@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Erro 404 - Página Não Encontrada</title>
+    <meta name="description" content="Trinity Mídia Digital: Soluções digitais completas que transformam ideias em realidade tecnológica. Desenvolvimento Web, Marketing Digital e Criação de Conteúdo.">
+    <meta name="keywords" content="mídia digital, desenvolvimento web, marketing digital, trinity, criação de sites, SEO, realidade digital">
+    <link rel="stylesheet" href="/dist/output.css">
+    <link rel="canonical" href="https://www.trinityds.com.br/404">
+     <link rel="shortcut icon" href="/Imagens/Logo Sem Background.png" type="image/x-icon">
+</head>
+<body class="opacity-0 transition-opacity duration-500">
+<canvas id="canvas-bg" class="fixed inset-0 z-[-1] w-full h-full pointer-events-none"></canvas>
+    <header>
+        <main class="flex flex-col justify-center items-center text-center px-4 py-12 mt-4">
+            <div class="text-center">
+                <h1 class="font-size:32px text-7xl md:text-9xl font-black uppercase text-purple-400" style="text-shadow: 0 0 10px #a855f7, 0 0 20px #a855f7;">
+                    404
+                </h1>
+                <p id="error-message" class="text-lg md:text-xl text-gray-200 max-w-lg mx-auto min-h-[3rem] md:min-h-[2rem] mt-6">
+                </p>
+                <a href="/" class="neon-border-button mt-8 inline-block">
+                    Voltar para a Home
+            </a>
+            </div>
+
+        </main>
+    </header>
+
+    <script src="/js/ui.js" defer></script>
+    <script type="module" src="/js/main.js" defer></script>
+    <script src="/js/background.js" defer></script> <script type="module" src="/js/main.js" defer></script>
+
+        <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const messageElement = document.getElementById('error-message');
+            
+            const textToType = "Oh não! Parece que a página que você procurava não foi encontrada... 😕";
+            let index = 0;
+
+            function typeWriter() {
+                if (index < textToType.length) {
+                    messageElement.textContent += textToType.charAt(index);
+                    index++;
+                    setTimeout(typeWriter, 40); 
+                }
+            }
+            
+           setTimeout(typeWriter, 500); 
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case: Transporta App | Trinity Midia Digital</title>
+    <meta name="description" content="Trinity Mídia Digital: Soluções digitais completas que transformam ideias em realidade tecnológica. Desenvolvimento Web, Marketing Digital e Criação de Conteúdo.">
+    <meta name="keywords" content="mídia digital, desenvolvimento web, marketing digital, trinity, criação de sites, SEO, realidade digital">
+    <link rel="stylesheet" href="/dist/output.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="canonical" href="https://www.trinityds.com.br/projetos/transporta">
+</head>
+<body class="opacity-0 transition-opacity duration-500 text-gray-100">
+    
+    <!-- Background Animado (Base do Site) -->
+    <canvas id="canvas-bg" class="fixed inset-0 z-[-1] w-full h-full pointer-events-none"></canvas>
+    
+    <div class="main-container">
+
+        <!-- BOTÃO VOLTAR -->
+        <div class="absolute top-0 left-0 mt-6 ml-6 md:mt-8 md:ml-8 z-50">
+            <a href="/projetos" class="flex flex-col items-center text-white/70 hover:text-cyan-400 transition-colors duration-300 group">
+                <div class="p-2 rounded-full border border-white/10 group-hover:border-cyan-400/50 bg-black/50 backdrop-blur-sm transition-colors mb-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
+                    </svg>
+                </div>
+                <p class="text-xs tracking-wide uppercase font-bold" data-i18n="btn_back">Voltar</p>
+            </a>
+        </div>
+
+        <main class="flex flex-col justify-center items-center px-4 py-12">
+            
+            <!-- HERO SECTION -->
+            <header class="relative w-full max-w-7xl mx-auto pt-20 pb-12 md:py-24">
+                <div class="flex flex-col md:flex-row items-center gap-12">
+                    
+                    <!-- Texto -->
+                    <div class="w-full md:w-1/2 text-left">
+                        <span class="inline-block py-1 px-3 rounded-full bg-cyan-500/20 border border-cyan-500/50 text-cyan-300 text-xs font-bold uppercase tracking-wider mb-6" data-i18n="transp_tag">
+                            Logística & Mobilidade
+                        </span>
+                        
+                        <h1 class="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-tight mb-6">
+                            Transporta App: <br/>
+                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500" data-i18n="transp_hero_title">Revolução Logística</span>
+                        </h1>
+                        
+                        <p class="text-lg text-gray-300 leading-relaxed mb-8 border-l-4 border-purple-500 pl-4" data-i18n="transp_hero_desc">
+                            Como a Trinity digitalizou a operação de fretes de ponta a ponta, conectando motoristas e gestores em tempo real através de um ecossistema mobile robusto.
+                        </p>
+                        
+                        <!-- ÁREA DOS BOTÕES -->
+                        <div class="flex flex-wrap gap-4">
+                            
+                            <!-- Ver Demo -->
+                            <a href="#demo" class="neon-border-button bg-cyan-500/10 hover:bg-cyan-500/20 text-white border-cyan-500 flex items-center justify-center" data-i18n="btn_demo">
+                                Ver Demo
+                            </a>
+                            
+                            <!-- Documentação Técnica -->
+                            <a href="/projetos/transporta/tecnica" class="flex items-center gap-2 border border-white/20 hover:border-purple-500/50 bg-white/5 hover:bg-purple-500/10 text-white py-3 px-6 rounded-lg transition group">
+                                <svg class="w-5 h-5 text-purple-400 group-hover:text-purple-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                                </svg>
+                                <span class="text-sm font-medium" data-i18n="btn_docs">Docs Técnicos</span>
+                            </a>
+
+                            <!-- Google Play -->
+                            <a href="https://play.google.com/store/apps/details?id=com.trinityds.transporta" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 border border-white/20 hover:border-green-500/50 bg-white/5 hover:bg-green-500/10 text-white py-3 px-6 rounded-lg transition group">
+                                <svg class="w-5 h-5 text-green-400 group-hover:text-green-300" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.5,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L3.84,21.85L3.84,2.15L6.05,2.66Z" />
+                                </svg>
+                                <span class="text-sm font-medium" data-i18n="btn_playstore">Google Play</span>
+                            </a>
+
+                        </div>
+                    </div>
+
+                    <!-- Imagem Hero (Feature Graphic) -->
+                    <div class="w-full md:w-1/2 flex justify-center md:justify-end relative">
+                        <!-- Efeito de brilho atrás da imagem -->
+                        <div class="absolute inset-0 bg-purple-500/20 blur-3xl rounded-full z-0"></div>
+                        <img src="/Imagens/Transporta_cover.png"
+                             alt="Transporta App Capa" 
+                             class="relative z-10 rounded-2xl border border-white/10 shadow-2xl w-full h-auto transform hover:scale-105 transition duration-500">
+                    </div>
+                </div>
+            </header>
+
+            <!-- O DESAFIO (Problema) - Card Glass -->
+            <section class="w-full max-w-5xl mx-auto my-12">
+                <div class="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-8 md:p-12 text-center relative overflow-hidden">
+                    <!-- Detalhe decorativo -->
+                    <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-cyan-500 via-purple-500 to-cyan-500"></div>
+                    
+                    <h2 class="text-3xl font-bold text-white mb-6 uppercase tracking-wide" data-i18n="transp_challenge_title">O Desafio</h2>
+                    <p class="text-xl text-gray-300 leading-relaxed font-light" data-i18n="transp_challenge_desc">
+                        "O cliente enfrentava processos manuais demorados, dependência de notas fiscais em papel e falta de rastreabilidade em tempo real. A comunicação era fragmentada, gerando atrasos e inconsistências nos dados."
+                    </p>
+                </div>
+            </section>
+
+            <!-- A SOLUÇÃO & STACK TÉCNICA -->
+            <section class="w-full max-w-7xl mx-auto py-12 md:py-20">
+                <div class="flex flex-col md:flex-row gap-12">
+                    
+                    <!-- Descrição da Solução -->
+                    <div class="w-full md:w-1/2">
+                        <h2 class="text-3xl font-bold text-white mb-6 flex items-center gap-3">
+                            <span class="w-2 h-8 bg-cyan-500 rounded-full"></span>
+                            <span data-i18n="transp_solution_title">A Solução Trinity</span>
+                        </h2>
+                        <p class="text-gray-300 mb-8 text-lg" data-i18n="transp_solution_desc">
+                            Desenvolvemos um ecossistema completo composto por um <strong class="text-cyan-400">App Mobile Nativo</strong> para os motoristas e um <strong class="text-purple-400">Dashboard Administrativo</strong> para a gestão.
+                        </p>
+                        
+                        <ul class="space-y-6">
+                            <li class="flex items-start bg-white/5 p-4 rounded-xl border border-white/5 hover:border-cyan-500/30 transition-colors">
+                                <div class="bg-cyan-500/20 p-2 rounded-lg mr-4">
+                                    <svg class="w-6 h-6 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+                                </div>
+                                <div>
+                                    <h4 class="text-white font-bold mb-1" data-i18n="transp_feature1_title">Login Seguro</h4>
+                                    <p class="text-gray-400 text-sm" data-i18n="transp_feature1_desc">Acesso corporativo restrito com validação de perfil (Driver/Master).</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start bg-white/5 p-4 rounded-xl border border-white/5 hover:border-cyan-500/30 transition-colors">
+                                <div class="bg-cyan-500/20 p-2 rounded-lg mr-4">
+                                    <svg class="w-6 h-6 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v1m6 11h2m-6 0h-2v4m0-11v3m0 0h.01M12 12h4.01M16 20h4M4 12h4m12 0h.01M5 8h2a1 1 0 001-1V5a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1zm12 0h2a1 1 0 001-1V5a1 1 0 00-1-1h-2a1 1 0 00-1 1v2a1 1 0 001 1zM5 20h2a1 1 0 001-1v-2a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1z"></path></svg>
+                                </div>
+                                <div>
+                                    <h4 class="text-white font-bold mb-1" data-i18n="transp_feature2_title">Leitor de Código de Barras</h4>
+                                    <p class="text-gray-400 text-sm" data-i18n="transp_feature2_desc">Integração com Google ML Kit para leitura instantânea de NF-e via câmera.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start bg-white/5 p-4 rounded-xl border border-white/5 hover:border-cyan-500/30 transition-colors">
+                                <div class="bg-cyan-500/20 p-2 rounded-lg mr-4">
+                                    <svg class="w-6 h-6 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path></svg>
+                                </div>
+                                <div>
+                                    <h4 class="text-white font-bold mb-1" data-i18n="transp_feature3_title">Offline-First</h4>
+                                    <p class="text-gray-400 text-sm" data-i18n="transp_feature3_desc">Sincronização robusta de dados, permitindo operação mesmo em áreas sem sinal.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Stack Técnica (Card Glass Dark) -->
+                    <div class="w-full md:w-1/2">
+                        <div class="bg-black/40 backdrop-blur-md p-8 rounded-2xl border border-white/10 shadow-lg h-full">
+                            <h3 class="text-xl font-bold text-white mb-6 border-b border-white/10 pb-4" data-i18n="tech_stack_title">Tecnologias Utilizadas</h3>
+                            
+                            <div class="grid grid-cols-2 gap-4">
+                                <!-- Tech Item -->
+                                <div class="flex items-center gap-3 p-3 bg-white/5 rounded-lg border border-white/5 hover:bg-white/10 transition">
+                                    <div class="w-2 h-2 rounded-full bg-purple-500 shadow-[0_0_10px_#a855f7]"></div>
+                                    <span class="font-medium text-gray-200 text-sm">Kotlin (Native)</span>
+                                </div>
+                                <div class="flex items-center gap-3 p-3 bg-white/5 rounded-lg border border-white/5 hover:bg-white/10 transition">
+                                    <div class="w-2 h-2 rounded-full bg-green-500 shadow-[0_0_10px_#22c55e]"></div>
+                                    <span class="font-medium text-gray-200 text-sm">Realm DB</span>
+                                </div>
+                                <div class="flex items-center gap-3 p-3 bg-white/5 rounded-lg border border-white/5 hover:bg-white/10 transition">
+                                    <div class="w-2 h-2 rounded-full bg-blue-500 shadow-[0_0_10px_#3b82f6]"></div>
+                                    <span class="font-medium text-gray-200 text-sm">Google ML Kit</span>
+                                </div>
+                                <div class="flex items-center gap-3 p-3 bg-white/5 rounded-lg border border-white/5 hover:bg-white/10 transition">
+                                    <div class="w-2 h-2 rounded-full bg-yellow-500 shadow-[0_0_10px_#eab308]"></div>
+                                    <span class="font-medium text-gray-200 text-sm">AWS Lightsail</span>
+                                </div>
+                                <div class="flex items-center gap-3 p-3 bg-white/5 rounded-lg border border-white/5 hover:bg-white/10 transition">
+                                    <div class="w-2 h-2 rounded-full bg-orange-500 shadow-[0_0_10px_#f97316]"></div>
+                                    <span class="font-medium text-gray-200 text-sm">Node.js API</span>
+                                </div>
+                                <div class="flex items-center gap-3 p-3 bg-white/5 rounded-lg border border-white/5 hover:bg-white/10 transition">
+                                    <div class="w-2 h-2 rounded-full bg-indigo-500 shadow-[0_0_10px_#6366f1]"></div>
+                                    <span class="font-medium text-gray-200 text-sm">Retrofit 2</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- GALERIA (Screenshots) -->
+            <section class="w-full py-20 relative">
+                <!-- Fundo decorativo -->
+                <div class="absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/10 to-transparent pointer-events-none"></div>
+                
+                <div class="container mx-auto px-6 relative z-10">
+                    <div class="text-center mb-16">
+                        <h2 class="text-3xl font-bold text-white mb-2" data-i18n="app_gallery_title">Por dentro do App</h2>
+                        <p class="text-gray-400" data-i18n="app_gallery_subtitle">Interface limpa e focada na produtividade.</p>
+                    </div>
+
+                    <!-- Grid de Screenshots (Mockups) -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                        <!-- Screenshot 1 -->
+                        <div class="group flex flex-col items-center">
+                            <div class="relative rounded-[2rem] border-4 border-gray-800 bg-gray-900 shadow-2xl overflow-hidden transform group-hover:-translate-y-2 transition duration-500">
+                                <img src="/Imagens/Login_app.png" alt="Login" class="w-full max-w-[240px] opacity-90 group-hover:opacity-100 transition">
+                            </div>
+                            <p class="mt-6 font-semibold text-cyan-400 uppercase text-xs tracking-wider" data-i18n="screen_login">Acesso Seguro</p>
+                        </div>
+                        <!-- Screenshot 2 -->
+                        <div class="group flex flex-col items-center mt-8 md:mt-0">
+                            <div class="relative rounded-[2rem] border-4 border-gray-800 bg-gray-900 shadow-2xl overflow-hidden transform group-hover:-translate-y-2 transition duration-500 delay-100">
+                                <img src="/Imagens/Home_app.png" alt="Lista" class="w-full max-w-[240px] opacity-90 group-hover:opacity-100 transition">
+                            </div>
+                            <p class="mt-6 font-semibold text-purple-400 uppercase text-xs tracking-wider" data-i18n="screen_home">Home</p>
+                        </div>
+                        <!-- Screenshot 3 -->
+                        <div class="group flex flex-col items-center">
+                            <div class="relative rounded-[2rem] border-4 border-gray-800 bg-gray-900 shadow-2xl overflow-hidden transform group-hover:-translate-y-2 transition duration-500 delay-200">
+                                <img src="/Imagens/Inclusao_app.png" alt="Scanner" class="w-full max-w-[240px] opacity-90 group-hover:opacity-100 transition">
+                            </div>
+                            <p class="mt-6 font-semibold text-cyan-400 uppercase text-xs tracking-wider" data-i18n="screen_scanner">Formulário de Inclusão</p>
+                        </div>
+                        <!-- Screenshot 4 -->
+                        <div class="group flex flex-col items-center mt-8 md:mt-0">
+                            <div class="relative rounded-[2rem] border-4 border-gray-800 bg-gray-900 shadow-2xl overflow-hidden transform group-hover:-translate-y-2 transition duration-500 delay-100">
+                                <img src="/Imagens/Diario_app.jpg" alt="Lista" class="w-full max-w-[240px] opacity-90 group-hover:opacity-100 transition">
+                            </div>
+                            <p class="mt-6 font-semibold text-purple-400 uppercase text-xs tracking-wider" data-i18n="screen_details">Diário de Bordo</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+                        <!-- DEMO VÍDEO (Native HTML5 + Phone Mockup) -->
+                        <section id="demo" class="w-full py-20 bg-black/20 backdrop-blur-sm border-y border-white/5">
+                            <div class="container mx-auto px-6 text-center">
+                                <h2 class="text-3xl font-bold text-white mb-4" data-i18n="demo_title">Veja em Ação</h2>
+                                <p class="text-gray-400 mb-12" data-i18n="demo_desc">Navegação fluida e intuitiva em tempo real.</p>
+                                
+                                <!-- MOCKUP DE CELULAR (Feito com Tailwind) -->
+                                <div class="relative mx-auto border-gray-800 bg-gray-800 border-[14px] rounded-[2.5rem] h-[635px] w-[300px] shadow-xl flex flex-col justify-center overflow-hidden">
+                        
+                                <!-- Detalhes do "Celular" (Câmera, Botões) -->
+                                <div class="w-[148px] h-[18px] bg-gray-800 top-0 rounded-b-[1rem] left-1/2 -translate-x-1/2 absolute z-20"></div>
+                                <div class="h-[46px] w-[3px] bg-gray-800 absolute -left-[17px] top-[124px] rounded-l-lg"></div>
+                                <div class="h-[46px] w-[3px] bg-gray-800 absolute -left-[17px] top-[178px] rounded-l-lg"></div>
+                                <div class="h-[64px] w-[3px] bg-gray-800 absolute -right-[17px] top-[142px] rounded-r-lg"></div>
+                                        
+                                <!-- TELA (Vídeo) -->
+                                <div class="rounded-[2rem] overflow-hidden w-full h-full bg-black relative z-10">
+                                    <!-- 
+                                        autoplay: Toca sozinho
+                                        loop: Repete quando acaba
+                                        muted: Mudo (OBRIGATÓRIO para autoplay funcionar em navegadores modernos)
+                                        playsinline: Não abre em tela cheia no iPhone (fica dentro da moldura)
+                                    -->
+                            <video 
+                                class="w-full h-full object-cover" 
+                                autoplay 
+                                loop 
+                                muted 
+                                playsinline
+                                poster="/Imagens/Login_app.png">
+                                <source src="/Videos/demo_transporta.mp4" type="video/mp4">
+                                Seu navegador não suporta a reprodução de vídeo.
+                            </video>
+                        </div>
+                    </div>
+                    
+                    <p class="text-xs text-gray-500 mt-6" data-i18n="demo_note">* Vídeo acelerado para demonstração</p>
+                </div>
+            </section>
+
+            <!-- DASHBOARD WEB (Deep Dive) -->
+            <section class="w-full py-20 bg-[#0B0F19] relative overflow-hidden border-t border-white/5">
+                 <!-- Background decorativo -->
+                 <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-cyan-900/10 to-transparent pointer-events-none"></div>
+
+                 <div class="container mx-auto px-6 relative z-10">
+                    <div class="text-center mb-20">
+                        <h2 class="text-3xl md:text-5xl font-bold text-white mb-4" data-i18n="web_title">O Centro de Comando</h2>
+                        <p class="text-gray-400 max-w-2xl mx-auto" data-i18n="web_desc">
+                            Uma plataforma web robusta para gestão completa da operação logística, do cadastro à entrega final.
+                        </p>
+                    </div>
+
+                    <!-- TELA DE LOGIN (O Início) -->
+                    <div class="mb-32 flex flex-col md:flex-row items-center gap-12">
+                        <div class="w-full md:w-1/2 order-2 md:order-1">
+                            <h3 class="text-2xl font-bold text-white mb-4 border-l-4 border-cyan-500 pl-4" data-i18n="web_login_title">Acesso Corporativo</h3>
+                            <p class="text-gray-400 mb-6 leading-relaxed" data-i18n="web_login_desc">
+                                Segurança desde o primeiro clique. O sistema conta com autenticação criptografada, recuperação de senha segura e controle de sessão. A interface limpa foca na agilidade de acesso para o operador.
+                            </p>
+                            <div class="flex gap-4 text-sm text-gray-500 font-mono">
+                                <span class="bg-white/5 px-3 py-1 rounded border border-white/10">JWT Auth</span>
+                                <span class="bg-white/5 px-3 py-1 rounded border border-white/10">AES-256</span>
+                            </div>
+                        </div>
+                        <div class="w-full md:w-1/2 order-1 md:order-2">
+                            <div class="rounded-xl overflow-hidden shadow-[0_0_30px_rgba(34,211,238,0.15)] border border-white/10 transform hover:scale-[1.02] transition duration-500">
+                                <img src="/Imagens/login-dashboard.png" alt="Tela de Login Dashboard" class="w-full h-auto">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- HOME / DASHBOARD (Bento Grid) -->
+                    <div class="mb-32">
+                        <div class="text-center mb-12">
+                            <h3 class="text-2xl font-bold text-white inline-block border-b-2 border-purple-500 pb-2" data-i18n="web_overview_title">Visão Geral da Operação</h3>
+                        </div>
+                        
+                        <!-- Bento Grid Layout -->
+                        <div class="space-y-8">
+                            
+                            <!-- IMAGEM PRINCIPAL (Home Dashboard) -->
+                            <div class="rounded-2xl overflow-hidden border border-white/10 shadow-2xl relative group">
+                                <!-- Overlay com Título -->
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-100 transition duration-300 z-10 flex items-end p-8">
+                                    <div>
+                                        <h4 class="text-xl font-bold text-white mb-1" data-i18n="web_main_dash_title">Visão Geral da Operação</h4>
+                                        <p class="text-sm text-gray-400" data-i18n="web_main_dash_desc">Monitoramento em tempo real de todas as viagens.</p>
+                                    </div>
+                                </div>
+                                <!-- Imagem -->
+                                <img src="/Imagens/home-dashboard.png" alt="Dashboard Principal" class="w-full h-auto object-cover min-h-[300px] md:min-h-[500px]">
+                            </div>
+
+                            <!-- GRID DE FUNCIONALIDADES (4 Itens) -->
+                            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                                
+                                <!-- Funcionalidade 1 (Imagem 283x303) -->
+                                <div class="bg-white/5 border border-white/5 rounded-xl p-4 hover:border-cyan-500/30 transition duration-300 group">
+                                    <div class="h-64 w-full bg-black/20 rounded-lg mb-4 overflow-hidden flex items-center justify-center relative">
+                                        <!-- object-contain: Garante que a imagem caiba sem cortar -->
+                                        <img src="/Imagens/sync-dashboard.png" alt="Funcionalidade 1" class="h-full w-full object-contain group-hover:scale-105 transition duration-500">
+                                    </div>
+                                    <h5 class="text-white font-bold text-lg mb-2" data-i18n="web_feat1_title">Sincronização</h5>
+                                    <p class="text-gray-400 text-xs leading-relaxed" data-i18n="web_feat1_desc">
+                                        Atualização rápida manual para não perder nenhuma atualização.
+                                    </p>
+                                </div>
+
+                                <!-- Funcionalidade 2 (Imagem 283x303) -->
+                                <div class="bg-white/5 border border-white/5 rounded-xl p-4 hover:border-purple-500/30 transition duration-300 group">
+                                    <div class="h-64 w-full bg-black/20 rounded-lg mb-4 overflow-hidden flex items-center justify-center relative">
+                                        <img src="/Imagens/fretestotais-dashboard.png" alt="Funcionalidade 2" class="h-full w-full object-contain group-hover:scale-105 transition duration-500">
+                                    </div>
+                                    <h5 class="text-white font-bold text-lg mb-2" data-i18n="web_feat2_title">Exibição total</h5>
+                                    <p class="text-gray-400 text-xs leading-relaxed" data-i18n="web_feat2_desc">
+                                        Exibe todas as viagens já salvas.
+                                    </p>
+                                </div>
+
+                                <!-- Funcionalidade 3 (Imagem ALTA 283x495) -->
+                                <div class="bg-white/5 border border-white/5 rounded-xl p-4 hover:border-yellow-500/30 transition duration-300 group">
+                                    <div class="h-64 w-full bg-black/20 rounded-lg mb-4 overflow-hidden flex items-center justify-center relative">
+                                        <img src="/Imagens/filtros-dashboard.png" alt="Funcionalidade 4" class="h-full w-full object-contain group-hover:scale-105 transition duration-500">
+                                    </div>
+                                    <h5 class="text-white font-bold text-lg mb-2" data-i18n="web_feat3_title">Filtros</h5>
+                                    <p class="text-gray-400 text-xs leading-relaxed" data-i18n="web_feat3_desc">
+                                        Filtro personalizado por data de inclusão ou emissão.
+                                    </p>
+                                </div>
+
+                                <!-- Funcionalidade 4 (Imagem 283x303) -->
+                                <div class="bg-white/5 border border-white/5 rounded-xl p-4 hover:border-green-500/30 transition duration-300 group">
+                                    <div class="h-64 w-full bg-black/20 rounded-lg mb-4 overflow-hidden flex items-center justify-center relative">
+                                        <img src="/Imagens/exportar-dashboard.png" alt="Funcionalidade 3" class="h-full w-full object-contain group-hover:scale-105 transition duration-500">
+                                    </div>
+                                    <h5 class="text-white font-bold text-lg mb-2" data-i18n="web_feat4_title">Exportação de Dados</h5>
+                                    <p class="text-gray-400 text-xs leading-relaxed" data-i18n="web_feat4_desc">
+                                        Geração de relatórios em Excel/PDF com um único clique.
+                                    </p>
+                                </div>
+
+
+                            </div>
+                            </div>
+                        </div>
+
+                    <!-- USUÁRIOS (Swiper) -->
+                    <div class="mb-32 mt-32">
+                        <div class="flex flex-col md:flex-row gap-12 items-center">
+                            <div class="w-full md:w-1/3">
+                                <h3 class="text-2xl font-bold text-white mb-4" data-i18n="web_users_title">Gestão de Usuários</h3>
+                                <p class="text-gray-400 mb-6" data-i18n="web_users_desc">
+                                    Interfaces dedicadas para o cadastro e gerenciamento de perfis. O sistema diferencia permissões e acessos automaticamente.
+                                </p>
+
+                                <div class="flex flex-col gap-3">
+                                    <div class="flex items-center gap-3 text-gray-300">
+                                        <div class="w-8 h-8 rounded-full bg-purple-500/20 flex items-center justify-center text-purple-400 font-bold">A</div>
+                                        <div>
+                                            <strong class="block text-white" data-i18n="web_role_admin">Administradores</strong>
+                                            <span class="text-xs" data-i18n="web_role_admin_desc">Controle total do sistema</span>
+                                        </div>
+                                    </div>
+
+                                <div class="flex items-center gap-3 text-gray-300">
+                                        <div class="w-8 h-8 rounded-full bg-cyan-500/20 flex items-center justify-center text-cyan-400 font-bold">M</div>
+                                        <div>
+                                            <strong class="block text-white" data-i18n="web_role_driver">Motoristas</strong>
+                                            <span class="text-xs" data-i18n="web_role_driver_desc">Acesso ao App Mobile</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="w-full md:w-2/3">
+                                <!-- SWIPER DASHBOARD -->
+                                <div class="swiper dashboard-swiper">
+                                    <div class="swiper-wrapper">
+                                        <!-- Slide 1: Admins -->
+                                        <div class="swiper-slide">
+                                            <img src="/Imagens/admin-dashboard.png" alt="Visualização Administradores">
+                                        </div>
+                                        <!-- Slide 2: Cadastro Admin -->
+                                        <div class="swiper-slide">
+                                            <img src="/Imagens/cadastro-admin-dashboard.png" alt="Cadastro Administradores">
+                                        </div>
+                                        <!-- Slide 3: Motoristas -->
+                                        <div class="swiper-slide">
+                                            <img src="/Imagens/motoristas-dashboard.png" alt="Visualização Motoristas">
+                                        </div>
+                                        <!-- Slide 4: Cadastro Motoristas -->
+                                        <div class="swiper-slide">
+                                            <img src="/Imagens/cadastro-motoristas-dashboard.png" alt="Cadastro Motoristas">
+                                        </div>
+                                    </div>
+
+                                    <!-- Paginação (bolinhas) -->
+                                    <div class="swiper-pagination"></div>
+
+                                    <!-- Progresso Circular -->
+                                    <div class="autoplay-progress">
+                                        <svg viewBox="0 0 48 48">
+                                            <circle cx="24" cy="24" r="20"></circle>
+                                        </svg>
+                                        <span></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CONTROLE OPERACIONAL (Prints Grandes) -->
+                    <div class="space-y-24 mb-32">
+                        
+                        <!-- Rotas -->
+                        <div class="flex flex-col md:flex-row items-center gap-8 border border-white/5 bg-white/5 p-6 rounded-2xl">
+                            <div class="w-full md:w-2/3 overflow-hidden rounded-xl shadow-lg">
+                                <img src="/Imagens/rotas-dashboard.png" alt="Rotas" class="w-full h-auto hover:scale-105 transition duration-700">
+                            </div>
+                            <div class="w-full md:w-1/3">
+                                <h4 class="text-xl font-bold text-white mb-2 text-cyan-400" data-i18n="web_routes_title">Otimização de Rotas</h4>
+                                <p class="text-gray-400 text-sm" data-i18n="web_routes_desc">Visualização clara de origens e destinos, permitindo ao gestor cadastrar suas rota para entrega.</p>
+                            </div>
+                        </div>
+
+                        <!-- Veículos -->
+                        <div class="flex flex-col md:flex-row-reverse items-center gap-8 border border-white/5 bg-white/5 p-6 rounded-2xl">
+                            <div class="w-full md:w-2/3 overflow-hidden rounded-xl shadow-lg">
+                                <img src="/Imagens/veiculos-dashboard.png" alt="Veículos" class="w-full h-full object-cover hover:scale-105 transition duration-700">
+                            </div>
+                            <div class="w-full md:w-1/3">
+                                <h4 class="text-xl font-bold text-white mb-2 text-purple-400" data-i18n="web_fleet_title">Controle de Frota</h4>
+                                <p class="text-gray-400 text-sm" data-i18n="web_fleet_desc">Cadastro detalhado de cavalos e carretas, com status de manutenção e vinculação com motoristas.</p>
+                            </div>
+                        </div>
+
+                        <!-- Produtos/Cargas -->
+                        <div class="flex flex-col md:flex-row items-center gap-8 border border-white/5 bg-white/5 p-6 rounded-2xl">
+                            <div class="w-full md:w-2/3 overflow-hidden rounded-xl shadow-lg">
+                                <img src="/Imagens/cargas-dashboard.png" alt="Cargas" class="w-full h-auto hover:scale-105 transition duration-700">
+                            </div>
+                            <div class="w-full md:w-1/3">
+                                <h4 class="text-xl font-bold text-white mb-2 text-green-400" data-i18n="web_cargo_title">Produtos e Cargas</h4>
+                                <p class="text-gray-400 text-sm" data-i18n="web_cargo_desc">Gerenciamento do tipo de carga transportada, garantindo o controle do que é carregado.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FEEDBACK -->
+                    <div class="max-w-3xl mx-auto text-center bg-gradient-to-b from-gray-900 to-black border border-white/10 rounded-3xl p-12 relative overflow-hidden">
+                        <div class="absolute -top-10 -right-10 w-32 h-32 bg-cyan-500/20 blur-3xl rounded-full"></div>
+                        
+                        <div class="relative z-10">
+                            <div class="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                                <svg class="w-8 h-8 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path></svg>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white mb-4" data-i18n="feedback_title">Ouvindo quem importa</h3>
+                            <p class="text-gray-400 mb-8" data-i18n="feedback_desc">
+                                O sistema possui um módulo dedicado de Feedback, permitindo que motoristas reportem problemas ou sugiram melhorias diretamente pelo app. Isso garante a evolução constante da plataforma baseada no uso real.
+                            </p>
+                            <div class="rounded-xl overflow-hidden border border-white/10 shadow-lg mx-auto max-w-lg">
+                                <img src="/Imagens/feedback-dashboard.png" alt="Feedback" class="w-full h-auto">
+                            </div>
+                        </div>
+                    </div>
+
+                 </div>
+            </section>
+
+            <!-- CTA FINAL -->
+            <section class="w-full py-20 text-center">
+                <div class="bg-gradient-to-r from-cyan-900/20 to-purple-900/20 border border-white/5 rounded-3xl p-12 max-w-4xl mx-auto backdrop-blur-sm">
+                    <h2 class="text-2xl md:text-3xl font-bold text-white mb-4" data-i18n="cta_title">Gostou da Solução?</h2>
+                    <p class="text-gray-400 mb-8" data-i18n="cta_desc">Vamos conversar sobre o seu projeto.</p>
+                    <a href="https://wa.me/5521920447431" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 neon-border-button bg-green-500/10 hover:bg-green-500/20 text-green-400 border-green-500">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                        Falar com a Trinity
+                    </a>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- Scripts e Rodapé Padrão do Site -->
+    <script src="/js/ui.js" defer></script>
+    <script type="module" src="/js/main.js" defer></script>
+    <script src="/js/background.js" defer></script> 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+</body>
+</html>
