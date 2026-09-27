@@ -1,0 +1,56 @@
+name: Deploy Trinity Website
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+concurrency:
+  group: trinity-website-production
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Configure SSH
+        shell: bash
+        run: |
+          mkdir -p ~/.ssh
+          chmod 700 ~/.ssh
+
+          printf '%s\n' "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+
+          printf '%s\n' "${{ secrets.SSH_KNOWN_HOSTS }}" > ~/.ssh/known_hosts
+          chmod 600 ~/.ssh/known_hosts
+
+      - name: Deploy to production
+        shell: bash
+        run: |
+          ssh \
+            -i ~/.ssh/id_ed25519 \
+            "${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}" \
+            'bash -se' <<'EOF'
+
+          set -euo pipefail
+
+          cd /home/ubuntu/infra/projetos/trinity-site/html
+
+          git fetch origin main
+          git checkout main
+          git pull --ff-only origin main
+
+          cd /home/ubuntu/infra/projetos
+
+          docker compose build trinity_site
+          docker compose up -d trinity_site
+
+          curl --fail --silent --show-error \
+            http://127.0.0.1:3014/ \
+            > /dev/null
+
+          docker compose ps trinity_site
+          EOF
