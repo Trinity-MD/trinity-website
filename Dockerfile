@@ -1,14 +1,29 @@
-# Usa a imagem levíssima do Nginx
+# =========================
+# Etapa 1: Build do Tailwind
+# =========================
+FROM node:20-alpine AS builder
+
+WORKDIR /app
+
+COPY package.json package-lock.json ./
+RUN npm ci
+
+COPY tailwind.config.js ./
+COPY Main ./Main
+
+RUN npm run build
+
+
+# =========================
+# Etapa 2: Servidor Nginx
+# =========================
 FROM nginx:alpine
 
-# Limpa a pasta padrão
 RUN rm -rf /usr/share/nginx/html/*
 
-# Copia a nossa configuração customizada de rotas e rewrites
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
-# Copia o site inteiro da sua pasta Main para o servidor
-COPY ./Main /usr/share/nginx/html
+COPY --from=builder /app/Main /usr/share/nginx/html
 
 EXPOSE 80
 
