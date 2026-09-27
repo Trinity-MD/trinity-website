@@ -1,16 +1,13 @@
 {
-  "dependencies": {
-    "firebase": "^12.2.1"
-  },
   "name": "trinity-site",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-"scripts": {
+  "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "tw:init": "tailwindcss init",
-    "dev": "npx tailwindcss -i ./Main/src/input.css -o ./Main/dist/output.css --watch",
-    "build": "npx tailwindcss -i ./Main/src/input.css -o ./Main/dist/output.css --minify"
+    "dev": "tailwindcss -i ./Main/src/input.css -o ./Main/dist/output.css --watch",
+    "build": "tailwindcss -i ./Main/src/input.css -o ./Main/dist/output.css --minify"
   },
   "repository": {
     "type": "git",
