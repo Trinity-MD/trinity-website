@@ -232,6 +232,84 @@ const translations = {
         "ct_success_title": "Mensagem enviada.",
         "ct_success_desc": "O retorno será feito pelo endereço informado.",
 
+        // Case Transporta
+        "tr_page_title": "Transporta | Trinity Mídia Digital e Tecnologia",
+        "tr_nav_label": "Navegação principal",
+        "tr_language_label": "Idioma",
+        "tr_menu_label": "Abrir menu",
+        "tr_mobile_nav_label": "Navegação móvel",
+        "tr_footer_nav_label": "Navegação do rodapé",
+        "tr_hero_label": "Case / Sistema corporativo",
+        "tr_status": "Em produção · Projeto privado",
+        "tr_hero_desc": "Sistema corporativo desenvolvido para digitalizar e centralizar uma operação logística, conectando aplicativo Android, painel web, API, dados e infraestrutura de produção.",
+        "tr_stack_label": "Stack",
+        "tr_timeline_label": "Cronologia",
+        "tr_timeline": "Iniciado mai/2025 · Entregue nov/2025 · Produção jun/2026",
+        "tr_context_label": "Problema",
+        "tr_context_title": "Uma operação que precisava conectar campo e gestão.",
+        "tr_context_p1": "O trabalho em campo dependia de documentos e registros conduzidos em processos manuais. Para acompanhar a operação, a gestão precisava reunir essas informações em um fluxo centralizado.",
+        "tr_context_p2": "O desafio era ligar a rotina dos motoristas ao acompanhamento administrativo, mantendo os dados disponíveis para consulta e continuidade do trabalho.",
+        "tr_solution_label": "Solução e produto",
+        "tr_solution_title": "Quatro frentes, uma operação integrada.",
+        "tr_solution_desc": "Aplicativo, painel, API e infraestrutura cumprem funções distintas dentro do mesmo sistema.",
+        "tr_android_title": "Aplicativo Android",
+        "tr_android_desc": "Aplicação nativa em Kotlin para a rotina móvel. Registra dados e documentos, lê códigos e permite continuar o trabalho sem conexão, com sincronização posterior pela API.",
+        "tr_web_title": "Dashboard web",
+        "tr_web_desc": "Interface administrativa para cadastros, acompanhamento de registros, filtros e exportações. Concentra a visão da gestão sobre as informações recebidas do campo.",
+        "tr_api_title": "API",
+        "tr_api_desc": "Camada em Node.js e LoopBack 4 para comunicação entre aplicativo, painel e banco. Centraliza regras de negócio, autenticação e permissões por perfil.",
+        "tr_infra_title": "Infraestrutura",
+        "tr_infra_desc": "Ambiente em Linux com serviços organizados em containers Docker para publicação e operação do sistema em produção.",
+        "tr_interfaces_label": "Interfaces",
+        "tr_interfaces_title": "Do acesso móvel à consulta no painel.",
+        "tr_interfaces_desc": "As interfaces abaixo utilizam dados fictícios para demonstrar o aplicativo e o painel sem expor informações da operação real.",
+        "tr_app_alt": "Tela de acesso do aplicativo Transporta",
+        "tr_app_caption": "Aplicativo Android",
+        "tr_app_caption_detail": "Entrada para a operação móvel.",
+        "tr_dashboard_alt": "Dashboard administrativo do Transporta com registros fictícios da operação",
+        "tr_dashboard_caption": "Dashboard web",
+        "tr_dashboard_caption_detail": "Visão administrativa dos registros da operação.",
+        "tr_demo_label": "Demonstração",
+        "tr_demo_title": "Demonstração do fluxo móvel",
+        "tr_demo_desc": "Um trecho do uso do aplicativo durante o fluxo operacional.",
+        "tr_demo_video_label": "Demonstração do fluxo móvel do Transporta",
+        "tr_arch_label": "Arquitetura",
+        "tr_arch_title": "Camadas com responsabilidades definidas.",
+        "tr_arch_desc": "Os dois pontos de uso se comunicam com a API. Ela concentra as regras e o acesso aos dados; os serviços operam em ambiente Linux com Docker.",
+        "tr_arch_flow_alt": "Aplicativo Android e dashboard web conectados à API, que acessa o MongoDB",
+        "tr_arch_field": "Campo",
+        "tr_arch_app": "Aplicativo Android",
+        "tr_arch_management": "Gestão",
+        "tr_arch_dashboard": "Dashboard web",
+        "tr_arch_rules": "Regras e acesso",
+        "tr_arch_data": "Dados",
+        "tr_arch_foot": "Operação em produção: Docker · Linux",
+        "tr_decisions_label": "Decisões técnicas",
+        "tr_decisions_title": "Escolhas ligadas ao uso real.",
+        "tr_decisions_intro": "A arquitetura acompanha a rotina de campo, a necessidade de controle administrativo e a operação contínua do sistema.",
+        "tr_offline_title": "Continuidade no campo",
+        "tr_offline_desc": "O aplicativo mantém dados de trabalho localmente para apoiar o uso sem rede e envia registros pendentes quando a conexão está disponível.",
+        "tr_separation_title": "Separação entre interfaces e regras",
+        "tr_separation_desc": "Aplicativo e dashboard têm fluxos próprios; a API centraliza as regras de negócio e a comunicação com o MongoDB.",
+        "tr_access_title": "Acesso por perfil",
+        "tr_access_desc": "Autenticação e permissões diferenciam as ações disponíveis para os usuários do sistema.",
+        "tr_records_title": "Registros consultáveis",
+        "tr_records_desc": "A captura de códigos e documentos alimenta os registros da operação; no painel, filtros e exportações apoiam a consulta administrativa.",
+        "tr_production_label": "Estado atual",
+        "tr_production_title": "Em produção, com acesso privado.",
+        "tr_production_desc": "O desenvolvimento começou em maio de 2025 e foi entregue em novembro de 2025. A entrada em produção ocorreu em junho de 2026. O sistema atende a uma operação corporativa privada e não possui demonstração pública do ambiente real.",
+        "tr_date_start": "Mai/2025",
+        "tr_milestone_start": "Início do desenvolvimento",
+        "tr_date_delivery": "Nov/2025",
+        "tr_milestone_delivery": "Entrega do desenvolvimento",
+        "tr_date_live": "Jun/2026",
+        "tr_milestone_live": "Entrada em produção",
+        "tr_final_label": "Próximo passo",
+        "tr_final_title": "Software precisa funcionar além da interface.",
+        "tr_final_desc": "O Transporta reúne aplicativo, painel, API e infraestrutura em uma única operação integrada.",
+        "tr_final_contact": "Conversar sobre um projeto",
+        "tr_final_projects": "Ver outros projetos",
+
         //Home
         "home_hero_title": "Tiramos sua ideia do papel com <br class='hidden md:block'/> <span class='text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-500 to-cyan-400 bg-300% animate-gradient'>tecnologia e design.</span>",
         "home_hero_subtitle": "Desenvolvimento de software de alta performance, aplicativos nativos e plataformas web escaláveis. Transformamos complexidade em experiência.",
@@ -297,65 +375,6 @@ const translations = {
         "filter_platforms": "Plataformas Web",
         "filter_sites": "Sites",
         "filter_others": "Outros",
-
-        //Página Projeto Transporta
-        "transp_tag": "Logística & Mobilidade",
-        "transp_hero_title": "Revolução Logística",
-        "transp_hero_desc": "Como a Trinity digitalizou a operação de fretes de ponta a ponta, conectando motoristas e gestores em tempo real através de um ecossistema mobile robusto.",
-        "btn_demo": "Ver Demo",
-        "btn_docs": "Docs Técnicos",
-        "btn_playstore": "Google Play",
-        "transp_challenge_title": "O Desafio",
-        "transp_challenge_desc": "\"O cliente enfrentava processos manuais demorados, dependência de notas fiscais em papel e falta de rastreabilidade em tempo real. A comunicação era fragmentada, gerando atrasos e inconsistências nos dados.\"",
-        "transp_solution_title": "A Solução Trinity",
-        "transp_solution_desc": "Desenvolvemos um ecossistema completo composto por um <strong class='text-cyan-400'>App Mobile Nativo</strong> para os motoristas e um <strong class='text-purple-400'>Dashboard Administrativo</strong> para a gestão.",
-        "transp_feature1_title": "Login Seguro",
-        "transp_feature1_desc": "Acesso corporativo restrito com validação de perfil (Driver/Master).",
-        "transp_feature2_title": "Leitor de Código de Barras",
-        "transp_feature2_desc": "Integração com Google ML Kit para leitura instantânea de NF-e via câmera.",
-        "transp_feature3_title": "Offline-First",
-        "transp_feature3_desc": "Sincronização robusta de dados, permitindo operação mesmo em áreas sem sinal.",
-        "tech_stack_title": "Tecnologias Utilizadas",
-        "app_gallery_title": "Por dentro do App",
-        "app_gallery_subtitle": "Interface limpa e focada na produtividade.",
-        "screen_login": "Acesso Seguro",
-        "screen_Home": "Home",
-        "screen_scanner": "Formulário de Inclusão",
-        "screen_details": "Diário de Bordo",
-        "demo_title": "Veja em Ação",
-        "demo_desc": "Navegação fluida e intuitiva em tempo real.",
-        "demo_note": "* Vídeo acelerado para demonstração",
-        "web_title": "O Centro de Comando",
-        "web_desc": "Uma plataforma web robusta para gestão completa da operação logística, do cadastro à entrega final.",
-        "web_login_title": "Acesso Corporativo",
-        "web_login_desc": "Segurança desde o primeiro clique. O sistema conta com autenticação criptografada, recuperação de senha segura e controle de sessão. A interface limpa foca na agilidade de acesso para o operador.",
-        "web_overview_title": "Visão Geral da Operação",
-        "web_main_dash_title": "Visão Geral da Operação",
-        "web_main_dash_desc": "Monitoramento em tempo real de todas as viagens.",
-        "web_feat1_title": "Sincronização",
-        "web_feat1_desc": "Atualização rápida manual para não perder nenhuma atualização.",
-        "web_feat2_title": "Exibição total",
-        "web_feat2_desc": "Exibe todas as viagens já salvas.",
-        "web_feat3_title": "Filtros",
-        "web_feat3_desc": "Filtro personalizado por data de inclusão ou emissão.",
-        "web_feat4_title": "Exportação de Dados",
-        "web_feat4_desc": "Geração de relatórios em Excel/PDF com um único clique.",
-        "web_users_title": "Gestão de Usuários",
-        "web_users_desc": "Interfaces dedicadas para o cadastro e gerenciamento de perfis. O sistema diferencia permissões e acessos automaticamente.",
-        "web_role_admin": "Administradores",
-        "web_role_admin_desc": "Controle total do sistema",
-        "web_role_driver": "Motoristas",
-        "web_role_driver_desc": "Acesso ao App Mobile",
-        "web_routes_title": "Otimização de Rotas",
-        "web_routes_desc": "Visualização clara de origens e destinos, permitindo ao gestor cadastrar suas rota para entrega.",
-        "web_fleet_title": "Controle de Frota",
-        "web_fleet_desc": "Cadastro detalhado de cavalos e carretas, com status de manutenção e vinculação com motoristas.",
-        "web_cargo_title": "Produtos e Cargas",
-        "web_cargo_desc": "Gerenciamento do tipo de carga transportada, garantindo o controle do que é carregado.",
-        "feedback_title": "Ouvindo quem importa",
-        "feedback_desc": "O sistema possui um módulo dedicado de Feedback, permitindo que motoristas reportem problemas ou sugiram melhorias diretamente pelo app. Isso garante a evolução constante da plataforma baseada no uso real.",
-        "cta_title": "Gostou da Solução?",
-        "cta_desc": "Vamos conversar sobre o seu projeto.",
 
         //Página Sobre Nós
         "about_hero_title": "Mais que código, <br> <span class='text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400'>propósito.</span>",
@@ -618,6 +637,84 @@ const translations = {
         "ct_success_title": "Message sent.",
         "ct_success_desc": "A reply will be sent to the address you provided.",
 
+        // Transporta case
+        "tr_page_title": "Transporta | Trinity Digital Media and Technology",
+        "tr_nav_label": "Main navigation",
+        "tr_language_label": "Language",
+        "tr_menu_label": "Open menu",
+        "tr_mobile_nav_label": "Mobile navigation",
+        "tr_footer_nav_label": "Footer navigation",
+        "tr_hero_label": "Case study / Corporate system",
+        "tr_status": "In production · Private project",
+        "tr_hero_desc": "A corporate system built to digitize and centralize a logistics operation, connecting an Android app, web dashboard, API, data, and production infrastructure.",
+        "tr_stack_label": "Stack",
+        "tr_timeline_label": "Timeline",
+        "tr_timeline": "Started May 2025 · Delivered Nov 2025 · Live since Jun 2026",
+        "tr_context_label": "Problem",
+        "tr_context_title": "An operation that needed to connect field work and management.",
+        "tr_context_p1": "Field work relied on documents and records handled through manual processes. To follow the operation, management needed to bring this information into a central workflow.",
+        "tr_context_p2": "The challenge was to link drivers' daily work with administrative oversight while keeping records available for review and continuity.",
+        "tr_solution_label": "Solution and product",
+        "tr_solution_title": "Four parts, one integrated operation.",
+        "tr_solution_desc": "The app, dashboard, API, and infrastructure have distinct roles within the same system.",
+        "tr_android_title": "Android app",
+        "tr_android_desc": "A native Kotlin app for mobile work. It records data and documents, reads codes, and supports work without a connection, syncing through the API later.",
+        "tr_web_title": "Web dashboard",
+        "tr_web_desc": "An administrative interface for records, management data, filters, and exports. It gives management a consolidated view of information received from the field.",
+        "tr_api_title": "API",
+        "tr_api_desc": "A Node.js and LoopBack 4 layer connecting the app, dashboard, and database. It centralizes business rules, authentication, and role-based permissions.",
+        "tr_infra_title": "Infrastructure",
+        "tr_infra_desc": "A Linux environment with services organized in Docker containers for deployment and production operation.",
+        "tr_interfaces_label": "Interfaces",
+        "tr_interfaces_title": "From mobile access to dashboard review.",
+        "tr_interfaces_desc": "The interfaces below use fictional data to demonstrate the app and dashboard without exposing information from the real operation.",
+        "tr_app_alt": "Transporta app sign-in screen",
+        "tr_app_caption": "Android app",
+        "tr_app_caption_detail": "Entry point for mobile work.",
+        "tr_dashboard_alt": "Transporta administrative dashboard with fictional operational records",
+        "tr_dashboard_caption": "Web dashboard",
+        "tr_dashboard_caption_detail": "Administrative view of operational records.",
+        "tr_demo_label": "Demonstration",
+        "tr_demo_title": "Mobile workflow demonstration",
+        "tr_demo_desc": "A short segment showing the app in use during the operational workflow.",
+        "tr_demo_video_label": "Transporta mobile workflow demonstration",
+        "tr_arch_label": "Architecture",
+        "tr_arch_title": "Layers with clear responsibilities.",
+        "tr_arch_desc": "Both interfaces communicate with the API. It handles rules and data access; the services run on Linux with Docker.",
+        "tr_arch_flow_alt": "Android app and web dashboard connected to the API, which accesses MongoDB",
+        "tr_arch_field": "Field",
+        "tr_arch_app": "Android app",
+        "tr_arch_management": "Management",
+        "tr_arch_dashboard": "Web dashboard",
+        "tr_arch_rules": "Rules and access",
+        "tr_arch_data": "Data",
+        "tr_arch_foot": "Production operation: Docker · Linux",
+        "tr_decisions_label": "Technical decisions",
+        "tr_decisions_title": "Choices shaped by actual use.",
+        "tr_decisions_intro": "The architecture supports field work, administrative oversight, and ongoing system operation.",
+        "tr_offline_title": "Continuity in the field",
+        "tr_offline_desc": "The app keeps working data locally to support use without a network and sends pending records when connectivity is available.",
+        "tr_separation_title": "Interfaces and rules kept separate",
+        "tr_separation_desc": "The app and dashboard have their own flows; the API centralizes business rules and communication with MongoDB.",
+        "tr_access_title": "Role-based access",
+        "tr_access_desc": "Authentication and permissions determine which actions are available to each system user.",
+        "tr_records_title": "Reviewable records",
+        "tr_records_desc": "Captured codes and documents feed operational records; dashboard filters and exports support administrative review.",
+        "tr_production_label": "Current state",
+        "tr_production_title": "In production, with private access.",
+        "tr_production_desc": "Development began in May 2025 and was delivered in November 2025. The system entered production in June 2026. It serves a private corporate operation and has no public demo of the real environment.",
+        "tr_date_start": "May 2025",
+        "tr_milestone_start": "Development started",
+        "tr_date_delivery": "Nov 2025",
+        "tr_milestone_delivery": "Development delivered",
+        "tr_date_live": "Jun 2026",
+        "tr_milestone_live": "Entered production",
+        "tr_final_label": "Next step",
+        "tr_final_title": "Software has to work beyond the interface.",
+        "tr_final_desc": "Transporta brings together an app, dashboard, API, and infrastructure in one integrated operation.",
+        "tr_final_contact": "Discuss a project",
+        "tr_final_projects": "View other projects",
+
         //Home
         "home_hero_title": "We bring your ideas to life with <br class='hidden md:block'/> <span class='text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-500 to-cyan-400 bg-300% animate-gradient'>technology and design.</span>",
         "home_hero_subtitle": "High-performance software development, native apps, and scalable web platforms. We transform complexity into experience.",
@@ -683,65 +780,6 @@ const translations = {
         "filter_platforms": "Web Platforms",
         "filter_sites": "Sites",
         "filter_others": "Others",
-
-        // Página Projeto Transporta
-        "btn_demo": "Watch Demo",
-        "btn_docs": "Tech Docs",
-        "btn_playstore": "Google Play",
-        "transp_tag": "Logistics & Mobility",
-        "transp_hero_title": "Logistics Revolution",
-        "transp_hero_desc": "How Trinity digitized freight operations end-to-end, connecting drivers and managers in real-time through a robust mobile ecosystem.",
-        "transp_challenge_title": "The Challenge",
-        "transp_challenge_desc": "\"The client faced time-consuming manual processes, reliance on paper invoices, and lack of real-time traceability. Communication was fragmented, causing delays and data inconsistencies.\"",
-        "transp_solution_title": "The Trinity Solution",
-                "transp_solution_desc": "We developed a complete ecosystem consisting of a <strong class='text-cyan-400'>Native Mobile App</strong> for drivers and an <strong class='text-purple-400'>Administrative Dashboard</strong> for management.",
-        "transp_feature1_title": "Secure Login",
-        "transp_feature1_desc": "Restricted corporate access with profile validation (Driver/Master).",
-        "transp_feature2_title": "Barcode Scanner",
-        "transp_feature2_desc": "Integration with Google ML Kit for instant invoice reading via camera.",
-        "transp_feature3_title": "Offline-First",
-        "transp_feature3_desc": "Robust data synchronization, allowing operation even in areas without signal.",
-        "tech_stack_title": "Technology Stack",
-        "app_gallery_title": "Inside the App",
-        "app_gallery_subtitle": "Clean interface focused on productivity.",
-        "screen_login": "Secure Access",
-        "screen_home": "Home",
-        "screen_scanner": "Entry Form",
-        "screen_details": "Logbook",
-        "demo_title": "See it in Action",
-        "demo_desc": "Fluid and intuitive navigation in real-time.",
-        "demo_note": "* Video accelerated for demonstration",
-        "web_title": "The Command Center",
-        "web_desc": "A robust web platform for complete logistics operation management, from registration to final delivery.",
-        "web_login_title": "Corporate Access",
-        "web_login_desc": "Security from the first click. The system features encrypted authentication, secure password recovery, and session control. The clean interface focuses on quick access for the operator.",
-        "web_overview_title": "Operation Overview",
-        "web_main_dash_title": "Operation Overview",
-        "web_main_dash_desc": "Real-time monitoring of all trips.",
-        "web_feat1_title": "Synchronization",
-        "web_feat1_desc": "Quick manual update to never miss an update.",
-        "web_feat2_title": "Total View",
-        "web_feat2_desc": "Displays all saved trips.",
-        "web_feat3_title": "Filters",
-        "web_feat3_desc": "Custom filtering by inclusion or issue date.",
-        "web_feat4_title": "Data Export",
-        "web_feat4_desc": "Report generation in Excel/PDF with a single click.",
-        "web_users_title": "User Management",
-        "web_users_desc": "Dedicated interfaces for profile registration and management. The system automatically differentiates permissions and access.",
-        "web_role_admin": "Administrators",
-        "web_role_admin_desc": "Full system control",
-        "web_role_driver": "Drivers",
-        "web_role_driver_desc": "Mobile App Access",
-        "web_routes_title": "Route Optimization",
-        "web_routes_desc": "Clear visualization of origins and destinations, allowing managers to register their delivery routes.",
-        "web_fleet_title": "Fleet Control",
-        "web_fleet_desc": "Detailed registration of trucks and trailers, with maintenance status and driver linking.",
-        "web_cargo_title": "Products and Cargo",
-        "web_cargo_desc": "Management of transported cargo type, ensuring control of what is loaded.",
-        "feedback_title": "Listening to who matters",
-        "feedback_desc": "The system features a dedicated Feedback module, allowing drivers to report issues or suggest improvements directly through the app. This ensures constant platform evolution based on real usage.",
-        "cta_title": "Liked the Solution?",
-        "cta_desc": "Let's talk about your project.",
 
         //Página Sobre Nós
         "about_hero_title": "More than code, <br> <span class='text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400'>purpose.</span>",
@@ -820,6 +858,14 @@ window.changeLanguage = function(lang) {
         const key = element.getAttribute('data-i18n');
         if (translations[lang] && translations[lang][key]) {
             element.innerHTML = translations[lang][key];
+        }
+    });
+    document.querySelectorAll('[data-i18n-alt], [data-i18n-aria-label]').forEach(element => {
+        for (const attribute of ['alt', 'aria-label']) {
+            const key = element.getAttribute(`data-i18n-${attribute}`);
+            if (key && translations[lang] && translations[lang][key]) {
+                element.setAttribute(attribute, translations[lang][key]);
+            }
         }
     });
     updateFlagIcons(lang);
@@ -1140,83 +1186,6 @@ function setupFilterSwiper() {
 }
 
 /* =======================================
- * CARROSSEL DASHBOARD
- * ======================================= */
-function setupDashboardSwiper() {
-    const swiperContainer = document.querySelector(".dashboard-swiper");
-    if (!swiperContainer) return;
-
-    const progressCircle = swiperContainer.querySelector(".autoplay-progress svg circle");
-    const progressContent = swiperContainer.querySelector(".autoplay-progress span");
-
-    const swiper = new Swiper(swiperContainer, {
-        slidesPerView: 1,
-        spaceBetween: 0,
-        centeredSlides: false,
-        loop: true,
-        grabCursor: true,
-        allowTouchMove: true,
-        simulateTouch: true,
-        freeMode: false,
-        longSwipes: false,
-        speed: 500,
-
-        autoplay: {
-            delay: 4000,
-            disableOnInteraction: false,  // NÃO desliga autoplay depois de arrastar
-        },
-
-        pagination: {
-            el: swiperContainer.querySelector(".swiper-pagination"),
-            clickable: true,
-        },
-
-        on: {
-            init(swiper) {
-                // força rodar a primeira vez
-                if (progressCircle) {
-                    progressCircle.style.setProperty("--progress", 1);
-                }
-                if (progressContent) {
-                    progressContent.textContent = `${Math.ceil(swiper.params.autoplay.delay / 1000)}s`;
-                }
-
-                if (swiper.autoplay && !swiper.autoplay.running) {
-                    swiper.autoplay.start();
-                }
-            },
-
-            autoplayTimeLeft(swiper, time, progress) {
-                if (progressCircle) {
-                    progressCircle.style.setProperty("--progress", 1 - progress);
-                }
-                if (progressContent) {
-                    progressContent.textContent = `${Math.ceil(time / 1000)}s`;
-                }
-            },
-        },
-    });
-
-                // Pausar/retomar em hover/click/hold (desktop + mobile)
-                swiperContainer.addEventListener("mouseenter", () => {
-                    if (dashboardSwiper.autoplay) dashboardSwiper.autoplay.stop();
-                });
-
-                swiperContainer.addEventListener("mouseleave", () => {
-                    if (dashboardSwiper.autoplay) dashboardSwiper.autoplay.start();
-                });
-
-                // mobile: finger down = pausa / finger up = continua
-                swiperContainer.addEventListener("touchstart", () => {
-                    if (dashboardSwiper.autoplay) dashboardSwiper.autoplay.stop();
-                });
-
-                swiperContainer.addEventListener("touchend", () => {
-                    if (dashboardSwiper.autoplay) dashboardSwiper.autoplay.start();
-                });
-}
-
-/* =======================================
  * INICIALIZAÇÃO GERAL
  * ATENÇÃO, ESSE EVENT LISTENER DEVE SER SEMPRE O ÚLTIMO DO ARQUIVO JS.
  * NÃO INSERIR NENHUMA FUNÇÃO APÓS ELE PARA EVITAR QUEBRAR O CÓDIGO.
@@ -1243,5 +1212,4 @@ document.addEventListener('DOMContentLoaded', () => {
     setupSwiper();
     setupProjectFilters();
     setupFilterSwiper();
-    setupDashboardSwiper();
 });
