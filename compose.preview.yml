@@ -1,0 +1,10 @@
+services:
+  trinity-preview:
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    container_name: trinity_website_preview
+
+    ports:
+      - "8080:80"
