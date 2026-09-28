@@ -191,6 +191,47 @@ const translations = {
         "ab_final_desc": "O contato é direto com quem fará a análise e a execução técnica.",
         "ab_final_cta": "Iniciar uma conversa",
 
+        // Contato
+        "ct_page_title": "Contato | Trinity Mídia Digital e Tecnologia",
+        "ct_hero_label": "Contato / Novos projetos",
+        "ct_hero_title": "Vamos conversar sobre o que você precisa construir ou resolver.",
+        "ct_hero_desc": "O contato é direto com quem fará a análise técnica e conduzirá o desenvolvimento.",
+        "ct_channels_label": "Canais de contato",
+        "ct_channels_title": "Escolha o canal mais adequado.",
+        "ct_wa_title": "Conversa direta",
+        "ct_wa_desc": "Para projetos, dúvidas iniciais ou para entender se uma ideia faz sentido tecnicamente.",
+        "ct_wa_cta": "Conversar pelo WhatsApp",
+        "ct_email_label": "E-mail",
+        "ct_email_title": "E-mail",
+        "ct_email_desc": "Para propostas, documentos ou contatos que precisem de mais contexto.",
+        "ct_email_cta": "Enviar e-mail",
+        "ct_form_trigger": "Prefere enviar uma mensagem pelo formulário?",
+        "ct_conversation_label": "Para começar",
+        "ct_conversation_title": "Não precisa chegar com tudo definido.",
+        "ct_conversation_desc": "Uma primeira conversa pode começar pelo problema. Arquitetura, tecnologias e escopo são definidos depois de entender o contexto.",
+        "ct_topic_problem": "O que precisa ser resolvido",
+        "ct_topic_process": "Como o processo funciona hoje",
+        "ct_topic_users": "Quem utilizará a solução",
+        "ct_topic_existing": "O que já existe ou já foi tentado",
+        "ct_demands_label": "Tipos de demanda",
+        "ct_demands_title": "Alguns contextos em que podemos atuar.",
+        "ct_demand_web": "Sistemas web",
+        "ct_demand_apps": "Aplicativos",
+        "ct_demand_apis": "APIs e integrações",
+        "ct_demand_automation": "Automação",
+        "ct_demand_infra": "Infraestrutura e deploy",
+        "ct_demand_evolution": "Evolução de sistemas existentes",
+        "ct_final_title": "Um problema real é um bom ponto de partida.",
+        "ct_final_desc": "A partir dele, avaliamos juntos o que realmente precisa ser construído.",
+        "ct_final_cta": "Ver projetos",
+        "ct_form_title": "Enviar uma mensagem",
+        "ct_form_intro": "Conte brevemente o que você precisa. O contato também pode começar por WhatsApp ou e-mail.",
+        "ct_form_submit": "Enviar mensagem",
+        "ct_form_error": "Não foi possível enviar a mensagem. Tente novamente ou use WhatsApp ou e-mail.",
+        "ct_success_label": "Mensagem enviada",
+        "ct_success_title": "Mensagem enviada.",
+        "ct_success_desc": "O retorno será feito pelo endereço informado.",
+
         //Home
         "home_hero_title": "Tiramos sua ideia do papel com <br class='hidden md:block'/> <span class='text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-500 to-cyan-400 bg-300% animate-gradient'>tecnologia e design.</span>",
         "home_hero_subtitle": "Desenvolvimento de software de alta performance, aplicativos nativos e plataformas web escaláveis. Transformamos complexidade em experiência.",
@@ -536,6 +577,47 @@ const translations = {
         "ab_final_desc": "You speak directly with the person who will handle the analysis and technical execution.",
         "ab_final_cta": "Start a conversation",
 
+        // Contact
+        "ct_page_title": "Contact | Trinity Digital Media and Technology",
+        "ct_hero_label": "Contact / New projects",
+        "ct_hero_title": "Let's talk about what you need to build or solve.",
+        "ct_hero_desc": "You speak directly with the person who will handle the technical analysis and lead development.",
+        "ct_channels_label": "Contact channels",
+        "ct_channels_title": "Choose the channel that works best.",
+        "ct_wa_title": "Direct conversation",
+        "ct_wa_desc": "For projects, initial questions, or to explore whether an idea makes technical sense.",
+        "ct_wa_cta": "Chat on WhatsApp",
+        "ct_email_label": "Email",
+        "ct_email_title": "Email",
+        "ct_email_desc": "For proposals, documents, or messages that need more context.",
+        "ct_email_cta": "Send an email",
+        "ct_form_trigger": "Prefer to send a message through the form?",
+        "ct_conversation_label": "To get started",
+        "ct_conversation_title": "You don't need to have everything figured out.",
+        "ct_conversation_desc": "A first conversation can start with the problem. Architecture, technologies, and scope come after understanding the context.",
+        "ct_topic_problem": "What needs to be solved",
+        "ct_topic_process": "How the process works today",
+        "ct_topic_users": "Who will use the solution",
+        "ct_topic_existing": "What already exists or has been tried",
+        "ct_demands_label": "Types of work",
+        "ct_demands_title": "Some contexts where we can help.",
+        "ct_demand_web": "Web systems",
+        "ct_demand_apps": "Apps",
+        "ct_demand_apis": "APIs and integrations",
+        "ct_demand_automation": "Automation",
+        "ct_demand_infra": "Infrastructure and deployment",
+        "ct_demand_evolution": "Evolution of existing systems",
+        "ct_final_title": "A real problem is a good starting point.",
+        "ct_final_desc": "From there, we can assess together what really needs to be built.",
+        "ct_final_cta": "View projects",
+        "ct_form_title": "Send a message",
+        "ct_form_intro": "Briefly describe what you need. You can also start a conversation on WhatsApp or by email.",
+        "ct_form_submit": "Send message",
+        "ct_form_error": "Your message could not be sent. Please try again or use WhatsApp or email.",
+        "ct_success_label": "Message sent",
+        "ct_success_title": "Message sent.",
+        "ct_success_desc": "A reply will be sent to the address you provided.",
+
         //Home
         "home_hero_title": "We bring your ideas to life with <br class='hidden md:block'/> <span class='text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-500 to-cyan-400 bg-300% animate-gradient'>technology and design.</span>",
         "home_hero_subtitle": "High-performance software development, native apps, and scalable web platforms. We transform complexity into experience.",
@@ -837,7 +919,9 @@ function setupModal() {
             e.preventDefault(); // Impede o redirecionamento padrão
 
             const submitBtn = form.querySelector('button[type="submit"]');
+            const errorNotice = document.getElementById('contact-form-error');
             const originalBtnText = submitBtn.innerHTML;
+            if (errorNotice) errorNotice.classList.add('hidden');
             
             // Muda texto para "Enviando..."
             const lang = localStorage.getItem('preferredLanguage') || 'pt';
@@ -854,14 +938,23 @@ function setupModal() {
                     'Accept': 'application/json'
                 }
             })
-            .then(response => {
+            .then(async response => {
+                const result = await response.json();
+                if (!response.ok || result.success === false || result.success === 'false') {
+                    throw new Error(result.message || 'FormSubmit rejected the message');
+                }
                 closeModal(modalProject);
                 openModal(modalSuccess);
                 form.reset();
             })
             .catch(error => {
                 console.error("Detalhe do erro:", error);
-                alert("Ocorreu um erro ao enviar. Por favor, tente pelo WhatsApp.");
+                if (errorNotice) {
+                    errorNotice.classList.remove('hidden');
+                } else {
+                    const lang = localStorage.getItem('preferredLanguage') || 'pt';
+                    alert(translations[lang]['ct_form_error']);
+                }
             })
             .finally(() => {
                 submitBtn.innerHTML = originalBtnText;
