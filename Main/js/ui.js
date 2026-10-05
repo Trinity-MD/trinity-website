@@ -14,6 +14,8 @@ const translations = {
         "footer_rights": "Todos os direitos reservados.",
 
         // Nova Home
+        "nh_page_title": "Trinity Mídia Digital e Tecnologia | Desenvolvimento Full Stack",
+        "nh_page_description": "Trinity Mídia Digital e Tecnologia. Desenvolvimento de sistemas web, aplicativos, APIs, integrações e infraestrutura de ponta a ponta.",
         "nh_brand_sub": "Mídia Digital e Tecnologia",
         "nh_start_project": "Iniciar um projeto",
         "nh_hero_eyebrow_brand": "Trinity Mídia Digital e Tecnologia",
@@ -96,6 +98,7 @@ const translations = {
 
         // Catálogo de projetos
         "pr_page_title": "Projetos | Trinity Mídia Digital e Tecnologia",
+        "pr_page_description": "Projetos reais da Trinity: sistemas em produção, aplicativos, ferramentas e referências técnicas desenvolvidos em diferentes contextos.",
         "pr_hero_label": "Portfólio / Projetos",
         "pr_hero_title": "Projetos construídos para problemas reais.",
         "pr_hero_desc": "Uma seleção de sistemas, aplicativos, ferramentas e projetos técnicos desenvolvidos em diferentes contextos — de operações corporativas em produção a produtos próprios e soluções pontuais.",
@@ -146,6 +149,7 @@ const translations = {
 
         // Sobre
         "ab_page_title": "Sobre | Trinity Mídia Digital e Tecnologia",
+        "ab_page_description": "Conheça a trajetória, os princípios e a forma de trabalhar da Trinity Mídia Digital e Tecnologia.",
         "ab_hero_label": "Sobre / Trinity",
         "ab_hero_title": "Software construído com contexto, responsabilidade e condução direta.",
         "ab_hero_desc": "A Trinity Mídia Digital e Tecnologia é a estrutura empresarial por trás dos projetos. O desenvolvimento e a condução técnica são realizados diretamente por quem acompanha o problema, define a arquitetura e leva a solução até produção.",
@@ -193,6 +197,7 @@ const translations = {
 
         // Contato
         "ct_page_title": "Contato | Trinity Mídia Digital e Tecnologia",
+        "ct_page_description": "Fale diretamente com a Trinity Mídia Digital e Tecnologia sobre projetos, sistemas e problemas técnicos.",
         "ct_hero_label": "Contato / Novos projetos",
         "ct_hero_title": "Vamos conversar sobre o que você precisa construir ou resolver.",
         "ct_hero_desc": "O contato é direto com quem fará a análise técnica e conduzirá o desenvolvimento.",
@@ -234,6 +239,7 @@ const translations = {
 
         // Case Transporta
         "tr_page_title": "Transporta | Trinity Mídia Digital e Tecnologia",
+        "tr_page_description": "Case Transporta: aplicativo Android, dashboard web, API e infraestrutura para uma operação logística privada em produção.",
         "tr_nav_label": "Navegação principal",
         "tr_language_label": "Idioma",
         "tr_menu_label": "Abrir menu",
@@ -420,6 +426,8 @@ const translations = {
 
         // New Home
         "nh_brand_sub": "Digital Media and Technology",
+        "nh_page_title": "Trinity Digital Media and Technology | Full Stack Development",
+        "nh_page_description": "Trinity Digital Media and Technology. Development of web systems, apps, APIs, integrations, and infrastructure from end to end.",
         "nh_start_project": "Start a project",
         "nh_hero_eyebrow_brand": "Trinity Digital Media and Technology",
         "nh_hero_eyebrow_work": "End-to-End Software Development",
@@ -501,6 +509,7 @@ const translations = {
 
         // Projects catalog
         "pr_page_title": "Projects | Trinity Digital Media and Technology",
+        "pr_page_description": "Real Trinity projects: production systems, apps, tools, and technical references developed in different contexts.",
         "pr_hero_label": "Portfolio / Projects",
         "pr_hero_title": "Projects built for real problems.",
         "pr_hero_desc": "A selection of systems, apps, tools, and technical projects developed in different contexts — from corporate operations in production to independent products and focused solutions.",
@@ -551,6 +560,7 @@ const translations = {
 
         // About
         "ab_page_title": "About | Trinity Digital Media and Technology",
+        "ab_page_description": "Discover the background, principles, and working approach of Trinity Digital Media and Technology.",
         "ab_hero_label": "About / Trinity",
         "ab_hero_title": "Software built with context, responsibility, and direct technical leadership.",
         "ab_hero_desc": "Trinity Digital Media and Technology is the business structure behind the projects. Development and technical direction are handled directly by the person who understands the problem, defines the architecture, and takes the solution into production.",
@@ -598,6 +608,7 @@ const translations = {
 
         // Contact
         "ct_page_title": "Contact | Trinity Digital Media and Technology",
+        "ct_page_description": "Contact Trinity Digital Media and Technology directly about projects, systems, and technical problems.",
         "ct_hero_label": "Contact / New projects",
         "ct_hero_title": "Let's talk about what you need to build or solve.",
         "ct_hero_desc": "You speak directly with the person who will handle the technical analysis and lead development.",
@@ -639,6 +650,7 @@ const translations = {
 
         // Transporta case
         "tr_page_title": "Transporta | Trinity Digital Media and Technology",
+        "tr_page_description": "Transporta case study: Android app, web dashboard, API, and infrastructure for a private logistics operation in production.",
         "tr_nav_label": "Main navigation",
         "tr_language_label": "Language",
         "tr_menu_label": "Open menu",
@@ -860,8 +872,8 @@ window.changeLanguage = function(lang) {
             element.innerHTML = translations[lang][key];
         }
     });
-    document.querySelectorAll('[data-i18n-alt], [data-i18n-aria-label]').forEach(element => {
-        for (const attribute of ['alt', 'aria-label']) {
+    document.querySelectorAll('[data-i18n-alt], [data-i18n-aria-label], [data-i18n-content]').forEach(element => {
+        for (const attribute of ['alt', 'aria-label', 'content']) {
             const key = element.getAttribute(`data-i18n-${attribute}`);
             if (key && translations[lang] && translations[lang][key]) {
                 element.setAttribute(attribute, translations[lang][key]);
