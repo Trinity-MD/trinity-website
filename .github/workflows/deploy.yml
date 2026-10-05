@@ -48,9 +48,19 @@ jobs:
           docker compose build trinity_site
           docker compose up -d trinity_site
 
-          curl --fail --silent --show-error \
-            http://127.0.0.1:3014/ \
-            > /dev/null
+          for i in {1..10}; do
+          if curl -fsS http://127.0.0.1:3014/ >/dev/null; then
+            echo "Site respondeu com sucesso."
+            exit 0
+          fi
+
+          echo "Aguardando o container responder... tentativa $i/10"
+          sleep 2
+          done
+
+          echo "Site não respondeu após 10 tentativas."
+          docker logs --tail 100 trinity_site_web
+          exit 1
 
           docker compose ps trinity_site
           EOF
