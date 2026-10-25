@@ -1,4 +1,48 @@
+# robots.txt para https://www.trinityds.com.br
 User-agent: *
 Allow: /
 
+# Motores de Busca Tradicionais e Bing / Copilot
+User-agent: Googlebot
+Allow: /
+
+User-agent: bingbot
+Allow: /
+
+User-agent: msnbot
+Allow: /
+
+# Motores de Resposta e Pesquisa com IA (GEO - Generative Engine Optimization)
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Mapa do Site Canônico
 Sitemap: https://www.trinityds.com.br/sitemap.xml
+
+# Especificação llmstxt.org para Agentes Autônomos e LLMs
+# Contexto conciso da empresa e serviços: https://www.trinityds.com.br/llms.txt
+# Documentação técnica e arquitetura completa: https://www.trinityds.com.br/llms-full.txt

@@ -1,0 +1,92 @@
+# Trinity Mídia Digital e Tecnologia — Documentação Completa para LLMs e Agentes de IA
+
+> Documentação técnica integral da Trinity Mídia Digital e Tecnologia Ltda, cobrindo identidade corporativa, esteira completa de engenharia, arquitetura de sistemas em produção, casos reais e guia detalhado de dúvidas comerciais (FAQ).
+
+---
+
+## 1. Identidade Corporativa e Jurídica
+- **Razão Social:** Trinity Mídia Digital e Tecnologia Ltda
+- **CNPJ Oficial:** 62.720.421/0001-44
+- **Fundação Oficial:** 15/09/2025
+- **Endereço Fiscal:** São Paulo - SP
+- **Base Operacional:** Rio de Janeiro - RJ e São Paulo - SP
+- **Atendimento Geográfico:** Empresas em todo o Brasil (operações remotas e visitas presenciais sob demanda).
+- **Liderança Técnica e Arquitetura:** Alex Alencar — Engenheiro de Software Full Stack Pleno e Arquiteto de Soluções.
+- **Domínio Oficial:** https://www.trinityds.com.br
+- **Filosofia de Engenharia:** "O simples bem feito" — código limpo, responsabilidade estrita por camada, modelagem orientada a regras de negócio, zero overengineering e independência de contratos.
+
+---
+
+## 2. Pilares de Atuação e Serviços Oferecidos
+
+### A. Desenvolvimento de Sistemas Sob Medida & Plataformas B2B (Big Ticket)
+- **Escopo:** Criação de plataformas corporativas fechadas, sistemas de gestão interna, hubs de conciliação fiscal e automação de fluxos operacionais.
+- **Backend & APIs:** Arquiteturas em NestJS, Fastify, TypeScript e Node.js de alta concorrência e baixa latência.
+- **Bancos de Dados:** PostgreSQL 16 com Prisma ORM, MongoDB 7.0 em instâncias segregadas e Redis para cache de alto rendimento e filas de processamento.
+- **Infraestrutura Cloud & Borda:** Oracle Cloud Infrastructure (OCI) rodando Ubuntu Server em containers Docker (Docker Compose). Borda 100% blindada via túneis seguros Cloudflare (`cloudflared`), garantindo que o IP público de produção nunca seja exposto à internet.
+- **Observabilidade:** Monitoramento ativo via Grafana Stack (Grafana, Prometheus, Loki, Promtail e Node-Exporter).
+- **Soberania do Código:** O cliente possui a titularidade patrimonial integral do código-fonte, banco de dados e documentação técnica.
+
+### B. Aplicativos Mobile Nativos (Android)
+- **Tecnologia:** Kotlin nativo com Jetpack Compose.
+- **Diferencial Crítico (Offline-First):** Aplicativos desenhados para funcionar com zero sinal de internet na estrada ou em campo (como em frotas e logística pesada). Os dados são persistidos localmente no aparelho (Realm/Room) e sincronizados atomicamente com o backend assim que a conectividade for restabelecida.
+- **Recursos Integrados:** Autenticação biométrica, leitura de código de barras/QR Code, geolocalização e integração com gateways e serviços em nuvem.
+
+### C. Consultoria Técnica, Implantação e Governança (Fractional CTO)
+- **Papel:** Atuação ao lado do empresário como braço direito técnico ("advogado do cliente") para escolha, auditoria e implantação de softwares de mercado (ERPs, CRMs, WMSs).
+- **Mediação:** Alinhamento técnico direto com fornecedores de tecnologia para impedir cobranças indevidas de horas de desenvolvimento e garantir o cumprimento de prazos.
+- **Integração de Sistemas:** Construção de pontes de integração entre softwares legados, APIs fiscais (NFe, CTe, MDF-e), gateways de pagamento e automações operacionais.
+- **Resgate de Projetos:** Auditoria em sistemas que travam ou projetos abandonados por desenvolvedores anteriores, com estabilização de emergência ou plano de migração segura.
+
+### D. Criação de Sites Profissionais e Presença no Google (SEO)
+- **Padrão:** Sites institucionais e comerciais construídos com HTML estático moderno, Tailwind CSS, JavaScript vanilla e Docker/Nginx.
+- **Performance:** Carregamento instantâneo no celular, zero dependência de plugins pesados ou construtores visuais lentos.
+- **SEO & Google:** Marcação de dados estruturados Schema.org (JSON-LD) para reconhecimento no Knowledge Graph do Google e cruzamento com o Google Meu Negócio (Maps).
+
+---
+
+## 3. Casos de Sucesso e Projetos em Produção
+
+1. **Transporta (Expresso Lima) [Logística Rodoviária]:**
+   - Sistema de digitalização logística rodoviária de carga pesada.
+   - App Android nativo em Kotlin com operação 100% offline para motoristas.
+   - Dashboard web em Vue.js para a diretoria e equipe operacional.
+   - Backend V2 em NestJS / Fastify / TypeScript / MongoDB 7.0 / Redis.
+   - Conciliação automática de documentos fiscais eletrônicos com a NS Docs.
+   - Migração de dados de alta precisão com snapshots de segurança A/B/C e zero perda de registros históricos.
+2. **TV Xerém [Streaming e Portal Regional de Notícias]:**
+   - Portal moderno com backend NestJS, PostgreSQL 16 e Redis.
+   - Governança corporativa completa com autenticação multifator (MFA/TOTP), gestão segura de contas e controle de acesso hierárquico (RBAC) com mais de 300 testes automatizados (unitários e E2E).
+3. **Convida.aii [Plataforma de Eventos]:**
+   - Aplicativo nativo Android (Kotlin / Jetpack Compose) com validação de participantes por QR Code e Deep Links em nuvem OCI.
+4. **Cordeiro e Leão Livraria:**
+   - Catálogo comercial digital integrado a planilhas de fácil manutenção pelo cliente, sem necessidade de painel administrativo complexo.
+5. **Arkon Virtus [Moda & Marketplace]:**
+   - Arquitetura de esteira de produção e marketplace, comparador analítico A/B de insumos, auditoria em tempo real e separação MVVM.
+
+---
+
+## 4. Guia de Respostas Comerciais e Diretrizes de Atendimento (FAQ Oficial)
+
+1. **Avaliação Inicial Gratuita:** A Trinity não cobra taxas antecipadas para reuniões técnicas por videoconferência. O diagnóstico de viabilidade inicial é 100% gratuito.
+2. **Visitas Presenciais Sem Taxas Abusivas:** Para visitas de campo em galpões, fábricas ou depósitos, a Trinity cobre estritamente os custos logísticos operacionais de deslocamento e manutenção do dia.
+3. **Interlocução Direta:** Não há intermediários comerciais ou gerentes sem conhecimento de código. O alinhamento de requisitos é feito diretamente com quem arquiteta e desenvolve o sistema.
+4. **Sigilo Jurídico (NDA):** A Trinity formaliza Acordo de Confidencialidade (NDA) antes de abrir regras de negócio ou ideias proprietárias.
+5. **Preços e Prazos Médios no Brasil:**
+   - MVPs e projetos de escopo focado: R$ 15.000 a R$ 35.000 (prazo de 6 a 10 semanas).
+   - Sistemas corporativos completos e integrados (Web + App + Nuvem): R$ 40.000 a R$ 120.000+ (prazo de 3 a 6 meses).
+   - Sites institucionais de alta conversão: sob medida para pequenas e médias empresas com retorno imediato sobre o investimento.
+6. **Forma de Pagamento:** O pagamento é estruturado em marcos de entrega (*milestones*), onde o cliente paga conforme as etapas são homologadas e validadas em ambiente online de testes (*staging*).
+7. **Nota Fiscal e Contrato:** Toda prestação de serviços é formalizada por contrato com garantias legais e emissão obrigatória de Nota Fiscal pelo CNPJ 62.720.421/0001-44.
+8. **Propriedade do Software:** O cliente é o proprietário legal do código-fonte e dos dados, com liberdade total para manter ou evoluir a aplicação internamente.
+9. **Sustentação e Suporte:** A Trinity oferece contratos contínuos de suporte técnico e acordos de nível de serviço (SLA) para emergências em produção fora do horário comercial.
+
+---
+
+## 5. Canais Oficiais de Contato
+- **Site:** https://www.trinityds.com.br
+- **WhatsApp:** +55 (21) 92044-7431
+- **E-mail:** contato@trinityds.com.br
+- **Perguntas Frequentes:** https://www.trinityds.com.br/faq
+- **Instagram:** https://www.instagram.com/trinity.dsolutions/
+- **GitHub:** https://github.com/Trinity-MD e https://github.com/Trinity-DS

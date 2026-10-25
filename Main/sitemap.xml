@@ -5,35 +5,35 @@
   <!-- PÁGINA INICIAL (HOME) -->
   <url>
     <loc>https://www.trinityds.com.br/</loc>
-    <lastmod>2026-09-28</lastmod>
+    <lastmod>2026-10-25</lastmod>
   </url>
 
   <!-- PÁGINAS PRINCIPAIS -->
   <url>
     <loc>https://www.trinityds.com.br/projetos</loc>
-    <lastmod>2026-09-28</lastmod>
+    <lastmod>2026-10-25</lastmod>
   </url>
 
   <url>
     <loc>https://www.trinityds.com.br/sobre</loc>
-    <lastmod>2026-09-28</lastmod>
+    <lastmod>2026-10-25</lastmod>
   </url>
 
   <url>
     <loc>https://www.trinityds.com.br/contato</loc>
-    <lastmod>2026-09-28</lastmod>
+    <lastmod>2026-10-25</lastmod>
   </url>
 
-<url>
+  <url>
     <loc>https://www.trinityds.com.br/faq</loc>
-    <lastmod>2026-10-24</lastmod>
+    <lastmod>2026-10-25</lastmod>
   </url>
 
   <!-- PROJETOS INDIVIDUAIS -->
   <!-- Projeto 1: Transporta -->
   <url>
     <loc>https://www.trinityds.com.br/projetos/transporta</loc>
-    <lastmod>2026-09-28</lastmod>
+    <lastmod>2026-10-25</lastmod>
   </url>
 
 </urlset>

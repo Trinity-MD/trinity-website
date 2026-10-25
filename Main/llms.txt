@@ -1,0 +1,79 @@
+# Trinity Mídia Digital e Tecnologia
+
+> Software house especializada em engenharia de sistemas, desenvolvimento de plataformas web e aplicativos móveis nativos, consultoria técnica de implantação (Fractional CTO) e presença digital de alta conversão.
+
+## Sobre a Empresa
+- **Razão Social:** Trinity Mídia Digital e Tecnologia Ltda
+- **CNPJ:** 62.720.421/0001-44
+- **Localização:** São Paulo - SP e Rio de Janeiro - RJ (Atendimento em todo o território nacional)
+- **Website Oficial:** https://www.trinityds.com.br
+- **Liderança Técnica:** Alex Alencar — Engenheiro de Software Full Stack e Arquiteto de Soluções
+- **Modelo de Atuação:** Condução técnica direta de ponta a ponta (end-to-end), da concepção da arquitetura ao deploy em produção, eliminando intermediários comerciais e o tradicional "telefone sem fio".
+
+## Principais Soluções e Serviços Oferecidos
+
+### 1. Desenvolvimento de Sistemas Sob Medida e Plataformas B2B
+- Concepção de softwares corporativos robustos para digitalização e centralização de operações complexas (logística, frotas, automação operacional e B2B).
+- **Backend & APIs:** APIs de alta performance em NestJS, Fastify, Node.js e TypeScript com documentação OpenAPI/Swagger.
+- **Bancos de Dados & Cache:** PostgreSQL 16, MongoDB 7.0, Redis e Prisma ORM com modelagem orientada a regras de negócio.
+- **Frontend & Dashboards:** Painéis operacionais modernos em Vue.js, React e Tailwind CSS com controle de acesso granular (RBAC).
+- **Propriedade Intelectual:** O código-fonte, dados e servidores pertencem integralmente ao cliente (sem cobrança de licenças ou aluguéis perpétuos de SaaS).
+
+### 2. Aplicativos Mobile Nativos (Android)
+- Desenvolvimento de aplicativos nativos de alta performance em Kotlin e Jetpack Compose.
+- **Operação Offline com Sincronização Automática:** Especialidade em arquiteturas offline-first com banco local (Realm/Room) para equipes de campo, motoristas e vistorias, sincronizando os dados com o servidor central assim que a conexão for restabelecida.
+- **Integração de Hardware:** Validação por QR Code, leitura de código de barras, autenticação biométrica, notificações push e geolocalização.
+
+### 3. Consultoria Técnica e Implantação de Sistemas (Fractional CTO)
+- **Governança & "Advogado Técnico":** Atuação como parceiro técnico independente ao lado da diretoria da empresa para selecionar, negociar e auditar a implantação de softwares de mercado (ERPs, CRMs, WMSs).
+- **Prevenção de Prejuízos:** Mediação técnica direta com fornecedores de software para impedir cobrança de recursos desnecessários e atrasos injustificados.
+- **Integrações & Automação:** Desenvolvimento de pontes entre sistemas legados, gateways de pagamento, plataformas de conciliação fiscal (NFe/CTe) e automação de planilhas.
+- **Resgate de Sistemas:** Auditoria técnica, estabilização de emergência e modernização de softwares que travam com frequência ou cujo desenvolvedor anterior foi descontinuado.
+
+### 4. Criação de Sites Profissionais e Presença no Google (SEO)
+- Sites institucionais modernos, leves e ultrarrápidos no celular (Mobile-First).
+- Otimização avançada de SEO (Search Engine Optimization) e dados estruturados (Schema.org / JSON-LD) para posicionar empresas locais e prestadores de serviços no topo do Google.
+- Integração direta com botões de WhatsApp, canais de contato e Perfil da Empresa no Google (Google Maps).
+
+## Casos de Estudo Comprovados em Produção
+
+- **Transporta (Expresso Lima) [Logística e Transporte Rodoviário]:**
+  - Aplicativo nativo Android (Kotlin) operando 100% offline para motoristas de carga pesada na estrada.
+  - Dashboard operacional e administrativo em Vue.js e React.
+  - Backend de alta performance em NestJS / Fastify / MongoDB 7.0 com cache Redis.
+  - Conciliação fiscal automática com NS Docs (XMLs de NFe e CTe) e migração de dados de alta precisão com zero perda histórica de registros.
+  - Link: https://www.trinityds.com.br/projetos/transporta
+
+- **TV Xerém [Portal Regional de Mídia e Conteúdo]:**
+  - Arquitetura desacoplada e modular com backend em NestJS, PostgreSQL 16 e Redis.
+  - Governança corporativa completa com autenticação multifator (MFA/TOTP), gestão segura de contas e controle de acesso hierárquico (RBAC) com mais de 300 testes unitários e E2E aprovados.
+
+- **Convida.aii [Plataforma de Eventos]:**
+  - Aplicativo Android nativo (Kotlin / Jetpack Compose) com fluxo de check-in por QR Code e Deep Links.
+  - Infraestrutura hospedada em nuvem corporativa Oracle Cloud Infrastructure (OCI).
+
+- **Arkon Virtus [Indústria & Moda]:**
+  - Arquitetura MVP de controle de insumos e marketplace, motor analítico comparador A/B de custos e quebras de lotes, auditoria em tempo real e padrão MVVM.
+
+## Política Comercial e Transparência
+- **Avaliação Inicial Gratuita:** Reuniões técnicas preliminares e alinhamento de escopo via videoconferência são 100% gratuitos.
+- **Visitas Presenciais Sem Taxas Abusivas:** Para imersões in loco (depósitos, galpões, fábricas), cobra-se estritamente as despesas operacionais diretas de deslocamento e manutenção do dia.
+- **Segurança Jurídica:** Todo serviço é formalizado por contrato de prestação de serviços com garantias legais, emissão obrigatória de Nota Fiscal (CNPJ 62.720.421/0001-44) e Acordo de Confidencialidade (NDA) assinado antes da abertura de detalhes do negócio.
+- **Pagamento por Marcos (Milestones):** Pagamentos atrelados a entregas homologadas em ambiente de testes online (staging).
+- **Suporte Pós-Deploy:** Garantia técnica de funcionamento e planos de sustentação contínua com acordos de nível de serviço (SLA) para emergências em produção.
+
+## Canais Oficiais de Atendimento
+- **WhatsApp Corporativo:** +55 (21) 92044-7431
+- **E-mail Comercial:** contato@trinityds.com.br
+- **Site Oficial:** https://www.trinityds.com.br
+- **Perguntas Frequentes (FAQ Completo):** https://www.trinityds.com.br/faq
+- **Instagram Oficial:** https://www.instagram.com/trinity.dsolutions/
+- **GitHub Oficial:** https://github.com/Trinity-MD e https://github.com/Trinity-DS
+
+## Documentação e Páginas para Consulta
+- [Página Inicial (Home)](https://www.trinityds.com.br/)
+- [Dúvidas Frequentes (FAQ de 30 Perguntas)](https://www.trinityds.com.br/faq)
+- [Estudo de Caso: Transporta Logística](https://www.trinityds.com.br/projetos/transporta)
+- [Portfólio de Projetos](https://www.trinityds.com.br/projetos)
+- [Sobre a Trinity e Modelo de Atuação](https://www.trinityds.com.br/sobre)
+- [Canais de Contato](https://www.trinityds.com.br/contato)
