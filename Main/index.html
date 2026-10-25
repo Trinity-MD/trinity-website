@@ -17,28 +17,111 @@
     <meta name="twitter:title" content="Trinity Mídia Digital e Tecnologia | Desenvolvimento Full Stack">
     <meta name="twitter:description" content="Trinity Mídia Digital e Tecnologia. Desenvolvimento de sistemas web, aplicativos, APIs, integrações e infraestrutura de ponta a ponta.">
     <meta name="twitter:image" content="https://www.trinityds.com.br/Imagens/trinity-logo-header.png">
+    <!-- ========================================================= -->
+    <!-- [GOOGLE & SEO] DADOS ESTRUTURADOS OFICIAIS (JSON-LD SCHEMA) -->
+    <!-- Entidade: Trinity Mídia Digital e Tecnologia Ltda        -->
+    <!-- CNPJ: 62.720.421/0001-44 | Domínio: www.trinityds.com.br   -->
+    <!-- ========================================================= -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@graph": [
             {
-                "@type": "Organization",
+                "@type": ["Organization", "ProfessionalService"],
                 "@id": "https://www.trinityds.com.br/#organization",
                 "name": "Trinity Mídia Digital e Tecnologia",
+                "alternateName": "Trinity Digital Solutions",
+                "legalName": "Trinity Mídia Digital e Tecnologia Ltda",
                 "url": "https://www.trinityds.com.br/",
-                "logo": "https://www.trinityds.com.br/Imagens/trinity-logo-header.png"
+                "logo": "https://www.trinityds.com.br/Imagens/trinity-logo-header.png",
+                "image": "https://www.trinityds.com.br/Imagens/trinity-logo-header.png",
+                "taxID": "62.720.421/0001-44",
+                "description": "Software house especializada em engenharia de sistemas, desenvolvimento web e mobile, infraestrutura cloud de alta performance e presença digital.",
+                "telephone": "+55-21-92044-7431",
+                "contactPoint": {
+                    "@type": "ContactPoint",
+                    "telephone": "+55-21-92044-7431",
+                    "contactType": "customer service",
+                    "availableLanguage": ["Portuguese", "English"]
+                },
+                "sameAs": [
+                    "https://www.instagram.com/trinity.dsolutions/",
+                    "https://github.com/Trinity-DS"
+                ],
+                "areaServed": [
+                    {
+                        "@type": "Country",
+                        "name": "Brasil"
+                    },
+                    {
+                        "@type": "State",
+                        "name": "Rio de Janeiro"
+                    },
+                    {
+                        "@type": "State",
+                        "name": "São Paulo"
+                    }
+                ],
+                "knowsAbout": [
+                    "Software Engineering",
+                    "Full Stack Development",
+                    "Mobile Apps Kotlin Android",
+                    "Cloud Infrastructure OCI",
+                    "DevOps and Docker",
+                    "High Performance APIs NestJS Fastify",
+                    "Web Design e Marketing Digital"
+                ],
+                "hasOfferCatalog": {
+                    "@type": "OfferCatalog",
+                    "name": "Serviços de Engenharia e Tecnologia",
+                    "itemListElement": [
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "Service",
+                                "name": "Desenvolvimento de Software Sob Medida e Plataformas B2B"
+                            }
+                        },
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "Service",
+                                "name": "Aplicativos Nativos Mobile (Android)"
+                            }
+                        },
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "Service",
+                                "name": "Arquitetura Cloud, DevOps e Segurança de Dados"
+                            }
+                        },
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "Service",
+                                "name": "Web Design e Presença Digital Estratégica"
+                            }
+                        }
+                    ]
+                }
             },
             {
                 "@type": "WebSite",
                 "@id": "https://www.trinityds.com.br/#website",
                 "url": "https://www.trinityds.com.br/",
                 "name": "Trinity Mídia Digital e Tecnologia",
-                "publisher": { "@id": "https://www.trinityds.com.br/#organization" },
+                "publisher": {
+                    "@id": "https://www.trinityds.com.br/#organization"
+                },
                 "inLanguage": "pt-BR"
             }
         ]
     }
     </script>
+    <!-- ========================================================= -->
+    <!-- [FIM GOOGLE & SEO]                                        -->
+    <!-- ========================================================= -->
     <link rel="stylesheet" href="/dist/output.css">
 </head>
 <body class="trinity-home">
