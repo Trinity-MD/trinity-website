@@ -64,3 +64,21 @@ jobs:
 
           docker compose ps trinity_site
           EOF
+
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Restore IndexNow Cooldown Cache
+        uses: actions/cache@v4
+        with:
+          path: .indexnow_cache.json
+          key: indexnow-cache-${{ github.run_id }}
+          restore-keys: |
+            indexnow-cache-
+
+      - name: Notify Search Engines via IndexNow
+        shell: bash
+        run: |
+          python3 scripts/indexnow_submit.py
