@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-i18n="tr_page_title">Transporta | Trinity Mídia Digital e Tecnologia</title>
-    <meta name="description" data-i18n-content="tr_page_description" content="Case Transporta: aplicativo Android, dashboard web, API e infraestrutura para uma operação logística privada em produção.">
+    <title data-i18n="tr_page_title">Transporta V2 — Case de Engenharia & Migração | Trinity</title>
+    <meta name="description" data-i18n-content="tr_page_description" content="Case Transporta: aplicativo Android Kotlin offline-first, novo dashboard em Vue 3, API em TypeScript com Redis e migração de dados em produção sem parada operacional.">
     <link rel="canonical" href="https://www.trinityds.com.br/projetos/transporta">
     <link rel="icon" type="image/png" href="/Imagens/trinity-logo-header.png">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Trinity Mídia Digital e Tecnologia">
-    <meta property="og:title" content="Transporta | Trinity Mídia Digital e Tecnologia">
-    <meta property="og:description" content="Case Transporta: aplicativo Android, dashboard web, API e infraestrutura para uma operação logística privada em produção.">
+    <meta property="og:title" content="Transporta V2 — Case de Engenharia & Migração | Trinity">
+    <meta property="og:description" content="Case Transporta: aplicativo Android Kotlin offline-first, novo dashboard em Vue 3, API em TypeScript com Redis e migração de dados em produção sem parada operacional.">
     <meta property="og:url" content="https://www.trinityds.com.br/projetos/transporta">
     <meta property="og:image" content="https://www.trinityds.com.br/Imagens/Transporta_cover.png">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Transporta | Trinity Mídia Digital e Tecnologia">
-    <meta name="twitter:description" content="Case Transporta: aplicativo Android, dashboard web, API e infraestrutura para uma operação logística privada em produção.">
+    <meta name="twitter:title" content="Transporta V2 — Case de Engenharia & Migração | Trinity">
+    <meta name="twitter:description" content="Case Transporta: aplicativo Android Kotlin offline-first, novo dashboard em Vue 3, API em TypeScript com Redis e migração de dados em produção sem parada operacional.">
     <meta name="twitter:image" content="https://www.trinityds.com.br/Imagens/Transporta_cover.png">
     <link rel="stylesheet" href="/dist/output.css">
 
@@ -29,8 +29,8 @@
             {
                 "@type": "TechArticle",
                 "@id": "https://www.trinityds.com.br/projetos/transporta#article",
-                "headline": "Case de Engenharia Transporta — Aplicativo Android Kotlin Offline-First e Gestão de Cargas",
-                "description": "Estudo de caso detalhado do ecossistema Transporta: aplicativo móvel para motoristas em Kotlin nativo, dashboard web administrativo, sincronização offline com Realm/Room e conciliação fiscal automática de CT-e e NF-e.",
+                "headline": "Case de Engenharia Transporta V2 — Arquitetura Offline-First, Vue 3 e Migração Sem Big Bang",
+                "description": "Estudo de caso detalhado da evolução do ecossistema Transporta: aplicativo móvel para motoristas em Kotlin com Outbox Pattern, novo dashboard administrativo em Vue 3, conciliação fiscal automática de CT-e/NF-e com NS Docs e migração de dados históricos em produção com zero perda.",
                 "url": "https://www.trinityds.com.br/projetos/transporta",
                 "inLanguage": "pt-BR",
                 "author": {
@@ -45,16 +45,17 @@
                 },
                 "about": {
                     "@type": "SoftwareApplication",
-                    "name": "Transporta Mobile & Web",
+                    "name": "Transporta V2 Mobile & Web",
+                    "softwareVersion": "2.0.0",
                     "applicationCategory": "BusinessApplication",
                     "operatingSystem": "Android, Web Browser",
                     "featureList": [
-                        "Operação 100% offline para motoristas de carga pesada",
-                        "Sincronização bidirecional resiliente de dados com o servidor",
-                        "Leitura de código de barras e validação de canhotos fiscais",
-                        "Conciliação automática de CT-e e NF-e com NS Docs",
-                        "Backend de alta performance em NestJS e Fastify com cache Redis",
-                        "Infraestrutura conteinerizada com Docker em nuvem corporativa"
+                        "Operação 100% offline para motoristas com Fila Outbox",
+                        "Persistência de grant durável com Android Keystore P-256",
+                        "Dashboard administrativo moderno em Vue 3, Vite e Tailwind CSS",
+                        "Conciliação automática assíncrona de CT-e e NF-e via NS Docs",
+                        "Backend enxugado de 139 rotas para 32 contratos cirúrgicos com Redis",
+                        "Migração de dados históricos em produção com zero perda de registros"
                     ]
                 }
             },
@@ -118,16 +119,16 @@
     <main>
         <section class="tt-hero" aria-labelledby="transporta-title">
             <div class="th-shell">
-                <p class="th-eyebrow" data-i18n="tr_hero_label">Case / Sistema corporativo</p>
+                <p class="th-eyebrow" data-i18n="tr_hero_label">Case de Engenharia Corporativa / Logística Crítica</p>
                 <div class="tt-hero-grid">
                     <div>
                         <h1 id="transporta-title">Transporta</h1>
-                        <p class="tt-status" data-i18n="tr_status">Em produção · Projeto privado</p>
-                        <p class="tt-hero-desc" data-i18n="tr_hero_desc">Sistema corporativo desenvolvido para digitalizar e centralizar uma operação logística, conectando aplicativo Android, painel web, API, dados e infraestrutura de produção.</p>
+                        <p class="tt-status" data-i18n="tr_status">🟢 Operação em Produção · Migração V1 → V2 Concluída</p>
+                        <p class="tt-hero-desc" data-i18n="tr_hero_desc">A evolução de um ecossistema logístico em produção: da arquitetura inicial à reconstrução cirúrgica da API, modernização do Dashboard Web em Vue 3 e aplicativo Android nativo Kotlin com sincronização offline, conciliação fiscal e migração sem big bang.</p>
                     </div>
                     <div class="tt-hero-meta">
-                        <div><p class="th-eyebrow" data-i18n="tr_stack_label">Stack</p><p>Kotlin · React · Node.js / LoopBack 4 · MongoDB · Docker · Linux</p></div>
-                        <div><p class="th-eyebrow" data-i18n="tr_timeline_label">Cronologia</p><p data-i18n="tr_timeline">Iniciado mai/2025 · Entregue nov/2025 · Produção jun/2026</p></div>
+                        <div><p class="th-eyebrow" data-i18n="tr_stack_label">Stack V2</p><p>Kotlin (Offline-First) · Vue 3 + Vite · TypeScript / Fastify · MongoDB 7.0 · Redis · Oracle Cloud (OCI) · Docker · NS Docs</p></div>
+                        <div><p class="th-eyebrow" data-i18n="tr_timeline_label">Cronologia do Projeto</p><p data-i18n="tr_timeline">V1 em Produção (Mai/2025 – Jun/2026) · Arquitetura V2 e Cutover (Out/2026)</p></div>
                     </div>
                 </div>
             </div>
@@ -135,80 +136,517 @@
 
         <section class="th-section tt-context" aria-labelledby="context-title">
             <div class="th-shell tt-intro-grid">
-                <div><p class="th-eyebrow" data-i18n="tr_context_label">Problema</p><h2 id="context-title" data-i18n="tr_context_title">Uma operação que precisava conectar campo e gestão.</h2></div>
-                <div class="tt-intro-copy"><p data-i18n="tr_context_p1">O trabalho em campo dependia de documentos e registros conduzidos em processos manuais. Para acompanhar a operação, a gestão precisava reunir essas informações em um fluxo centralizado.</p><p data-i18n="tr_context_p2">O desafio era ligar a rotina dos motoristas ao acompanhamento administrativo, mantendo os dados disponíveis para consulta e continuidade do trabalho.</p></div>
+                <div><p class="th-eyebrow" data-i18n="tr_context_label">O Desafio Operacional</p><h2 id="context-title" data-i18n="tr_context_title">Conectar a boleia do caminhão sem sinal à conciliação fiscal na matriz.</h2></div>
+                <div class="tt-intro-copy"><p data-i18n="tr_context_p1">Em rotas de carga pesada, motoristas atravessam rodovias sem qualquer cobertura móvel. Registrar canhotos, ocorrências e entregas dependia de formulários manuais ou esperas de dias até o retorno à base, atrasando faturamentos e conciliações fiscais.</p><p data-i18n="tr_context_p2">O desafio era duplo: criar uma aplicação Android que operasse 100% offline com persistência durável no aparelho e, no backend, automatizar o cruzamento fiscal de CT-e e NF-e com segurança de ponta a ponta.</p></div>
             </div>
         </section>
 
         <section class="th-section tt-solution" aria-labelledby="solution-title">
             <div class="th-shell">
-                <div class="tt-section-head"><p class="th-eyebrow" data-i18n="tr_solution_label">Solução e produto</p><h2 id="solution-title" data-i18n="tr_solution_title">Quatro frentes, uma operação integrada.</h2><p data-i18n="tr_solution_desc">Aplicativo, painel, API e infraestrutura cumprem funções distintas dentro do mesmo sistema.</p></div>
+                <div class="tt-section-head"><p class="th-eyebrow" data-i18n="tr_solution_label">Solução e Arquitetura</p><h2 id="solution-title" data-i18n="tr_solution_title">A Tríade V2: Três camadas autônomas, uma operação contínua.</h2><p data-i18n="tr_solution_desc">Aplicativo móvel, painel administrativo e API corporativa integrados para garantir resiliência no campo e visibilidade na gestão.</p></div>
                 <div class="tt-fronts">
-                    <article><div><h3 data-i18n="tr_android_title">Aplicativo Android</h3><p data-i18n="tr_android_desc">Aplicação nativa em Kotlin para a rotina móvel. Registra dados e documentos, lê códigos e permite continuar o trabalho sem conexão, com sincronização posterior pela API.</p></div><p class="tt-tech">Kotlin</p></article>
-                    <article><div><h3 data-i18n="tr_web_title">Dashboard web</h3><p data-i18n="tr_web_desc">Interface administrativa para cadastros, acompanhamento de registros, filtros e exportações. Concentra a visão da gestão sobre as informações recebidas do campo.</p></div><p class="tt-tech">React · Vite · Tailwind CSS</p></article>
-                    <article><div><h3 data-i18n="tr_api_title">API</h3><p data-i18n="tr_api_desc">Camada em Node.js e LoopBack 4 para comunicação entre aplicativo, painel e banco. Centraliza regras de negócio, autenticação e permissões por perfil.</p></div><p class="tt-tech">Node.js · LoopBack 4 · MongoDB</p></article>
-                    <article><div><h3 data-i18n="tr_infra_title">Infraestrutura</h3><p data-i18n="tr_infra_desc">Ambiente em Linux com serviços organizados em containers Docker para publicação e operação do sistema em produção.</p></div><p class="tt-tech">Docker · Linux</p></article>
+                    <article><div><h3 data-i18n="tr_android_title">Aplicativo Android Nativo (Kotlin)</h3><p data-i18n="tr_android_desc">Aplicação nativa com arquitetura Offline-First e Outbox Pattern. Motoristas registram viagens, canhotos e ocorrências sem conexão; os dados são assinados com chave local P-256 no Keystore do Android e sincronizados automaticamente com a API, com In-App Updates imediato para blindar a compatibilidade da frota.</p></div><p class="tt-tech">Kotlin · Jetpack Compose · Room · Keystore P-256 · In-App Updates</p></article>
+                    <article><div><h3 data-i18n="tr_web_title">Dashboard Web Administrativo (Vue 3)</h3><p data-i18n="tr_web_desc">Interface de comando operacional reconstruída em Vue 3, Vite e TypeScript. Despacho de cargas, rastreamento de viagens, sinalizadores globais em tempo real e tempo de resposta de consultas otimizado de 13,8s para 1,2s.</p></div><p class="tt-tech">Vue 3 · Vite · TypeScript · Tailwind CSS · TanStack Query</p></article>
+                    <article><div><h3 data-i18n="tr_api_title">API V2 & Conciliação Fiscal (TypeScript + Redis)</h3><p data-i18n="tr_api_desc">Backend enxugado de 139 rotas legadas para 32 contratos cirúrgicos. Autenticação por sessão real e RBAC no servidor, cache Redis e integração assíncrona com NS Docs para leitura automática de XMLs de NF-e e CT-e.</p></div><p class="tt-tech">Node.js · Fastify · Redis · MongoDB 7.0 · NS Docs</p></article>
+                    <article><div><h3 data-i18n="tr_infra_title">Infraestrutura Corporativa (Oracle Cloud + Docker)</h3><p data-i18n="tr_infra_desc">Ambiente isolado em nuvem corporativa Oracle Cloud (OCI), com contêineres Docker, esteiras independentes de CI/CD para API e Dashboard, proteção Cloudflare Tunnel e isolamento rigoroso de dados.</p></div><p class="tt-tech">Oracle Cloud (OCI) · Docker · Cloudflare Tunnel · CI/CD</p></article>
                 </div>
             </div>
         </section>
 
         <section class="th-section tt-interfaces" aria-labelledby="interfaces-title">
             <div class="th-shell">
-                <div class="tt-section-head"><p class="th-eyebrow" data-i18n="tr_interfaces_label">Interfaces</p><h2 id="interfaces-title" data-i18n="tr_interfaces_title">Do acesso móvel à consulta no painel.</h2><p data-i18n="tr_interfaces_desc">As interfaces abaixo utilizam dados fictícios para demonstrar o aplicativo e o painel sem expor informações da operação real.</p></div>
+                <div class="tt-section-head"><p class="th-eyebrow" data-i18n="tr_interfaces_label">Interfaces em Produção</p><h2 id="interfaces-title" data-i18n="tr_interfaces_title">Da operação na estrada ao painel de controle executivo.</h2><p data-i18n="tr_interfaces_desc">As interfaces abaixo utilizam dados fictícios homologados para demonstrar o aplicativo e o painel sem expor informações sigilosas da operação real.</p></div>
                 <div class="tt-interface-grid">
-                    <figure><div class="tt-image-wrap tt-image-mobile"><img src="/Imagens/Login_app.png" alt="Tela de acesso do aplicativo Transporta" data-i18n-alt="tr_app_alt" loading="lazy"></div><figcaption><strong data-i18n="tr_app_caption">Aplicativo Android</strong><span data-i18n="tr_app_caption_detail">Entrada para a operação móvel.</span></figcaption></figure>
-                    <figure><div class="tt-image-wrap tt-image-dashboard"><img src="/Imagens/home-dashboard.png" alt="Dashboard administrativo do Transporta com registros fictícios da operação" data-i18n-alt="tr_dashboard_alt" loading="lazy"></div><figcaption><strong data-i18n="tr_dashboard_caption">Dashboard web</strong><span data-i18n="tr_dashboard_caption_detail">Visão administrativa dos registros da operação.</span></figcaption></figure>
+                    <figure>
+                        <div class="tt-image-wrap tt-image-mobile relative group cursor-zoom-in" data-lightbox-item data-index="0" data-src="/Imagens/Login_app.png" data-title="Aplicativo Android Nativo (Kotlin)" data-title-en="Native Android App (Kotlin)" data-caption="Autenticação local com Keystore P-256, sincronização Outbox durável e In-App Updates imediato para governança de frota." data-caption-en="Local authentication via Keystore P-256, durable Outbox synchronization, and Immediate In-App Updates for fleet governance." data-badge="Kotlin · Android Nativo" data-badge-en="Kotlin · Android Native" tabindex="0" role="button" aria-label="Ampliar tela do aplicativo móvel">
+                            <img src="/Imagens/Login_app.png" alt="Tela de acesso do aplicativo Transporta" data-i18n-alt="tr_app_alt" loading="lazy">
+                            <div class="absolute bottom-2.5 right-2.5 pointer-events-none opacity-85 group-hover:opacity-100 transition-opacity z-10">
+                                <span class="inline-flex items-center gap-1.5 px-2.5 py-1 text-[11px] font-medium bg-[#202632]/85 text-white rounded shadow border border-white/20 backdrop-blur-sm">
+                                    <svg class="w-3.5 h-3.5 text-[#82A3A1]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"/></svg>
+                                    <span data-i18n="tr_zoom_badge">Ampliar</span>
+                                </span>
+                            </div>
+                        </div>
+                        <figcaption><strong data-i18n="tr_app_caption">Aplicativo Android Nativo</strong><span data-i18n="tr_app_caption_detail">Autenticação local segura e operação de campo.</span></figcaption>
+                    </figure>
+                    <figure>
+                        <div class="tt-image-wrap tt-image-dashboard relative group cursor-zoom-in" data-lightbox-item data-index="1" data-src="/Imagens/dashboard-v2.png" data-title="Dashboard Web V2 (Vue 3 · Produção)" data-title-en="Web Dashboard V2 (Vue 3 · Production)" data-caption="Visão administrativa em tempo real com despacho de viagens, catálogo de rotas e latência otimizada de 1,2s." data-caption-en="Real-time administrative view with trip dispatching, route catalogs, and 1.2s optimized latency." data-badge="Vue 3 + Vite · Produção" data-badge-en="Vue 3 + Vite · Production" tabindex="0" role="button" aria-label="Ampliar tela do dashboard administrativo V2">
+                            <img src="/Imagens/dashboard-v2.png" alt="Dashboard administrativo do Transporta V2 em Vue 3 com registros homologados da operação" data-i18n-alt="tr_dashboard_alt" loading="lazy">
+                            <div class="absolute bottom-2.5 right-2.5 pointer-events-none opacity-85 group-hover:opacity-100 transition-opacity z-10">
+                                <span class="inline-flex items-center gap-1.5 px-2.5 py-1 text-[11px] font-medium bg-[#202632]/85 text-white rounded shadow border border-white/20 backdrop-blur-sm">
+                                    <svg class="w-3.5 h-3.5 text-[#82A3A1]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"/></svg>
+                                    <span data-i18n="tr_zoom_badge">Ampliar</span>
+                                </span>
+                            </div>
+                        </div>
+                        <figcaption><strong data-i18n="tr_dashboard_caption">Dashboard Web V2 (Vue 3 · Produção)</strong><span data-i18n="tr_dashboard_caption_detail">Visão administrativa em tempo real de viagens, despacho de cargas e conciliações fiscais.</span></figcaption>
+                    </figure>
                 </div>
                 <div class="tt-demo">
                     <p class="th-eyebrow" data-i18n="tr_demo_label">Demonstração</p>
-                    <h3 data-i18n="tr_demo_title">Demonstração do fluxo móvel</h3>
-                    <p data-i18n="tr_demo_desc">Um trecho do uso do aplicativo durante o fluxo operacional.</p>
+                    <h3 data-i18n="tr_demo_title">Fluxo Operacional Móvel</h3>
+                    <p data-i18n="tr_demo_desc">Demonstração prática do uso do aplicativo nativo durante a rotina de registro e validação.</p>
                     <video controls playsinline preload="metadata" aria-label="Demonstração do fluxo móvel do Transporta" data-i18n-aria-label="tr_demo_video_label"><source src="/Videos/demo_transporta.mp4" type="video/mp4"></video>
+                </div>
+
+                <!-- ========================================================= -->
+                <!-- [EVOLUÇÃO VISUAL] COMPARATIVO DE PAINÉIS V1 (LEGADO) vs V2 -->
+                <!-- ========================================================= -->
+                <div class="mt-14 pt-12 border-t border-[#c8d0cf]">
+                    <div class="text-center max-w-2xl mx-auto mb-8">
+                        <p class="th-eyebrow text-[#126d79]">Evolução de Interface</p>
+                        <h3 class="text-2xl md:text-3xl font-bold tracking-tight text-[#202632] mb-3">Do MVP Legado (V1) ao Dashboard Reestruturado (V2)</h3>
+                        <p class="text-sm text-[#46555a] leading-relaxed">A refatoração preservou o modelo mental dos operadores logísticos, mas elevou a velocidade de carregamento em mais de 90% com renderização moderna em Vue 3 e filtros reativos instantâneos.</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+                        <div class="border border-[#c8d0cf] bg-[#F5F6F5] p-4 rounded-sm flex flex-col">
+                            <span class="inline-block px-2.5 py-1 text-xs font-semibold bg-[#202632]/10 text-[#202632] mb-3 w-fit rounded-sm font-mono">DASHBOARD V1 (LEGADO)</span>
+                            <div class="overflow-hidden border border-[#c8d0cf] mb-3 bg-[#11141a] aspect-[16/9] flex items-center justify-center relative group cursor-zoom-in" data-lightbox-item data-index="2" data-src="/Imagens/home-dashboard.png" data-title="Dashboard V1 (Legado · Concepção Inicial)" data-title-en="Dashboard V1 (Legacy · Initial Concept)" data-caption="Concepção inicial focada na validação do fluxo operacional. Atendeu a primeira fase, acumulou 139 rotas na API e latência de ~13,8s." data-caption-en="Initial concept focused on operational workflow validation. Supported early stages, accumulated 139 API routes and ~13.8s latency." data-badge="Legado V1 · Concepção" data-badge-en="Legacy V1 · Concept" tabindex="0" role="button" aria-label="Ampliar tela do dashboard V1 legado">
+                                <img src="/Imagens/home-dashboard.png" alt="Dashboard V1 Legado do Transporta" class="w-full h-full object-contain" loading="lazy">
+                                <div class="absolute bottom-2.5 right-2.5 pointer-events-none opacity-85 group-hover:opacity-100 transition-opacity z-10">
+                                    <span class="inline-flex items-center gap-1.5 px-2.5 py-1 text-[11px] font-medium bg-[#202632]/85 text-white rounded shadow border border-white/20 backdrop-blur-sm">
+                                        <svg class="w-3.5 h-3.5 text-[#82A3A1]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"/></svg>
+                                        <span data-i18n="tr_zoom_badge">Ampliar</span>
+                                    </span>
+                                </div>
+                            </div>
+                            <p class="text-xs text-[#526064] leading-relaxed">Concepção inicial focada na validação do fluxo operacional. Atendeu a primeira fase do negócio, mas acumulou mais de 139 rotas na API e dependia de credenciais estáticas no bundle web.</p>
+                        </div>
+
+                        <div class="border-2 border-[#126d79] bg-white p-4 rounded-sm flex flex-col shadow-sm">
+                            <div class="flex items-center justify-between mb-3">
+                                <span class="inline-block px-2.5 py-1 text-xs font-semibold bg-[#126d79] text-white w-fit rounded-sm font-mono">DASHBOARD V2 (ATUAL · VUE 3)</span>
+                                <span class="text-[0.72rem] text-emerald-700 font-semibold flex items-center gap-1">● Latência: 1,2s</span>
+                            </div>
+                            <div class="overflow-hidden border border-[#c8d0cf] mb-3 bg-[#11141a] aspect-[16/9] flex items-center justify-center relative group cursor-zoom-in" data-lightbox-item data-index="3" data-src="/Imagens/dashboard-v2.png" data-title="Dashboard V2 (Atual · Reestruturado em Vue 3)" data-title-en="Dashboard V2 (Current · Rebuilt in Vue 3)" data-caption="Reconstrução integral em Vue 3, Vite, TypeScript e Tailwind CSS. Consultas em tempo real, filtros dinâmicos e latência de 1,2s." data-caption-en="Full rewrite in Vue 3, Vite, TypeScript, and Tailwind CSS. Real-time queries, dynamic filters, and 1.2s latency." data-badge="Modernização V2 · Produção" data-badge-en="Modernization V2 · Production" tabindex="0" role="button" aria-label="Ampliar tela do dashboard V2 atual">
+                                <img src="/Imagens/dashboard-v2.png" alt="Novo Dashboard V2 do Transporta em Vue 3" class="w-full h-full object-contain" loading="lazy">
+                                <div class="absolute bottom-2.5 right-2.5 pointer-events-none opacity-85 group-hover:opacity-100 transition-opacity z-10">
+                                    <span class="inline-flex items-center gap-1.5 px-2.5 py-1 text-[11px] font-medium bg-[#202632]/85 text-white rounded shadow border border-white/20 backdrop-blur-sm">
+                                        <svg class="w-3.5 h-3.5 text-[#82A3A1]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"/></svg>
+                                        <span data-i18n="tr_zoom_badge">Ampliar</span>
+                                    </span>
+                                </div>
+                            </div>
+                            <p class="text-xs text-[#46555a] leading-relaxed">Reconstrução integral em Vue 3, Vite, TypeScript e Tailwind CSS. Consultas em tempo real, filtros dinâmicos, sinalizadores globais e integração segura com RBAC no backend.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ========================================================= -->
+                <!-- [SANDBOX INTERATIVA] AMBIENTE DE HOMOLOGAÇÃO PARA CLIENTES -->
+                <!-- ========================================================= -->
+                <div class="mt-12 bg-[#202632] text-[#F5F6F5] p-6 md:p-8 rounded-sm border-l-4 border-[#82A3A1]">
+                    <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+                        <div class="max-w-2xl">
+                            <span class="inline-block px-2.5 py-0.5 text-xs font-mono font-semibold tracking-wider uppercase text-[#9DBBAE] bg-white/10 rounded-sm mb-2">Ambiente de Demonstração</span>
+                            <h4 class="text-xl md:text-2xl font-bold tracking-tight text-white mb-2">Experimente o Dashboard V2 na Prática (Sandbox Isolada)</h4>
+                            <p class="text-sm text-[#d4dcda] leading-relaxed">Estamos preparando uma instância pública e independente do Dashboard V2 com dados de frota mockados e gerador de viagens fictícias. Você poderá navegar por todas as telas operacionais, testar filtros e exportações sem qualquer acesso a dados confidenciais de clientes reais.</p>
+                        </div>
+                        <div class="flex flex-col sm:flex-row gap-3 w-full md:w-auto shrink-0">
+                            <!-- Link para a Sandbox quando estiver publicada -->
+                            <!-- <a href="https://sandbox.trinityds.com.br" target="_blank" rel="noopener" class="th-button th-button-teal text-center">Abrir Sandbox Interativa →</a> -->
+                            <a href="/contato?assunto=demonstracao-transporta" class="th-button th-button-canvas text-center whitespace-nowrap text-sm font-semibold">Solicitar Demonstração Guiada</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
         <section class="th-section tt-architecture" aria-labelledby="architecture-title">
             <div class="th-shell">
-                <div class="tt-section-head"><p class="th-eyebrow" data-i18n="tr_arch_label">Arquitetura</p><h2 id="architecture-title" data-i18n="tr_arch_title">Camadas com responsabilidades definidas.</h2><p data-i18n="tr_arch_desc">Os dois pontos de uso se comunicam com a API. Ela concentra as regras e o acesso aos dados; os serviços operam em ambiente Linux com Docker.</p></div>
+                <div class="tt-section-head"><p class="th-eyebrow" data-i18n="tr_arch_label">Topologia e Fluxo</p><h2 id="architecture-title" data-i18n="tr_arch_title">Arquitetura desacoplada e sincronização resiliente.</h2><p data-i18n="tr_arch_desc">A autorização e as regras fiscais residem exclusivamente no servidor. O aplicativo e o dashboard comunicam-se via contratos estritos com cache Redis em nuvem OCI.</p></div>
                 <div class="tt-architecture-flow" aria-label="Aplicativo Android e dashboard web conectados à API, que acessa o MongoDB" data-i18n-aria-label="tr_arch_flow_alt">
-                    <div class="tt-flow-inputs"><div class="tt-flow-node"><span data-i18n="tr_arch_field">Campo</span><strong data-i18n="tr_arch_app">Aplicativo Android</strong></div><div class="tt-flow-node"><span data-i18n="tr_arch_management">Gestão</span><strong data-i18n="tr_arch_dashboard">Dashboard web</strong></div></div>
+                    <div class="tt-flow-inputs"><div class="tt-flow-node"><span data-i18n="tr_arch_field">Campo</span><strong data-i18n="tr_arch_app">App Android (Kotlin Offline)</strong></div><div class="tt-flow-node"><span data-i18n="tr_arch_management">Gestão</span><strong data-i18n="tr_arch_dashboard">Dashboard Web (Vue 3 / Vite)</strong></div></div>
                     <span class="tt-flow-arrow" aria-hidden="true">→</span>
-                    <div class="tt-flow-node tt-flow-core"><span data-i18n="tr_arch_rules">Regras e acesso</span><strong>API · LoopBack 4</strong></div>
+                    <div class="tt-flow-node tt-flow-core"><span data-i18n="tr_arch_rules">Segurança & Regras</span><strong>API V2 · TypeScript + Redis</strong></div>
                     <span class="tt-flow-arrow" aria-hidden="true">→</span>
-                    <div class="tt-flow-node"><span data-i18n="tr_arch_data">Dados</span><strong>MongoDB</strong></div>
+                    <div class="tt-flow-node"><span data-i18n="tr_arch_data">Persistência & Nuvem</span><strong>MongoDB 7.0 · Oracle Cloud</strong></div>
                 </div>
-                <p class="tt-architecture-foot" data-i18n="tr_arch_foot">Operação em produção: Docker · Linux</p>
+                <p class="tt-architecture-foot" data-i18n="tr_arch_foot">Infraestrutura em Produção: Docker · Oracle Cloud Infrastructure · Cloudflare Tunnel · NS Docs</p>
             </div>
         </section>
 
         <section class="th-section tt-decisions" aria-labelledby="decisions-title">
             <div class="th-shell tt-decisions-grid">
-                <div><p class="th-eyebrow" data-i18n="tr_decisions_label">Decisões técnicas</p><h2 id="decisions-title" data-i18n="tr_decisions_title">Escolhas ligadas ao uso real.</h2><p data-i18n="tr_decisions_intro">A arquitetura acompanha a rotina de campo, a necessidade de controle administrativo e a operação contínua do sistema.</p></div>
+                <div><p class="th-eyebrow" data-i18n="tr_decisions_label">Engenharia Real</p><h2 id="decisions-title" data-i18n="tr_decisions_title">Decisões técnicas fundamentadas em produção.</h2><p data-i18n="tr_decisions_intro">Diferente de projetos acadêmicos, a evolução do Transporta foi guiada por auditorias rigorosas, contenção de riscos e operação real contínua.</p></div>
                 <div class="tt-decision-list">
-                    <article><h3 data-i18n="tr_offline_title">Continuidade no campo</h3><p data-i18n="tr_offline_desc">O aplicativo mantém dados de trabalho localmente para apoiar o uso sem rede e envia registros pendentes quando a conexão está disponível.</p></article>
-                    <article><h3 data-i18n="tr_separation_title">Separação entre interfaces e regras</h3><p data-i18n="tr_separation_desc">Aplicativo e dashboard têm fluxos próprios; a API centraliza as regras de negócio e a comunicação com o MongoDB.</p></article>
-                    <article><h3 data-i18n="tr_access_title">Acesso por perfil</h3><p data-i18n="tr_access_desc">Autenticação e permissões diferenciam as ações disponíveis para os usuários do sistema.</p></article>
-                    <article><h3 data-i18n="tr_records_title">Registros consultáveis</h3><p data-i18n="tr_records_desc">A captura de códigos e documentos alimenta os registros da operação; no painel, filtros e exportações apoiam a consulta administrativa.</p></article>
+                    <article><h3 data-i18n="tr_offline_title">Redução de Superfície: De 139 para 32 Endpoints</h3><p data-i18n="tr_offline_desc">A V1 antiga acumulou código inflado. Em vez de portar complexidade desnecessária, auditamos a operação e redesenhamos a API para apenas 32 contratos cirúrgicos, diminuindo drasticamente a superfície de ataque e o custo de manutenção.</p></article>
+                    <article><h3 data-i18n="tr_separation_title">Offline-First Real e Grant Durável P-256</h3><p data-i18n="tr_separation_desc">Uma resposta 401 de token expirado não apaga a identidade do motorista no meio da estrada. A autenticação local utiliza chaves P-256 no Android Keystore com Fila Outbox durável, desacoplando o trabalho de campo da conectividade de rede.</p></article>
+                    <article><h3 data-i18n="tr_access_title">Migração Sem Big Bang & Idempotência de Dados</h3><p data-i18n="tr_access_desc">A transição entre V1 e V2 operou em coexistência planejada. O ensaio de migração foi validado interrompendo o processo após 4.000 gravações e retomando com mapeamento de UUIDs sem gerar duplicatas ou perder um único registro histórico.</p></article>
+                    <article><h3 data-i18n="tr_records_title">Otimização de Latência: De 13,8s para 1,2s</h3><p data-i18n="tr_records_desc">A reconstrução do Dashboard em Vue 3 eliminou requisições em cascata e gargalos no banco. O tempo de consulta e filtragem de viagens caiu em mais de 90%, garantindo respostas quase instantâneas para os operadores de logística.</p></article>
                 </div>
             </div>
         </section>
 
         <section class="th-section tt-production" aria-labelledby="production-title">
             <div class="th-shell tt-production-grid">
-                <div><p class="th-eyebrow" data-i18n="tr_production_label">Estado atual</p><h2 id="production-title" data-i18n="tr_production_title">Em produção, com acesso privado.</h2><p data-i18n="tr_production_desc">O desenvolvimento começou em maio de 2025 e foi entregue em novembro de 2025. A entrada em produção ocorreu em junho de 2026. O sistema atende a uma operação corporativa privada e não possui demonstração pública do ambiente real.</p></div>
-                <ol class="tt-milestones"><li><span data-i18n="tr_date_start">Mai/2025</span><strong data-i18n="tr_milestone_start">Início do desenvolvimento</strong></li><li><span data-i18n="tr_date_delivery">Nov/2025</span><strong data-i18n="tr_milestone_delivery">Entrega do desenvolvimento</strong></li><li><span data-i18n="tr_date_live">Jun/2026</span><strong data-i18n="tr_milestone_live">Entrada em produção</strong></li></ol>
+                <div><p class="th-eyebrow" data-i18n="tr_production_label">Marcos de Evolução</p><h2 id="production-title" data-i18n="tr_production_title">Da validação inicial à consolidação corporativa.</h2><p data-i18n="tr_production_desc">O projeto nasceu como MVP em maio de 2025, foi validado em campo e entrou em produção. Conforme o volume aumentou, a Trinity planejou e executou a refatoração integral para a arquitetura V2, concluída em outubro de 2026 com zero interrupção operacional.</p></div>
+                <ol class="tt-milestones"><li><span data-i18n="tr_date_start">Mai/2025</span><strong data-i18n="tr_milestone_start">Início da V1 (MVP e Validação em Campo)</strong></li><li><span data-i18n="tr_date_delivery">Nov/2025</span><strong data-i18n="tr_milestone_delivery">Entrega da V1 e Operação Assistida</strong></li><li><span data-i18n="tr_date_live">Out/2026</span><strong data-i18n="tr_milestone_live">Entrada em Produção da V2 (Vue 3, API V2 e Cutover Final)</strong></li></ol>
             </div>
         </section>
 
         <section class="th-section th-final tt-final" aria-labelledby="final-title">
-            <div class="th-shell tt-final-grid"><div><p class="th-eyebrow" data-i18n="tr_final_label">Próximo passo</p><h2 id="final-title" data-i18n="tr_final_title">Software precisa funcionar além da interface.</h2><p data-i18n="tr_final_desc">O Transporta reúne aplicativo, painel, API e infraestrutura em uma única operação integrada.</p></div><div class="tt-final-actions"><a class="th-button th-button-ink" href="/contato" data-i18n="tr_final_contact">Conversar sobre um projeto</a><a class="th-text-link tt-final-link" href="/projetos" data-i18n="tr_final_projects">Ver outros projetos</a></div></div>
+            <div class="th-shell tt-final-grid"><div><p class="th-eyebrow" data-i18n="tr_final_label">Engenharia de Soluções</p><h2 id="final-title" data-i18n="tr_final_title">Software corporativo exige visão além do código.</h2><p data-i18n="tr_final_desc">O Transporta prova nossa capacidade de conceber, auditar, refatorar e sustentar plataformas complexas em produção sem colocar a operação do cliente em risco.</p></div><div class="tt-final-actions"><a class="th-button th-button-ink" href="/contato" data-i18n="tr_final_contact">Conversar sobre um projeto</a><a class="th-text-link tt-final-link" href="/projetos" data-i18n="tr_final_projects">Ver outros projetos</a></div></div>
         </section>
     </main>
 
     <footer class="th-footer">
-        <div class="th-shell"><div class="th-footer-grid"><div><p class="th-footer-brand">Trinity</p><p class="th-eyebrow" data-i18n="nh_brand_sub">Mídia Digital e Tecnologia</p><p data-i18n="nh_footer_desc">Desenvolvimento Full Stack, sistemas em produção, aplicativos, APIs, integrações e infraestrutura.</p></div><nav aria-label="Navegação do rodapé" data-i18n-aria-label="tr_footer_nav_label"><p class="th-eyebrow" data-i18n="nh_footer_nav">Navegação</p><a href="/" data-i18n="nav_home">Home</a><a href="/projetos" data-i18n="nav_projects">Projetos</a><a href="/sobre" data-i18n="nav_about">Sobre</a><a href="/faq">FAQ</a><a href="/contato" data-i18n="nav_contact">Contato</a></nav><div><p class="th-eyebrow" data-i18n="nh_footer_position">Posicionamento</p><p data-i18n="nh_panel_title">Desenvolvedor Full Stack Pleno — atuação end-to-end</p></div></div><div class="th-footer-bottom"><p>&copy; 2026 Trinity Mídia Digital e Tecnologia. <span data-i18n="footer_rights">Todos os direitos reservados.</span></p><span data-i18n="nh_footer_note">Arquitetura, código e deploy sob condução direta</span></div></div>
+        <div class="th-shell"><div class="th-footer-grid"><div><p class="th-footer-brand">Trinity</p><p class="th-eyebrow" data-i18n="nh_brand_sub">Mídia Digital e Tecnologia</p><p data-i18n="nh_footer_desc">Desenvolvimento Full Stack, sistemas em produção, aplicativos, APIs, integrações e infraestrutura.</p></div><nav aria-label="Navegação do rodapé" data-i18n-aria-label="tr_footer_nav_label"><p class="th-eyebrow" data-i18n="nh_footer_nav">Navegação</p><a href="/" data-i18n="nav_home">Home</a><a href="/projetos" data-i18n="nav_projects">Projetos</a><a href="/sobre" data-i18n="nav_about">Sobre</a><a href="/faq">FAQ</a><a href="/contato" data-i18n="nav_contact">Contato</a></nav><div><p class="th-eyebrow" data-i18n="nh_footer_position">Posicionamento</p><p data-i18n="nh_panel_title">Arquiteto de Soluções & Engenheiro Full Stack — atuação end-to-end</p></div></div><div class="th-footer-bottom"><p>&copy; 2026 Trinity Mídia Digital e Tecnologia. <span data-i18n="footer_rights">Todos os direitos reservados.</span></p><span data-i18n="nh_footer_note">Arquitetura, código e deploy sob condução direta</span></div></div>
     </footer>
+    <!-- ========================================================= -->
+    <!-- [MODAL LIGHTBOX] VISUALIZADOR MODULAR COM ZOOM E PAN -->
+    <!-- ========================================================= -->
+    <div id="tt-lightbox" class="fixed inset-0 z-[100] hidden bg-black/95 backdrop-blur-md flex flex-col justify-between transition-opacity duration-200 select-none opacity-0" role="dialog" aria-modal="true" aria-label="Visualizador de interfaces do projeto Transporta">
+        <!-- Barra Superior: Título, Badge, Contador e Controles Modulares de Zoom -->
+        <header class="flex items-center justify-between px-3 sm:px-6 py-2.5 sm:py-3 bg-black/60 border-b border-white/10 z-30 gap-2">
+            <!-- Esquerda: Identificação e Título -->
+            <div class="flex items-center gap-2 sm:gap-3 min-w-0">
+                <span id="tt-lightbox-badge" class="hidden md:inline-block text-[11px] font-mono uppercase tracking-wider px-2 py-0.5 rounded bg-white/10 text-[#82A3A1] border border-white/15 shrink-0">Produção</span>
+                <h3 id="tt-lightbox-title" class="text-xs sm:text-sm md:text-base font-semibold text-white tracking-wide truncate">Interface</h3>
+                <span id="tt-lightbox-counter" class="text-xs text-gray-400 font-mono shrink-0 ml-1">1 / 4</span>
+            </div>
+
+            <!-- Direita: Controles Modulares de Zoom e Fechar -->
+            <div class="flex items-center gap-1.5 sm:gap-2 shrink-0">
+                <!-- Grupo Modular de Zoom -->
+                <div class="flex items-center bg-white/10 rounded border border-white/15 p-0.5 shadow-inner">
+                    <button id="tt-lightbox-zoom-out" type="button" class="p-1.5 sm:px-2 text-gray-300 hover:text-white disabled:opacity-30 disabled:cursor-not-allowed hover:bg-white/10 rounded transition-colors" title="Diminuir Zoom (Atalho: -)" aria-label="Diminuir Zoom">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20 12H4"/></svg>
+                    </button>
+                    <button id="tt-lightbox-zoom-reset" type="button" class="px-2.5 py-1 text-xs font-mono font-bold text-[#82A3A1] hover:text-white hover:bg-white/10 rounded transition-colors" title="Clique para resetar (100% Ajustar)">
+                        <span id="tt-lightbox-zoom-val">100%</span>
+                    </button>
+                    <button id="tt-lightbox-zoom-in" type="button" class="p-1.5 sm:px-2 text-gray-300 hover:text-white disabled:opacity-30 disabled:cursor-not-allowed hover:bg-white/10 rounded transition-colors" title="Aumentar Zoom (Atalho: +)" aria-label="Aumentar Zoom">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg>
+                    </button>
+                </div>
+
+                <!-- Botão Fechar -->
+                <button id="tt-lightbox-close" type="button" class="p-1.5 sm:p-2 rounded-full hover:bg-white/15 text-gray-400 hover:text-white transition-colors focus:outline-none focus:ring-1 focus:ring-white/40 ml-1" title="Fechar visualizador (Esc)" aria-label="Fechar visualizador">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+                </button>
+            </div>
+        </header>
+
+        <!-- Palco Central com Pan/Drag e Zoom por Roda do Mouse -->
+        <main id="tt-lightbox-stage" class="relative flex-1 w-full overflow-hidden flex items-center justify-center p-2 sm:p-4 select-none">
+            <!-- Botão Imagem Anterior -->
+            <button id="tt-lightbox-prev" type="button" class="absolute left-2 sm:left-6 top-1/2 -translate-y-1/2 p-2.5 sm:p-3 rounded-full bg-black/60 hover:bg-[#126d79] text-white/90 hover:text-white border border-white/15 backdrop-blur-sm transition-all z-20 focus:outline-none focus:ring-2 focus:ring-white/40" aria-label="Imagem anterior" title="Anterior (Seta ←)">
+                <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
+            </button>
+
+            <!-- Container da Imagem -->
+            <div id="tt-lightbox-canvas" class="relative max-w-full max-h-full flex items-center justify-center">
+                <img id="tt-lightbox-img" src="" alt="" class="max-h-[76vh] max-w-[90vw] w-auto h-auto object-contain rounded shadow-2xl select-none cursor-zoom-in will-change-transform">
+            </div>
+
+            <!-- Botão Próxima Imagem -->
+            <button id="tt-lightbox-next" type="button" class="absolute right-2 sm:right-6 top-1/2 -translate-y-1/2 p-2.5 sm:p-3 rounded-full bg-black/60 hover:bg-[#126d79] text-white/90 hover:text-white border border-white/15 backdrop-blur-sm transition-all z-20 focus:outline-none focus:ring-2 focus:ring-white/40" aria-label="Próxima imagem" title="Próxima (Seta →)">
+                <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+            </button>
+        </main>
+
+        <!-- Barra Inferior: Legenda Técnica e Dicas Interativas -->
+        <footer class="flex flex-col items-center justify-center px-4 py-2.5 sm:py-3 bg-black/60 border-t border-white/10 z-30">
+            <p id="tt-lightbox-caption" class="text-xs sm:text-sm text-gray-200 text-center max-w-3xl leading-relaxed"></p>
+            <p class="text-[11px] text-gray-400 font-mono mt-1 hidden sm:block">Controles: Botões + / - ou Roda do Mouse para zoom · Clique e arraste para mover · Setas ← → navegam · Esc fecha</p>
+        </footer>
+    </div>
+
+    <!-- Script Lightbox Vanilla JS com Zoom Modular e Pan -->
+    <script>
+    (function() {
+        const items = Array.from(document.querySelectorAll('[data-lightbox-item]'));
+        const modal = document.getElementById('tt-lightbox');
+        const stage = document.getElementById('tt-lightbox-stage');
+        const canvas = document.getElementById('tt-lightbox-canvas');
+        const img = document.getElementById('tt-lightbox-img');
+        const title = document.getElementById('tt-lightbox-title');
+        const caption = document.getElementById('tt-lightbox-caption');
+        const badge = document.getElementById('tt-lightbox-badge');
+        const counter = document.getElementById('tt-lightbox-counter');
+        const zoomVal = document.getElementById('tt-lightbox-zoom-val');
+        const zoomInBtn = document.getElementById('tt-lightbox-zoom-in');
+        const zoomOutBtn = document.getElementById('tt-lightbox-zoom-out');
+        const zoomResetBtn = document.getElementById('tt-lightbox-zoom-reset');
+        const closeBtn = document.getElementById('tt-lightbox-close');
+        const prevBtn = document.getElementById('tt-lightbox-prev');
+        const nextBtn = document.getElementById('tt-lightbox-next');
+
+        if (!items.length || !modal) return;
+
+        let currentIndex = 0;
+        let zoomLevel = 1.0;
+        let panX = 0;
+        let panY = 0;
+        let isDragging = false;
+        let startX = 0;
+        let startY = 0;
+        let lastActiveElement = null;
+
+        function getGalleryData() {
+            const lang = localStorage.getItem('preferredLanguage') || 'pt';
+            return items.map(el => {
+                const titleVal = (lang === 'en' && el.getAttribute('data-title-en')) ? el.getAttribute('data-title-en') : el.getAttribute('data-title') || '';
+                const captionVal = (lang === 'en' && el.getAttribute('data-caption-en')) ? el.getAttribute('data-caption-en') : el.getAttribute('data-caption') || '';
+                const badgeVal = (lang === 'en' && el.getAttribute('data-badge-en')) ? el.getAttribute('data-badge-en') : el.getAttribute('data-badge') || 'Produção';
+                return {
+                    src: el.getAttribute('data-src'),
+                    title: titleVal,
+                    caption: captionVal,
+                    badge: badgeVal
+                };
+            });
+        }
+
+        let gallery = getGalleryData();
+
+        function clampPan() {
+            if (zoomLevel <= 1.0) {
+                panX = 0;
+                panY = 0;
+                return;
+            }
+            const stageRect = stage.getBoundingClientRect();
+            const baseW = img.offsetWidth || 800;
+            const baseH = img.offsetHeight || 500;
+            const currentW = baseW * zoomLevel;
+            const currentH = baseH * zoomLevel;
+            const maxPanX = Math.max(0, (currentW - stageRect.width) / 2 + 120);
+            const maxPanY = Math.max(0, (currentH - stageRect.height) / 2 + 80);
+            panX = Math.max(-maxPanX, Math.min(maxPanX, panX));
+            panY = Math.max(-maxPanY, Math.min(maxPanY, panY));
+        }
+
+        function applyTransform(animate = true) {
+            clampPan();
+            img.style.transition = animate ? 'transform 0.16s cubic-bezier(0.2, 0.9, 0.4, 1)' : 'none';
+            img.style.transform = `translate3d(${panX}px, ${panY}px, 0px) scale(${zoomLevel})`;
+
+            zoomVal.textContent = `${Math.round(zoomLevel * 100)}%`;
+            zoomOutBtn.disabled = zoomLevel <= 1.0;
+            zoomInBtn.disabled = zoomLevel >= 3.0;
+
+            if (zoomLevel > 1.0) {
+                img.style.cursor = isDragging ? 'grabbing' : 'grab';
+                stage.style.cursor = isDragging ? 'grabbing' : 'grab';
+            } else {
+                img.style.cursor = 'zoom-in';
+                stage.style.cursor = 'default';
+            }
+        }
+
+        function setZoom(newScale, animate = true) {
+            const clamped = Math.max(1.0, Math.min(3.0, Math.round(newScale * 100) / 100));
+            if (clamped === 1.0) {
+                panX = 0;
+                panY = 0;
+            }
+            zoomLevel = clamped;
+            applyTransform(animate);
+        }
+
+        function stepZoom(direction) {
+            const steps = [1.0, 1.25, 1.5, 1.75, 2.0, 2.5, 3.0];
+            if (direction > 0) {
+                const next = steps.find(s => s > zoomLevel + 0.05) || 3.0;
+                setZoom(next, true);
+            } else {
+                const prev = [...steps].reverse().find(s => s < zoomLevel - 0.05) || 1.0;
+                setZoom(prev, true);
+            }
+        }
+
+        function renderSlide(index) {
+            gallery = getGalleryData();
+            if (index < 0) index = gallery.length - 1;
+            if (index >= gallery.length) index = 0;
+            currentIndex = index;
+
+            const data = gallery[currentIndex];
+            zoomLevel = 1.0;
+            panX = 0;
+            panY = 0;
+            applyTransform(false);
+
+            img.src = data.src;
+            img.alt = data.title;
+            title.textContent = data.title;
+            caption.textContent = data.caption;
+            badge.textContent = data.badge;
+            counter.textContent = `${currentIndex + 1} / ${gallery.length}`;
+        }
+
+        function openLightbox(index) {
+            lastActiveElement = document.activeElement;
+            renderSlide(index);
+            modal.classList.remove('hidden');
+            requestAnimationFrame(() => {
+                modal.classList.remove('opacity-0');
+                modal.classList.add('opacity-100');
+            });
+            document.body.style.overflow = 'hidden';
+            closeBtn.focus();
+        }
+
+        function closeLightbox() {
+            modal.classList.remove('opacity-100');
+            modal.classList.add('opacity-0');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                zoomLevel = 1.0;
+                panX = 0;
+                panY = 0;
+                applyTransform(false);
+                img.src = '';
+                document.body.style.overflow = '';
+                if (lastActiveElement && typeof lastActiveElement.focus === 'function') {
+                    lastActiveElement.focus();
+                }
+            }, 200);
+        }
+
+        // Botões de Zoom
+        zoomInBtn.addEventListener('click', (e) => { e.stopPropagation(); stepZoom(1); });
+        zoomOutBtn.addEventListener('click', (e) => { e.stopPropagation(); stepZoom(-1); });
+        zoomResetBtn.addEventListener('click', (e) => { e.stopPropagation(); setZoom(1.0, true); });
+
+        // Arrastar / Mover com Mouse
+        stage.addEventListener('mousedown', (e) => {
+            if (zoomLevel <= 1.0) return;
+            if (e.button !== 0) return;
+            isDragging = true;
+            startX = e.clientX - panX;
+            startY = e.clientY - panY;
+            applyTransform(false);
+            e.preventDefault();
+        });
+
+        window.addEventListener('mousemove', (e) => {
+            if (!isDragging) return;
+            panX = e.clientX - startX;
+            panY = e.clientY - startY;
+            applyTransform(false);
+        });
+
+        window.addEventListener('mouseup', () => {
+            if (isDragging) {
+                isDragging = false;
+                applyTransform(true);
+            }
+        });
+
+        // Touch Drag no Mobile
+        let touchStartX = 0, touchStartY = 0;
+        stage.addEventListener('touchstart', (e) => {
+            if (zoomLevel <= 1.0) return;
+            if (e.touches.length === 1) {
+                isDragging = true;
+                touchStartX = e.touches[0].clientX - panX;
+                touchStartY = e.touches[0].clientY - panY;
+            }
+        }, { passive: true });
+
+        stage.addEventListener('touchmove', (e) => {
+            if (!isDragging || e.touches.length !== 1) return;
+            panX = e.touches[0].clientX - touchStartX;
+            panY = e.touches[0].clientY - touchStartY;
+            applyTransform(false);
+        }, { passive: true });
+
+        stage.addEventListener('touchend', () => {
+            if (isDragging) {
+                isDragging = false;
+                applyTransform(true);
+            }
+        });
+
+        // Roda do mouse para zoom progressivo contínuo
+        stage.addEventListener('wheel', (e) => {
+            e.preventDefault();
+            const delta = e.deltaY < 0 ? 0.2 : -0.2;
+            setZoom(zoomLevel + delta, true);
+        }, { passive: false });
+
+        // Clique e Duplo-clique
+        let clickTimeout = null;
+        img.addEventListener('click', (e) => {
+            e.stopPropagation();
+            if (clickTimeout) {
+                clearTimeout(clickTimeout);
+                clickTimeout = null;
+                // Duplo clique alterna entre 100% e 150%
+                if (zoomLevel > 1.0) {
+                    setZoom(1.0, true);
+                } else {
+                    setZoom(1.5, true);
+                }
+            } else {
+                clickTimeout = setTimeout(() => {
+                    clickTimeout = null;
+                    if (zoomLevel <= 1.0) {
+                        setZoom(1.35, true);
+                    }
+                }, 220);
+            }
+        });
+
+        // Clique no fundo escuro
+        stage.addEventListener('click', (e) => {
+            if (e.target === stage || e.target === canvas) {
+                if (zoomLevel > 1.0) {
+                    setZoom(1.0, true);
+                } else {
+                    closeLightbox();
+                }
+            }
+        });
+
+        // Triggers na página
+        items.forEach((item, idx) => {
+            item.addEventListener('click', (e) => {
+                e.preventDefault();
+                openLightbox(idx);
+            });
+            item.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    openLightbox(idx);
+                }
+            });
+        });
+
+        closeBtn.addEventListener('click', closeLightbox);
+        prevBtn.addEventListener('click', (e) => { e.stopPropagation(); renderSlide(currentIndex - 1); });
+        nextBtn.addEventListener('click', (e) => { e.stopPropagation(); renderSlide(currentIndex + 1); });
+
+        // Teclado
+        document.addEventListener('keydown', (e) => {
+            if (modal.classList.contains('hidden')) return;
+
+            if (e.key === 'Escape') {
+                e.preventDefault();
+                closeLightbox();
+            } else if (e.key === 'ArrowLeft') {
+                e.preventDefault();
+                renderSlide(currentIndex - 1);
+            } else if (e.key === 'ArrowRight') {
+                e.preventDefault();
+                renderSlide(currentIndex + 1);
+            } else if (e.key === '+' || e.key === '=') {
+                e.preventDefault();
+                stepZoom(1);
+            } else if (e.key === '-' || e.key === '_') {
+                e.preventDefault();
+                stepZoom(-1);
+            } else if (e.key === '0') {
+                e.preventDefault();
+                setZoom(1.0, true);
+            }
+        });
+    })();
+    </script>
     <script src="/js/ui.js" defer></script>
     <script type="module" src="/js/main.js" defer></script>
 </body>
