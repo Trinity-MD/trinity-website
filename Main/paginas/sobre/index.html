@@ -18,6 +18,83 @@
     <meta name="twitter:description" content="Conheça a trajetória, os princípios e a forma de trabalhar da Trinity Mídia Digital e Tecnologia.">
     <meta name="twitter:image" content="https://www.trinityds.com.br/Imagens/trinity-logo-header.png">
     <link rel="stylesheet" href="/dist/output.css">
+
+    <!-- ========================================================= -->
+    <!-- [GOOGLE & SEO] DADOS ESTRUTURADOS (AboutPage + Person)   -->
+    <!-- ========================================================= -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "AboutPage",
+                "@id": "https://www.trinityds.com.br/sobre#webpage",
+                "url": "https://www.trinityds.com.br/sobre",
+                "name": "Sobre a Trinity Mídia Digital e Tecnologia",
+                "description": "Conheça a história, princípios e liderança técnica da Trinity Mídia Digital e Tecnologia.",
+                "isPartOf": {
+                    "@type": "WebSite",
+                    "@id": "https://www.trinityds.com.br/#website",
+                    "name": "Trinity Mídia Digital e Tecnologia",
+                    "url": "https://www.trinityds.com.br/"
+                },
+                "about": {
+                    "@type": "Organization",
+                    "@id": "https://www.trinityds.com.br/#organization",
+                    "name": "Trinity Mídia Digital e Tecnologia Ltda",
+                    "taxID": "62.720.421/0001-44",
+                    "url": "https://www.trinityds.com.br"
+                },
+                "mainEntity": {
+                    "@id": "https://www.trinityds.com.br/sobre#alex-alencar"
+                }
+            },
+            {
+                "@type": "Person",
+                "@id": "https://www.trinityds.com.br/sobre#alex-alencar",
+                "name": "Alex Alencar",
+                "jobTitle": "Engenheiro de Software & Arquiteto de Soluções",
+                "worksFor": {
+                    "@type": "Organization",
+                    "@id": "https://www.trinityds.com.br/#organization"
+                },
+                "knowsAbout": [
+                    "Arquitetura de Software",
+                    "Engenharia de Sistemas Corporativos",
+                    "Desenvolvimento Android Nativo (Kotlin)",
+                    "Arquitetura Offline-First & Sincronização Resiliente",
+                    "APIs de Alta Performance (NestJS, Fastify, TypeScript)",
+                    "Modelagem de Banco de Dados (PostgreSQL, MongoDB)",
+                    "Infraestrutura em Nuvem (Oracle Cloud Infrastructure - OCI)",
+                    "Governança Técnica & Fractional CTO"
+                ],
+                "sameAs": [
+                    "https://github.com/Trinity-MD",
+                    "https://github.com/Trinity-DS",
+                    "https://www.instagram.com/trinity.dsolutions/"
+                ]
+            },
+            {
+                "@type": "BreadcrumbList",
+                "@id": "https://www.trinityds.com.br/sobre#breadcrumb",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://www.trinityds.com.br/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Sobre",
+                        "item": "https://www.trinityds.com.br/sobre"
+                    }
+                ]
+            }
+        ]
+    }
+    </script>
 </head>
 <body class="trinity-home trinity-about">
     <header class="th-header">

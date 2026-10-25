@@ -18,6 +18,78 @@
     <meta name="twitter:description" content="Projetos reais da Trinity: sistemas em produção, aplicativos, ferramentas e referências técnicas desenvolvidos em diferentes contextos.">
     <meta name="twitter:image" content="https://www.trinityds.com.br/Imagens/trinity-logo-header.png">
     <link rel="stylesheet" href="/dist/output.css">
+
+    <!-- ========================================================= -->
+    <!-- [GOOGLE & SEO] DADOS ESTRUTURADOS (CollectionPage + ItemList) -->
+    <!-- ========================================================= -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "CollectionPage",
+                "@id": "https://www.trinityds.com.br/projetos#webpage",
+                "url": "https://www.trinityds.com.br/projetos",
+                "name": "Portfólio de Projetos e Sistemas em Produção | Trinity Mídia Digital",
+                "description": "Conheça os projetos reais desenvolvidos pela Trinity: ecossistemas logísticos, aplicativos Android nativos, portais de mídia e plataformas corporativas em produção.",
+                "isPartOf": {
+                    "@type": "WebSite",
+                    "@id": "https://www.trinityds.com.br/#website",
+                    "name": "Trinity Mídia Digital e Tecnologia",
+                    "url": "https://www.trinityds.com.br/"
+                },
+                "mainEntity": {
+                    "@type": "ItemList",
+                    "itemListElement": [
+                        {
+                            "@type": "ListItem",
+                            "position": 1,
+                            "name": "Transporta (Expresso Lima)",
+                            "description": "Ecossistema logístico com app Android Kotlin nativo offline-first e conciliação de CT-e/NF-e.",
+                            "url": "https://www.trinityds.com.br/projetos/transporta"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 2,
+                            "name": "TV Xerém",
+                            "description": "Portal modular de mídia e governança com NestJS, PostgreSQL 16, MFA e RBAC corporativo."
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 3,
+                            "name": "Convida.aii",
+                            "description": "Plataforma de eventos e check-in com aplicativo Android Kotlin e infraestrutura em nuvem OCI."
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 4,
+                            "name": "Arkon Virtus",
+                            "description": "Sistema industrial MVP de controle de insumos e motor analítico de quebra de lotes."
+                        }
+                    ]
+                }
+            },
+            {
+                "@type": "BreadcrumbList",
+                "@id": "https://www.trinityds.com.br/projetos#breadcrumb",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://www.trinityds.com.br/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Projetos",
+                        "item": "https://www.trinityds.com.br/projetos"
+                    }
+                ]
+            }
+        ]
+    }
+    </script>
 </head>
 <body class="trinity-home trinity-projects">
     <header class="th-header">

@@ -18,6 +18,72 @@
     <meta name="twitter:description" content="Fale diretamente com a Trinity Mídia Digital e Tecnologia sobre projetos, sistemas e problemas técnicos.">
     <meta name="twitter:image" content="https://www.trinityds.com.br/Imagens/trinity-logo-header.png">
     <link rel="stylesheet" href="/dist/output.css">
+
+    <!-- ========================================================= -->
+    <!-- [GOOGLE & SEO] DADOS ESTRUTURADOS (ContactPage + ContactPoint) -->
+    <!-- ========================================================= -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "ContactPage",
+                "@id": "https://www.trinityds.com.br/contato#webpage",
+                "url": "https://www.trinityds.com.br/contato",
+                "name": "Contato e Atendimento Técnico | Trinity Mídia Digital e Tecnologia",
+                "description": "Fale diretamente com os engenheiros da Trinity Mídia Digital e Tecnologia sobre novos projetos, sistemas sob medida e consultoria técnica.",
+                "isPartOf": {
+                    "@type": "WebSite",
+                    "@id": "https://www.trinityds.com.br/#website",
+                    "name": "Trinity Mídia Digital e Tecnologia",
+                    "url": "https://www.trinityds.com.br/"
+                },
+                "mainEntity": {
+                    "@type": "ProfessionalService",
+                    "name": "Trinity Mídia Digital e Tecnologia Ltda",
+                    "taxID": "62.720.421/0001-44",
+                    "url": "https://www.trinityds.com.br",
+                    "telephone": "+55 21 92044-7431",
+                    "email": "contato@trinityds.com.br",
+                    "areaServed": ["BR", "Rio de Janeiro", "São Paulo"],
+                    "contactPoint": [
+                        {
+                            "@type": "ContactPoint",
+                            "telephone": "+55 21 92044-7431",
+                            "contactType": "sales",
+                            "availableLanguage": ["Portuguese", "English"],
+                            "contactOption": "TollFree"
+                        },
+                        {
+                            "@type": "ContactPoint",
+                            "email": "contato@trinityds.com.br",
+                            "contactType": "technical support",
+                            "availableLanguage": ["Portuguese", "English"]
+                        }
+                    ]
+                }
+            },
+            {
+                "@type": "BreadcrumbList",
+                "@id": "https://www.trinityds.com.br/contato#breadcrumb",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://www.trinityds.com.br/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Contato",
+                        "item": "https://www.trinityds.com.br/contato"
+                    }
+                ]
+            }
+        ]
+    }
+    </script>
 </head>
 <body class="trinity-home trinity-contact">
     <header class="th-header">
