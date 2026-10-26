@@ -316,6 +316,11 @@ const translations = {
         "tr_final_desc": "O Transporta prova nossa capacidade de conceber, auditar, refatorar e sustentar plataformas complexas em produção sem colocar a operação do cliente em risco.",
         "tr_final_contact": "Conversar sobre um projeto",
         "tr_final_projects": "Ver outros projetos",
+        "tr_sandbox_badge": "Ambiente de Demonstração",
+        "tr_sandbox_title": "Experimente o Dashboard V2 na Prática (Sandbox Isolada)",
+        "tr_sandbox_desc": "Navegue livremente pela instância pública e independente do Dashboard V2 com dados de frota mockados. Teste despacho de viagens, filtros reativos, sinalizadores globais e exportações sem qualquer acesso a dados confidenciais de clientes reais.",
+        "tr_sandbox_btn": "Acessar Sandbox Interativa",
+        "tr_sandbox_contact": "Solicitar Demonstração Guiada",
 
         //Home
         "home_hero_title": "Tiramos sua ideia do papel com <br class='hidden md:block'/> <span class='text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-500 to-cyan-400 bg-300% animate-gradient'>tecnologia e design.</span>",
@@ -728,6 +733,11 @@ const translations = {
         "tr_final_desc": "Transporta demonstrates our ability to architect, audit, refactor, and sustain mission-critical platforms in production without putting client operations at risk.",
         "tr_final_contact": "Discuss a project",
         "tr_final_projects": "View other projects",
+        "tr_sandbox_badge": "Demonstration Environment",
+        "tr_sandbox_title": "Experience the V2 Dashboard Live (Isolated Sandbox)",
+        "tr_sandbox_desc": "Freely explore the public, isolated Transporta V2 Dashboard with synthetic fleet data. Test trip dispatching, dynamic filters, real-time alerts, and data exports with zero exposure of confidential client records.",
+        "tr_sandbox_btn": "Open Interactive Sandbox",
+        "tr_sandbox_contact": "Request Guided Demo",
 
         //Home
         "home_hero_title": "We bring your ideas to life with <br class='hidden md:block'/> <span class='text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-500 to-cyan-400 bg-300% animate-gradient'>technology and design.</span>",

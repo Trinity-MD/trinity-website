@@ -239,14 +239,16 @@
                 <div class="mt-12 bg-[#202632] text-[#F5F6F5] p-6 md:p-8 rounded-sm border-l-4 border-[#82A3A1]">
                     <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
                         <div class="max-w-2xl">
-                            <span class="inline-block px-2.5 py-0.5 text-xs font-mono font-semibold tracking-wider uppercase text-[#9DBBAE] bg-white/10 rounded-sm mb-2">Ambiente de Demonstração</span>
-                            <h4 class="text-xl md:text-2xl font-bold tracking-tight text-white mb-2">Experimente o Dashboard V2 na Prática (Sandbox Isolada)</h4>
-                            <p class="text-sm text-[#d4dcda] leading-relaxed">Estamos preparando uma instância pública e independente do Dashboard V2 com dados de frota mockados e gerador de viagens fictícias. Você poderá navegar por todas as telas operacionais, testar filtros e exportações sem qualquer acesso a dados confidenciais de clientes reais.</p>
+                            <span class="inline-block px-2.5 py-0.5 text-xs font-mono font-semibold tracking-wider uppercase text-[#9DBBAE] bg-white/10 rounded-sm mb-2" data-i18n="tr_sandbox_badge">Ambiente de Demonstração</span>
+                            <h4 class="text-xl md:text-2xl font-bold tracking-tight text-white mb-2" data-i18n="tr_sandbox_title">Experimente o Dashboard V2 na Prática (Sandbox Isolada)</h4>
+                            <p class="text-sm text-[#d4dcda] leading-relaxed" data-i18n="tr_sandbox_desc">Navegue livremente pela instância pública e independente do Dashboard V2 com dados de frota mockados. Teste despacho de viagens, filtros reativos, sinalizadores globais e exportações sem qualquer acesso a dados confidenciais de clientes reais.</p>
                         </div>
                         <div class="flex flex-col sm:flex-row gap-3 w-full md:w-auto shrink-0">
-                            <!-- Link para a Sandbox quando estiver publicada -->
-                            <!-- <a href="https://sandbox.trinityds.com.br" target="_blank" rel="noopener" class="th-button th-button-teal text-center">Abrir Sandbox Interativa →</a> -->
-                            <a href="/contato?assunto=demonstracao-transporta" class="th-button th-button-canvas text-center whitespace-nowrap text-sm font-semibold">Solicitar Demonstração Guiada</a>
+                            <a href="https://transporta.trinityds.com.br/sandbox/" target="_blank" rel="noopener noreferrer" class="th-button th-button-teal text-center whitespace-nowrap text-sm font-semibold flex items-center justify-center gap-2 group shadow-lg">
+                                <span data-i18n="tr_sandbox_btn">Acessar Sandbox Interativa</span>
+                                <svg class="w-4 h-4 transition-transform group-hover:translate-x-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                            </a>
+                            <a href="/contato?assunto=demonstracao-transporta" class="th-button border border-white/20 bg-white/5 hover:bg-white/10 text-white text-center whitespace-nowrap text-sm font-semibold transition-colors" data-i18n="tr_sandbox_contact">Solicitar Demonstração Guiada</a>
                         </div>
                     </div>
                 </div>
