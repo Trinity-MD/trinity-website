@@ -5,13 +5,18 @@
   <!-- PÁGINA INICIAL (HOME) -->
   <url>
     <loc>https://www.trinityds.com.br/</loc>
-    <lastmod>2026-10-25</lastmod>
+    <lastmod>2026-10-26</lastmod>
   </url>
 
   <!-- PÁGINAS PRINCIPAIS -->
   <url>
+    <loc>https://www.trinityds.com.br/servicos</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+
+  <url>
     <loc>https://www.trinityds.com.br/projetos</loc>
-    <lastmod>2026-10-25</lastmod>
+    <lastmod>2026-10-26</lastmod>
   </url>
 
   <url>

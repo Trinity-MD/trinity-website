@@ -101,6 +101,7 @@
             </a>
             <nav class="th-nav" aria-label="Navegação principal">
                 <a href="/" data-i18n="nav_home">Home</a>
+                <a href="/servicos" data-i18n="nav_services">Serviços</a>
                 <a href="/projetos" aria-current="page" data-i18n="nav_projects">Projetos</a>
                 <a href="/sobre" data-i18n="nav_about">Sobre</a>
                 <a href="/faq">FAQ</a>
@@ -120,6 +121,7 @@
         </div>
         <nav id="menu-mobile" class="th-mobile-nav hidden" aria-label="Navegação móvel">
             <a href="/" data-i18n="nav_home">Home</a>
+            <a href="/servicos" data-i18n="nav_services">Serviços</a>
             <a href="/projetos" aria-current="page" data-i18n="nav_projects">Projetos</a>
             <a href="/sobre" data-i18n="nav_about">Sobre</a>
             <a href="/faq">FAQ</a>
@@ -159,10 +161,13 @@
                         <p data-i18n="pr_transporta_desc">Sistema integrado desenvolvido para digitalizar e centralizar uma operação logística, reunindo aplicativo Android, painel web, API e infraestrutura de produção.</p>
                         <dl>
                             <div><dt data-i18n="pr_fronts">Frentes</dt><dd>Android · Web · API · Infra</dd></div>
-                            <div><dt>Stack</dt><dd>Kotlin · React · Node.js / LoopBack 4 · MongoDB · Docker · Linux</dd></div>
-                            <div><dt data-i18n="pr_timeline">Cronologia</dt><dd data-i18n="pr_transporta_timeline">Iniciado mai/2025 · Entregue nov/2025 · Produção jun/2026</dd></div>
+                            <div><dt>Stack</dt><dd>Kotlin · Vue 3 + Vite · TypeScript / Fastify · MongoDB 7.0 · Redis · Oracle Cloud (OCI)</dd></div>
+                            <div><dt data-i18n="pr_timeline">Cronologia</dt><dd data-i18n="pr_transporta_timeline">V1 mai/2025 – jun/2026 · V2 out/2026 (Em produção)</dd></div>
                         </dl>
-                        <a class="th-text-link th-ink-link" href="/projetos/transporta" data-i18n="pr_view_project">Ver projeto</a>
+                        <div class="tp-actions" style="margin-top: 1.25rem; display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center;">
+                            <a class="th-button th-button-teal text-xs py-2 px-4 shadow-sm" href="https://transporta.trinityds.com.br/sandbox/" target="_blank" rel="noopener noreferrer" data-i18n="pr_transporta_sandbox">Acessar Sandbox Interativa ↗</a>
+                            <a class="th-text-link th-ink-link" href="/projetos/transporta" data-i18n="pr_view_project">Ver estudo de caso</a>
+                        </div>
                     </div>
                 </article>
 
@@ -275,7 +280,7 @@
         <div class="th-shell">
             <div class="th-footer-grid">
                 <div><p class="th-footer-brand">Trinity</p><p class="th-eyebrow" data-i18n="nh_brand_sub">Mídia Digital e Tecnologia</p><p data-i18n="nh_footer_desc">Desenvolvimento Full Stack, sistemas em produção, aplicativos, APIs, integrações e infraestrutura.</p></div>
-                <nav aria-label="Navegação do rodapé"><p class="th-eyebrow" data-i18n="nh_footer_nav">Navegação</p><a href="/" data-i18n="nav_home">Home</a><a href="/projetos" data-i18n="nav_projects">Projetos</a><a href="/sobre" data-i18n="nav_about">Sobre</a><a href="/faq">FAQ</a><a href="/contato" data-i18n="nav_contact">Contato</a></nav>
+                <nav aria-label="Navegação do rodapé"><p class="th-eyebrow" data-i18n="nh_footer_nav">Navegação</p><a href="/" data-i18n="nav_home">Home</a><a href="/servicos" data-i18n="nav_services">Serviços</a><a href="/projetos" data-i18n="nav_projects">Projetos</a><a href="/sobre" data-i18n="nav_about">Sobre</a><a href="/faq">FAQ</a><a href="/contato" data-i18n="nav_contact">Contato</a></nav>
                 <div><p class="th-eyebrow" data-i18n="nh_footer_position">Posicionamento</p><p data-i18n="nh_panel_title">Desenvolvedor Full Stack Pleno — atuação end-to-end</p></div>
             </div>
             <div class="th-footer-bottom"><p>&copy; 2026 Trinity Mídia Digital e Tecnologia. <span data-i18n="footer_rights">Todos os direitos reservados.</span></p><span data-i18n="nh_footer_note">Arquitetura, código e deploy sob condução direta</span></div>

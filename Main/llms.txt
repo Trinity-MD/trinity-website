@@ -72,6 +72,7 @@
 
 ## Documentação e Páginas para Consulta
 - [Página Inicial (Home)](https://www.trinityds.com.br/)
+- [Serviços Especializados de Engenharia de Software](https://www.trinityds.com.br/servicos)
 - [Dúvidas Frequentes (FAQ de 30 Perguntas)](https://www.trinityds.com.br/faq)
 - [Estudo de Caso: Transporta Logística](https://www.trinityds.com.br/projetos/transporta)
 - [Portfólio de Projetos](https://www.trinityds.com.br/projetos)
