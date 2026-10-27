@@ -887,7 +887,6 @@ textarea:-webkit-autofill:active  {
     .trinity-transporta .tt-flow-node { min-height: 70px; }
 }
 
-
 /* =======================================
  * SERVIÇOS: ESTRUTURA E ARQUITETURA
  * ======================================= */
@@ -900,50 +899,74 @@ textarea:-webkit-autofill:active  {
 .trinity-services .sv-metric-item dd { font-size: 1.15rem; font-weight: 700; color: #FFF; margin: 0; line-height: 1.3; }
 .trinity-services .sv-metric-item dd small { display: block; font-size: 0.8rem; font-weight: 400; color: #bbc9c5; margin-top: 0.25rem; }
 
-.trinity-services .sv-list-section { background: var(--th-canvas); padding-block: clamp(4rem, 6vw, 6rem); }
-.trinity-services .sv-card { background: #FFFFFF; border: 1px solid #d4dcda; border-top: 4px solid var(--th-teal); padding: clamp(1.8rem, 3.5vw, 2.75rem); margin-bottom: 3rem; box-shadow: 0 4px 12px rgba(32, 38, 50, 0.04); }
-.trinity-services .sv-card-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 0.75rem; margin-bottom: 0.5rem; }
-.trinity-services .sv-card-number { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 0.8rem; font-weight: 700; color: #126d79; }
-.trinity-services .sv-card-title { font-size: clamp(1.4rem, 2.4vw, 1.9rem); font-weight: 700; letter-spacing: -0.03em; color: var(--th-ink); margin-bottom: 0.6rem; }
-.trinity-services .sv-card-lead { font-size: 1.05rem; color: #46555a; line-height: 1.65; max-width: 68ch; margin-bottom: 1.75rem; }
+/* Alternating Section Blocks with Distinct Visual Rhythm */
+.trinity-services .sv-service-block { padding-block: clamp(3.5rem, 5.5vw, 5.5rem); border-bottom: 1px solid rgba(32, 38, 50, 0.08); }
+.trinity-services .sv-block-canvas { background: var(--th-canvas); }
+.trinity-services .sv-block-surface { background: var(--th-surface); }
+.trinity-services .sv-block-sage { background: #E2EAE5; }
+.trinity-services .sv-block-ink { background: var(--th-ink); color: var(--th-canvas); border-bottom: 1px solid rgba(245, 246, 245, 0.15); }
 
-.trinity-services .sv-detail-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1.5rem; margin-bottom: 1.75rem; }
-.trinity-services .sv-box-challenge { background: #FDF8F8; border-left: 3px solid #dc2626; padding: 1.35rem; border-radius: 2px; }
-.trinity-services .sv-box-solution { background: #F0F7F6; border-left: 3px solid var(--th-teal); padding: 1.35rem; border-radius: 2px; }
-.trinity-services .sv-box-title { font-size: 0.76rem; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; }
+/* Service Block Layout */
+.trinity-services .sv-block-grid { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: clamp(2rem, 5vw, 4.5rem); align-items: start; }
+.trinity-services .sv-block-title { font-size: clamp(1.6rem, 2.8vw, 2.3rem); font-weight: 700; letter-spacing: -0.035em; line-height: 1.2; margin-bottom: 1rem; color: var(--th-ink); }
+.trinity-services .sv-block-ink .sv-block-title { color: #FFFFFF; }
+.trinity-services .sv-block-lead { font-size: 1.05rem; line-height: 1.7; color: #46555a; margin-bottom: 1.75rem; }
+.trinity-services .sv-block-ink .sv-block-lead { color: #d4dcda; }
+
+/* Challenge vs Solution comparison */
+.trinity-services .sv-comparison-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1.25rem; margin-bottom: 1.5rem; }
+.trinity-services .sv-box-challenge { background: #FDF4F4; border-left: 3px solid #dc2626; border-radius: 2px; padding: 1.2rem; }
+.trinity-services .sv-block-ink .sv-box-challenge { background: rgba(220, 38, 38, 0.12); border-left-color: #ef4444; }
+.trinity-services .sv-box-solution { background: #F0F7F6; border-left: 3px solid var(--th-teal); border-radius: 2px; padding: 1.2rem; }
+.trinity-services .sv-block-ink .sv-box-solution { background: rgba(27, 154, 170, 0.15); border-left-color: #38bdf8; }
+.trinity-services .sv-box-title { font-size: 0.74rem; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.45rem; display: flex; align-items: center; gap: 0.4rem; }
 .trinity-services .sv-box-challenge .sv-box-title { color: #b91c1c; }
+.trinity-services .sv-block-ink .sv-box-challenge .sv-box-title { color: #fca5a5; }
 .trinity-services .sv-box-solution .sv-box-title { color: #126d79; }
+.trinity-services .sv-block-ink .sv-box-solution .sv-box-title { color: #7dd3fc; }
 .trinity-services .sv-box-content { font-size: 0.88rem; line-height: 1.7; color: #374151; margin: 0; }
+.trinity-services .sv-block-ink .sv-box-content { color: #e2e8f0; }
 
-.trinity-services .sv-deliverables { background: #F8FAFA; border: 1px solid #E2E8F0; padding: 1.25rem 1.5rem; margin-bottom: 1.75rem; border-radius: 2px; }
-.trinity-services .sv-deliverables-title { font-size: 0.75rem; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #126d79; margin-bottom: 0.6rem; }
-.trinity-services .sv-deliverables-list { margin: 0; padding-left: 1.25rem; font-size: 0.88rem; color: #46555a; line-height: 1.75; }
+/* Side Panel: Deliverables & Tech Tags */
+.trinity-services .sv-side-panel { background: #FFFFFF; border: 1px solid #c8d0cf; border-radius: 2px; padding: clamp(1.5rem, 2.5vw, 2rem); box-shadow: 0 4px 14px rgba(32, 38, 50, 0.04); }
+.trinity-services .sv-block-ink .sv-side-panel { background: rgba(255, 255, 255, 0.04); border-color: rgba(255, 255, 255, 0.15); box-shadow: none; }
+.trinity-services .sv-side-panel-title { font-size: 0.74rem; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: #126d79; margin-bottom: 0.85rem; border-bottom: 1px solid #e2eae5; padding-bottom: 0.5rem; }
+.trinity-services .sv-block-ink .sv-side-panel-title { color: var(--th-sage); border-color: rgba(255, 255, 255, 0.12); }
+.trinity-services .sv-side-list { margin: 0 0 1.5rem 0; padding-left: 1.25rem; font-size: 0.88rem; color: #46555a; line-height: 1.75; }
+.trinity-services .sv-block-ink .sv-side-list { color: #cbd5e1; }
+.trinity-services .sv-side-list li + li { margin-top: 0.45rem; }
 
-.trinity-services .sv-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; margin-top: 1.25rem; }
-.trinity-services .sv-tag { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 0.72rem; font-weight: 600; padding: 0.25rem 0.65rem; border-radius: 2px; background: #EEF0F2; color: #202632; }
+/* Tags */
+.trinity-services .sv-tags { display: flex; flex-wrap: wrap; gap: 0.45rem; align-items: center; margin-top: 1.25rem; }
+.trinity-services .sv-tag { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 0.7rem; font-weight: 600; padding: 0.22rem 0.6rem; border-radius: 2px; background: #EEF0F2; color: #202632; border: 1px solid #d4dcda; }
+.trinity-services .sv-block-ink .sv-tag { background: rgba(255, 255, 255, 0.08); color: #f1f5f9; border-color: rgba(255, 255, 255, 0.18); }
 
-.trinity-services .sv-differentials { background: var(--th-surface); padding-block: clamp(3.5rem, 5vw, 5rem); }
-.trinity-services .sv-diff-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2rem; margin-top: 2rem; }
-.trinity-services .sv-diff-card { background: #FFFFFF; border-left: 3px solid var(--th-teal); padding: 1.75rem; box-shadow: 0 2px 8px rgba(32, 38, 50, 0.04); }
+/* Differentials */
+.trinity-services .sv-differentials { background: var(--th-canvas); padding-block: clamp(3.5rem, 5vw, 5rem); }
+.trinity-services .sv-diff-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; margin-top: 2.2rem; }
+.trinity-services .sv-diff-card { background: var(--th-surface); border: 1px solid #c8d0cf; border-left: 4px solid var(--th-teal); padding: 1.75rem; border-radius: 2px; }
 .trinity-services .sv-diff-card h3 { font-size: 1.15rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--th-ink); }
 .trinity-services .sv-diff-card p { font-size: 0.89rem; line-height: 1.7; color: #46555a; margin: 0; }
 
-.trinity-services .sv-methodology { background: #E2EAE5; padding-block: clamp(3.5rem, 5vw, 5rem); }
-.trinity-services .sv-method-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.5rem; margin-top: 2rem; }
-.trinity-services .sv-method-card { background: #FFFFFF; padding: 1.5rem; border-top: 2px solid var(--th-teal); }
-.trinity-services .sv-method-step { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 0.8rem; font-weight: 700; color: #126d79; margin-bottom: 0.4rem; }
+/* Methodology */
+.trinity-services .sv-methodology { background: var(--th-surface); padding-block: clamp(3.5rem, 5vw, 5rem); }
+.trinity-services .sv-method-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.25rem; margin-top: 2.2rem; }
+.trinity-services .sv-method-card { background: #FFFFFF; padding: 1.6rem; border: 1px solid #c8d0cf; border-top: 3px solid var(--th-teal); border-radius: 2px; }
+.trinity-services .sv-method-step { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 0.75rem; font-weight: 700; color: #126d79; margin-bottom: 0.45rem; }
 .trinity-services .sv-method-card h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--th-ink); }
 .trinity-services .sv-method-card p { font-size: 0.85rem; line-height: 1.65; color: #46555a; margin: 0; }
 
-.trinity-services .sv-faq { background: var(--th-canvas); padding-block: clamp(3.5rem, 5vw, 5rem); }
-.trinity-services .sv-faq-list { max-width: 860px; margin-top: 2rem; border-top: 1px solid #d4dcda; }
-.trinity-services .sv-faq-item { border-bottom: 1px solid #d4dcda; padding-block: 1.5rem; }
-.trinity-services .sv-faq-item h3 { font-size: 1.12rem; font-weight: 700; color: var(--th-ink); margin-bottom: 0.6rem; }
+/* FAQ */
+.trinity-services .sv-faq { background: #E2EAE5; padding-block: clamp(3.5rem, 5vw, 5rem); }
+.trinity-services .sv-faq-list { max-width: 860px; margin-top: 2rem; display: grid; gap: 1rem; }
+.trinity-services .sv-faq-item { background: #FFFFFF; border: 1px solid #bac5c4; border-radius: 2px; padding: 1.5rem; border-left: 4px solid var(--th-teal); box-shadow: 0 2px 6px rgba(32, 38, 50, 0.03); }
+.trinity-services .sv-faq-item h3 { font-size: 1.1rem; font-weight: 700; color: var(--th-ink); margin-bottom: 0.6rem; }
 .trinity-services .sv-faq-item p { font-size: 0.92rem; line-height: 1.75; color: #46555a; margin: 0; }
 
 @media (max-width: 820px) {
     .trinity-services .sv-metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.25rem; }
-    .trinity-services .sv-detail-grid { grid-template-columns: 1fr; }
+    .trinity-services .sv-block-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .trinity-services .sv-comparison-grid { grid-template-columns: 1fr; }
     .trinity-services .sv-diff-grid { grid-template-columns: 1fr; }
     .trinity-services .sv-method-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
