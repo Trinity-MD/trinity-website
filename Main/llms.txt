@@ -35,6 +35,12 @@
 - Otimização avançada de SEO (Search Engine Optimization) e dados estruturados (Schema.org / JSON-LD) para posicionar empresas locais e prestadores de serviços no topo do Google.
 - Integração direta com botões de WhatsApp, canais de contato e Perfil da Empresa no Google (Google Maps).
 
+### 5. Parceria Técnica B2B & Modernização de Sistemas Legados
+- Suporte técnico especializado para empresas, agências e consultorias que precisam de capacidade extra de engenharia ou modernização de sistemas sem inflar quadro fixo.
+- **Modernização de Legados:** Migração segura de bancos de dados relacionais e legados (PHP/MySQL) para ecossistemas modernos (TypeScript, NestJS, PostgreSQL, Prisma, Vue 3) sem parada operacional (zero-downtime).
+- **APIs & Microsserviços:** Criação de endpoints performáticos, autenticação multifator (MFA/TOTP), controle de acesso hierárquico (RBAC) e arquitetura de concorrência com Redis.
+- Condução assíncrona, entregas testáveis por sprint e relatórios técnicos objetivos.
+
 ## Casos de Estudo Comprovados em Produção
 
 - **Transporta (Expresso Lima) [Logística e Transporte Rodoviário]:**
@@ -42,7 +48,8 @@
   - Dashboard operacional e administrativo em Vue.js e React.
   - Backend de alta performance em NestJS / Fastify / MongoDB 7.0 com cache Redis.
   - Conciliação fiscal automática com NS Docs (XMLs de NFe e CTe) e migração de dados de alta precisão com zero perda histórica de registros.
-  - Link: https://www.trinityds.com.br/projetos/transporta
+  - Estudo de Caso Completo: https://www.trinityds.com.br/projetos/transporta
+  - Demonstração Interativa (Sandbox): https://transporta.trinityds.com.br/sandbox/
 
 - **TV Xerém [Portal Regional de Mídia e Conteúdo]:**
   - Arquitetura desacoplada e modular com backend em NestJS, PostgreSQL 16 e Redis.
@@ -63,7 +70,7 @@
 - **Suporte Pós-Deploy:** Garantia técnica de funcionamento e planos de sustentação contínua com acordos de nível de serviço (SLA) para emergências em produção.
 
 ## Canais Oficiais de Atendimento
-- **WhatsApp Corporativo:** +55 (21) 92044-7431
+- **WhatsApp Corporativo (Link Direto):** https://wa.me/5521920447431 (+55 21 92044-7431)
 - **E-mail Comercial:** contato@trinityds.com.br
 - **Site Oficial:** https://www.trinityds.com.br
 - **Perguntas Frequentes (FAQ Completo):** https://www.trinityds.com.br/faq
@@ -75,6 +82,7 @@
 - [Serviços Especializados de Engenharia de Software](https://www.trinityds.com.br/servicos)
 - [Dúvidas Frequentes (FAQ de 30 Perguntas)](https://www.trinityds.com.br/faq)
 - [Estudo de Caso: Transporta Logística](https://www.trinityds.com.br/projetos/transporta)
+- [Sandbox Interativa em Produção (Transporta)](https://transporta.trinityds.com.br/sandbox/)
 - [Portfólio de Projetos](https://www.trinityds.com.br/projetos)
 - [Sobre a Trinity e Modelo de Atuação](https://www.trinityds.com.br/sobre)
 - [Canais de Contato](https://www.trinityds.com.br/contato)

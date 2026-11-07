@@ -13,10 +13,12 @@ const translations = {
         "nav_contact": "Contato",
         "footer_legal_text": "é uma marca comercial e de apresentação da",
         "footer_rights": "Todos os direitos reservados.",
+        "wa_floating_tooltip": "Falar no WhatsApp",
+        "wa_floating_aria": "Falar com o desenvolvedor no WhatsApp",
 
         // Nova Home
-        "nh_page_title": "Trinity Mídia Digital e Tecnologia | Desenvolvimento Full Stack",
-        "nh_page_description": "Trinity Mídia Digital e Tecnologia. Desenvolvimento de sistemas web, aplicativos, APIs, integrações e infraestrutura de ponta a ponta.",
+        "nh_page_title": "Desenvolvimento de Sistemas Web, Aplicativos & APIs | Trinity",
+        "nh_page_description": "Desenvolvimento de software sob medida, modernização de sistemas legados, APIs escaláveis e aplicativos offline-first. Fale direto com quem desenvolve.",
         "nh_brand_sub": "Mídia Digital e Tecnologia",
         "nh_start_project": "Iniciar um projeto",
         "nh_hero_eyebrow_brand": "Trinity Mídia Digital e Tecnologia",
@@ -99,8 +101,8 @@ const translations = {
         "nh_footer_note": "Arquitetura, código e deploy sob condução direta",
 
         // Catálogo de projetos
-        "pr_page_title": "Projetos | Trinity Mídia Digital e Tecnologia",
-        "pr_page_description": "Projetos reais da Trinity: sistemas em produção, aplicativos, ferramentas e referências técnicas desenvolvidos em diferentes contextos.",
+        "pr_page_title": "Portfólio de Sistemas em Produção & Casos de Engenharia | Trinity",
+        "pr_page_description": "Conheça nossos sistemas em produção: plataforma logística de ponta a ponta, aplicativos Android offline-first, painéis Vue 3 e arquitetura de APIs.",
         "pr_hero_label": "Portfólio / Projetos",
         "pr_hero_title": "Projetos construídos para problemas reais.",
         "pr_hero_desc": "Uma seleção de sistemas, aplicativos, ferramentas e projetos técnicos desenvolvidos em diferentes contextos — de operações corporativas em produção a produtos próprios e soluções pontuais.",
@@ -151,8 +153,8 @@ const translations = {
         "pr_final_cta": "Conversar sobre um projeto",
 
         // Sobre
-        "ab_page_title": "Sobre | Trinity Mídia Digital e Tecnologia",
-        "ab_page_description": "Conheça a trajetória, os princípios e a forma de trabalhar da Trinity Mídia Digital e Tecnologia.",
+        "ab_page_title": "Sobre a Trinity | Engenharia de Software & Atuação Full Stack",
+        "ab_page_description": "Conheça a atuação e os princípios de engenharia da Trinity Mídia Digital e Tecnologia. Projetos reais em produção com código limpo e interlocução técnica direta.",
         "ab_hero_label": "Sobre / Trinity",
         "ab_hero_title": "Software construído com contexto, responsabilidade e condução direta.",
         "ab_hero_desc": "A Trinity Mídia Digital e Tecnologia é a estrutura empresarial por trás dos projetos. O desenvolvimento e a condução técnica são realizados diretamente por quem acompanha o problema, define a arquitetura e leva a solução até produção.",
@@ -199,8 +201,8 @@ const translations = {
         "ab_final_cta": "Iniciar uma conversa",
 
         // Contato
-        "ct_page_title": "Contato | Trinity Mídia Digital e Tecnologia",
-        "ct_page_description": "Fale diretamente com a Trinity Mídia Digital e Tecnologia sobre projetos, sistemas e problemas técnicos.",
+        "ct_page_title": "Iniciar Projeto ou Consultoria Técnica | Contato Trinity",
+        "ct_page_description": "Fale diretamente com o desenvolvedor responsável sobre novos sistemas, modernização de legados, integrações ou consultoria técnica.",
         "ct_hero_label": "Contato / Novos projetos",
         "ct_hero_title": "Vamos conversar sobre o que você precisa construir ou resolver.",
         "ct_hero_desc": "O contato é direto com quem fará a análise técnica e conduzirá o desenvolvimento.",
@@ -427,8 +429,8 @@ const translations = {
         // ==========================================
         // PÁGINA DE SERVIÇOS (PT)
         // ==========================================
-        "sv_page_title": "Serviços de Engenharia de Software & Arquitetura de Sistemas | Trinity",
-        "sv_page_description": "Engenharia de software corporativa sob medida: sistemas web de alta performance, aplicativos Android offline-first, APIs escaláveis, migração segura de sistemas legados e infraestrutura cloud com observabilidade. Condução técnica direta por especialista sênior.",
+        "sv_page_title": "Serviços de Engenharia de Software, APIs & Migração de Sistemas | Trinity",
+        "sv_page_description": "Engenharia de software corporativa sob medida: sistemas web de alta performance, aplicativos Android offline-first, APIs escaláveis, migração segura de sistemas legados e infraestrutura cloud. Condução técnica direta de ponta a ponta.",
         "sv_hero_eyebrow": "Engenharia de Software & Arquitetura de Sistemas",
         "sv_hero_title": "Sistemas corporativos sob medida, aplicativos resilientes e infraestrutura em nuvem.",
         "sv_hero_desc": "Da concepção arquitetural à sustentação em produção. Desenvolvemos soluções técnicas projetadas para suportar operações reais e de alto volume — com código limpo, previsibilidade de entrega e interlocução direta com o desenvolvedor responsável.",
@@ -556,11 +558,13 @@ const translations = {
         "nav_contact": "Contact",
         "footer_legal_text": "is a trademark and trade name of",
         "footer_rights": "All rights reserved.",
+        "wa_floating_tooltip": "Chat on WhatsApp",
+        "wa_floating_aria": "Chat directly with the developer on WhatsApp",
 
         // New Home
         "nh_brand_sub": "Digital Media and Technology",
-        "nh_page_title": "Trinity Digital Media and Technology | Full Stack Development",
-        "nh_page_description": "Trinity Digital Media and Technology. Development of web systems, apps, APIs, integrations, and infrastructure from end to end.",
+        "nh_page_title": "Custom Web Systems, Mobile Apps & API Engineering | Trinity",
+        "nh_page_description": "Custom software engineering, legacy system modernization, scalable APIs, and offline-first mobile apps. Direct contact with the engineer.",
         "nh_start_project": "Start a project",
         "nh_hero_eyebrow_brand": "Trinity Digital Media and Technology",
         "nh_hero_eyebrow_work": "End-to-End Software Development",
@@ -642,8 +646,8 @@ const translations = {
         "nh_footer_note": "Architecture, code, and deployment handled directly",
 
         // Projects catalog
-        "pr_page_title": "Projects | Trinity Digital Media and Technology",
-        "pr_page_description": "Real Trinity projects: production systems, apps, tools, and technical references developed in different contexts.",
+        "pr_page_title": "Production Software Portfolio & Engineering Case Studies | Trinity",
+        "pr_page_description": "Explore our production systems: end-to-end logistics platform, offline-first Android apps, Vue 3 dashboards, and scalable API architecture.",
         "pr_hero_label": "Portfolio / Projects",
         "pr_hero_title": "Projects built for real problems.",
         "pr_hero_desc": "A selection of systems, apps, tools, and technical projects developed in different contexts — from corporate operations in production to independent products and focused solutions.",
@@ -694,8 +698,8 @@ const translations = {
         "pr_final_cta": "Discuss a project",
 
         // About
-        "ab_page_title": "About | Trinity Digital Media and Technology",
-        "ab_page_description": "Discover the background, principles, and working approach of Trinity Digital Media and Technology.",
+        "ab_page_title": "About Trinity | Software Engineering & Full Stack Development",
+        "ab_page_description": "Discover the engineering principles and production-tested systems of Trinity Digital Media and Technology. Direct technical leadership end-to-end.",
         "ab_hero_label": "About / Trinity",
         "ab_hero_title": "Software built with context, responsibility, and direct technical leadership.",
         "ab_hero_desc": "Trinity Digital Media and Technology is the business structure behind the projects. Development and technical direction are handled directly by the person who understands the problem, defines the architecture, and takes the solution into production.",
@@ -742,8 +746,8 @@ const translations = {
         "ab_final_cta": "Start a conversation",
 
         // Contact
-        "ct_page_title": "Contact | Trinity Digital Media and Technology",
-        "ct_page_description": "Contact Trinity Digital Media and Technology directly about projects, systems, and technical problems.",
+        "ct_page_title": "Start a Project or Technical Consultation | Contact Trinity",
+        "ct_page_description": "Speak directly with the lead engineer about new systems, legacy modernization, enterprise integrations, or technical consulting.",
         "ct_hero_label": "Contact / New projects",
         "ct_hero_title": "Let's talk about what you need to build or solve.",
         "ct_hero_desc": "You speak directly with the person who will handle the technical analysis and lead development.",
@@ -970,8 +974,8 @@ const translations = {
         // ==========================================
         // SERVICES PAGE (EN)
         // ==========================================
-        "sv_page_title": "Software Engineering & Systems Architecture Services | Trinity",
-        "sv_page_description": "Custom enterprise software engineering: high-performance web systems, offline-first Android apps, scalable APIs, safe legacy migration, and cloud infrastructure with observability. Direct technical leadership by senior specialist.",
+        "sv_page_title": "Custom Software Engineering, APIs & Legacy Modernization | Trinity",
+        "sv_page_description": "Tailored enterprise software engineering: high-performance web systems, offline-first Android apps, scalable APIs, and safe legacy modernization. Direct end-to-end technical leadership.",
         "sv_hero_eyebrow": "Software Engineering & Systems Architecture",
         "sv_hero_title": "Custom enterprise systems, resilient apps, and cloud infrastructure.",
         "sv_hero_desc": "From architectural design to production maintenance. We develop technical solutions engineered to support high-volume, mission-critical operations — with clean code, delivery predictability, and direct access to the lead developer.",
@@ -1145,6 +1149,9 @@ window.changeLanguage = function(lang) {
         }
     });
     updateFlagIcons(lang);
+    if (typeof updateWhatsAppFloat === 'function') {
+        updateWhatsAppFloat(lang);
+    }
     document.body.classList.remove('opacity-0');
 }
 
@@ -1462,6 +1469,146 @@ function setupFilterSwiper() {
 }
 
 /* =======================================
+ * BOTÃO FLUTUANTE DE WHATSAPP (CONVERSÃO DIRETA)
+ * ======================================= */
+function setupWhatsAppFloat() {
+    if (document.getElementById('trinity-whatsapp-widget')) return;
+
+    // Injeta estilos isolados do botão flutuante
+    const style = document.createElement('style');
+    style.id = 'trinity-whatsapp-styles';
+    style.textContent = `
+        .trinity-wa-container {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: inherit;
+        }
+        .trinity-wa-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: #25D366;
+            color: #ffffff;
+            box-shadow: 0 4px 16px rgba(37, 211, 102, 0.45), 0 2px 6px rgba(0, 0, 0, 0.3);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+            text-decoration: none;
+            position: relative;
+        }
+        .trinity-wa-link:hover, .trinity-wa-link:focus-visible {
+            transform: scale(1.08);
+            box-shadow: 0 6px 22px rgba(37, 211, 102, 0.7), 0 3px 8px rgba(0, 0, 0, 0.4);
+        }
+        .trinity-wa-pulse {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: #25D366;
+            opacity: 0.55;
+            animation: trinityWaPulse 2.8s infinite;
+            pointer-events: none;
+            z-index: -1;
+        }
+        @keyframes trinityWaPulse {
+            0% { transform: scale(1); opacity: 0.6; }
+            70% { transform: scale(1.45); opacity: 0; }
+            100% { transform: scale(1.45); opacity: 0; }
+        }
+        .trinity-wa-tooltip {
+            display: inline-block;
+            background: rgba(15, 23, 42, 0.94);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            color: #f8fafc;
+            padding: 7px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 500;
+            white-space: nowrap;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.3);
+            border: 1px solid rgba(255,255,255,0.12);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateX(8px);
+            transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+            pointer-events: none;
+        }
+        .trinity-wa-container:hover .trinity-wa-tooltip {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(0);
+        }
+        @media (max-width: 640px) {
+            .trinity-wa-container {
+                bottom: 18px;
+                right: 18px;
+            }
+            .trinity-wa-link {
+                width: 50px;
+                height: 50px;
+            }
+            .trinity-wa-tooltip {
+                display: none !important;
+            }
+        }
+    `;
+    document.head.appendChild(style);
+
+    // Injeta elemento no DOM
+    const widget = document.createElement('aside');
+    widget.id = 'trinity-whatsapp-widget';
+    widget.className = 'trinity-wa-container';
+    widget.setAttribute('aria-label', 'Atendimento direto via WhatsApp');
+
+    widget.innerHTML = `
+        <span class="trinity-wa-tooltip" id="trinity-wa-tooltip-text">Falar no WhatsApp</span>
+        <a id="trinity-whatsapp-link"
+           href="https://wa.me/5521920447431?text=Ol%C3%A1%20Alex,%20estive%20no%20site%20da%20Trinity%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto%20de%20software."
+           target="_blank"
+           rel="noopener noreferrer"
+           class="trinity-wa-link"
+           aria-label="Falar com o desenvolvedor no WhatsApp">
+            <span class="trinity-wa-pulse"></span>
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor" aria-hidden="true">
+                <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm.01 18.06c-1.49 0-2.95-.4-4.22-1.16l-.3-.18-3.13.82.84-3.05-.2-.32a8.03 8.03 0 0 1-1.23-4.26c0-4.47 3.64-8.11 8.11-8.11 2.17 0 4.2.85 5.73 2.38a8.07 8.07 0 0 1 2.38 5.73c0 4.47-3.64 8.07-8.17 8.07zm4.45-6.07c-.24-.12-1.44-.71-1.66-.79-.22-.08-.39-.12-.55.12-.16.24-.63.79-.77.95-.14.16-.28.18-.52.06-.24-.12-1.03-.38-1.96-1.21-.72-.64-1.21-1.44-1.35-1.68-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.55-1.33-.76-1.82-.2-.48-.41-.41-.56-.42l-.48-.01c-.16 0-.43.06-.66.31-.22.24-.86.84-.86 2.05 0 1.21.88 2.38 1 2.55.12.16 1.74 2.65 4.21 3.72.59.25 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.12-.22-.19-.46-.31z"/>
+            </svg>
+        </a>
+    `;
+
+    document.body.appendChild(widget);
+
+    // Ajusta o idioma inicial
+    const currentLang = localStorage.getItem('preferredLanguage') || 'pt';
+    updateWhatsAppFloat(currentLang);
+}
+
+function updateWhatsAppFloat(lang) {
+    const link = document.getElementById('trinity-whatsapp-link');
+    const tooltip = document.getElementById('trinity-wa-tooltip-text');
+    if (!link) return;
+
+    if (lang === 'en') {
+        link.href = 'https://wa.me/5521920447431?text=Hello%20Alex,%20I%20am%20visiting%20the%20Trinity%20website%20and%20would%20like%20to%20discuss%20a%20software%20project.';
+        link.setAttribute('aria-label', 'Chat directly with the developer on WhatsApp');
+        if (tooltip) tooltip.textContent = 'Chat on WhatsApp';
+    } else {
+        link.href = 'https://wa.me/5521920447431?text=Ol%C3%A1%20Alex,%20estive%20no%20site%20da%20Trinity%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto%20de%20software.';
+        link.setAttribute('aria-label', 'Falar com o desenvolvedor no WhatsApp');
+        if (tooltip) tooltip.textContent = 'Falar no WhatsApp';
+    }
+}
+
+/* =======================================
  * INICIALIZAÇÃO GERAL
  * ATENÇÃO, ESSE EVENT LISTENER DEVE SER SEMPRE O ÚLTIMO DO ARQUIVO JS.
  * NÃO INSERIR NENHUMA FUNÇÃO APÓS ELE PARA EVITAR QUEBRAR O CÓDIGO.
@@ -1488,4 +1635,5 @@ document.addEventListener('DOMContentLoaded', () => {
     setupSwiper();
     setupProjectFilters();
     setupFilterSwiper();
+    setupWhatsAppFloat();
 });

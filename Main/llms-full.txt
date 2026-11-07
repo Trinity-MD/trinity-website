@@ -43,6 +43,11 @@
 - **Performance:** Carregamento instantâneo no celular, zero dependência de plugins pesados ou construtores visuais lentos.
 - **SEO & Google:** Marcação de dados estruturados Schema.org (JSON-LD) para reconhecimento no Knowledge Graph do Google e cruzamento com o Google Meu Negócio (Maps).
 
+### E. Parceria Técnica B2B & Modernização de Sistemas Legados
+- **Capacidade Adicional de Engenharia:** Parceria estratégica com empresas de software, consultorias e agências digitais que buscam um parceiro técnico confiável para absorver demandas complexas de backend, APIs, refatoração e aplicativos nativos.
+- **Modernização de Legados & Migração de Dados:** Planejamento e execução de migrações seguras de bancos de dados relacionais e sistemas monolíticos obsoletos para arquiteturas modernas desacopladas (NestJS, TypeScript, PostgreSQL, Prisma, Vue 3, Redis) com garantia de zero-downtime e reconciliação de integridade.
+- **Comunicação Assíncrona & Transparência:** Gestão estruturada por escopo, entregas homologáveis por sprint em staging, relatórios técnicos objetivos e documentação rigorosa.
+
 ---
 
 ## 3. Casos de Sucesso e Projetos em Produção
@@ -54,6 +59,8 @@
    - Backend V2 em NestJS / Fastify / TypeScript / MongoDB 7.0 / Redis.
    - Conciliação automática de documentos fiscais eletrônicos com a NS Docs.
    - Migração de dados de alta precisão com snapshots de segurança A/B/C e zero perda de registros históricos.
+   - Estudo de Caso Completo: https://www.trinityds.com.br/projetos/transporta
+   - Sandbox Interativa em Produção: https://transporta.trinityds.com.br/sandbox/
 2. **TV Xerém [Streaming e Portal Regional de Notícias]:**
    - Portal moderno com backend NestJS, PostgreSQL 16 e Redis.
    - Governança corporativa completa com autenticação multifator (MFA/TOTP), gestão segura de contas e controle de acesso hierárquico (RBAC) com mais de 300 testes automatizados (unitários e E2E).
@@ -86,8 +93,9 @@
 ## 5. Canais Oficiais de Contato
 - **Site:** https://www.trinityds.com.br
 - **Serviços Especializados:** https://www.trinityds.com.br/servicos
-- **WhatsApp:** +55 (21) 92044-7431
+- **WhatsApp Corporativo (Link Direto):** https://wa.me/5521920447431 (+55 21 92044-7431)
 - **E-mail:** contato@trinityds.com.br
 - **Perguntas Frequentes:** https://www.trinityds.com.br/faq
+- **Sandbox Interativa do Transporta:** https://transporta.trinityds.com.br/sandbox/
 - **Instagram:** https://www.instagram.com/trinity.dsolutions/
 - **GitHub:** https://github.com/Trinity-MD e https://github.com/Trinity-DS

@@ -26,6 +26,7 @@ DEFAULT_COOLDOWN_SECONDS = 15 * 60  # 15 minutos
 
 ALL_CANONICAL_URLS = [
     f"https://{HOST}/",
+    f"https://{HOST}/servicos",
     f"https://{HOST}/faq",
     f"https://{HOST}/projetos",
     f"https://{HOST}/projetos/transporta",
@@ -130,7 +131,9 @@ def detect_changed_urls(project_root):
     # Mapeamento pontual por rota
     detected = set()
     for f in changed_files:
-        if "paginas/faq" in f:
+        if "paginas/servicos" in f:
+            detected.add(f"https://{HOST}/servicos")
+        elif "paginas/faq" in f:
             detected.add(f"https://{HOST}/faq")
         elif "paginas/projetos/transporta" in f:
             detected.add(f"https://{HOST}/projetos/transporta")
