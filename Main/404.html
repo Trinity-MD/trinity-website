@@ -1,55 +1,166 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Erro 404 - Página Não Encontrada</title>
+    <title>Página Não Encontrada (Erro 404) | Trinity Mídia Digital e Tecnologia</title>
     <meta name="robots" content="noindex, follow">
-    <meta name="description" content="Trinity Mídia Digital: Soluções digitais completas que transformam ideias em realidade tecnológica. Desenvolvimento Web, Marketing Digital e Criação de Conteúdo.">
-    <meta name="keywords" content="mídia digital, desenvolvimento web, marketing digital, trinity, criação de sites, SEO, realidade digital">
-    <link rel="stylesheet" href="/dist/output.css">
+    <meta name="description" content="A rota solicitada não foi encontrada ou mudou de endereço. Acesse os serviços, estudos de caso e guias de engenharia da Trinity Mídia Digital e Tecnologia.">
     <link rel="icon" type="image/png" href="/Imagens/trinity-logo-header.png">
+    <link rel="stylesheet" href="/dist/output.css">
 </head>
-<body class="opacity-0 transition-opacity duration-500">
-<canvas id="canvas-bg" class="fixed inset-0 z-[-1] w-full h-full pointer-events-none"></canvas>
-    <header>
-        <main class="flex flex-col justify-center items-center text-center px-4 py-12 mt-4">
-            <div class="text-center">
-                <h1 class="font-size:32px text-7xl md:text-9xl font-black uppercase text-purple-400" style="text-shadow: 0 0 10px #a855f7, 0 0 20px #a855f7;">
-                    404
-                </h1>
-                <p id="error-message" class="text-lg md:text-xl text-gray-200 max-w-lg mx-auto min-h-[3rem] md:min-h-[2rem] mt-6">
-                </p>
-                <a href="/" class="neon-border-button mt-8 inline-block">
-                    Voltar para a Home
+<body class="trinity-home">
+    <!-- CABEÇALHO CANÔNICO -->
+    <header class="th-header">
+        <div class="th-shell th-header-inner">
+            <a class="th-brand" href="/" aria-label="Trinity — Home">
+                <img class="th-brand-logo" src="/Imagens/trinity-logo-header.png" alt="Trinity" width="256" height="256">
+                <span>Trinity</span>
+                <small data-i18n="nh_brand_sub">Mídia Digital e Tecnologia</small>
             </a>
+            <nav class="th-nav" aria-label="Navegação principal">
+                <a href="/" data-i18n="nav_home">Home</a>
+                <a href="/servicos" data-i18n="nav_services">Serviços</a>
+                <a href="/projetos" data-i18n="nav_projects">Projetos</a>
+                <a href="/sobre" data-i18n="nav_about">Sobre</a>
+                <a href="/faq">FAQ</a>
+                <a href="/contato" data-i18n="nav_contact">Contato</a>
+            </nav>
+            <div class="th-header-actions">
+                <div class="th-languages" aria-label="Idioma">
+                    <button type="button" id="btn-mobile-pt" onclick="changeLanguage('pt')" aria-label="Português">PT</button>
+                    <span aria-hidden="true">/</span>
+                    <button type="button" id="btn-mobile-en" class="opacity-50" onclick="changeLanguage('en')" aria-label="English">EN</button>
+                </div>
+                <a class="th-header-cta" href="/contato" data-i18n="nh_start_project">Iniciar um projeto</a>
+                <button type="button" id="menu-toggle" class="th-menu-toggle" aria-label="Abrir menu" aria-controls="menu-mobile" aria-expanded="false">
+                    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
+                </button>
             </div>
-
-        </main>
+        </div>
+        <nav id="menu-mobile" class="th-mobile-nav hidden" aria-label="Navegação móvel">
+            <a href="/" data-i18n="nav_home">Home</a>
+            <a href="/servicos" data-i18n="nav_services">Serviços</a>
+            <a href="/projetos" data-i18n="nav_projects">Projetos</a>
+            <a href="/sobre" data-i18n="nav_about">Sobre</a>
+            <a href="/faq">FAQ</a>
+            <a href="/contato" data-i18n="nav_contact">Contato</a>
+            <a class="th-mobile-cta" href="/contato" data-i18n="nh_start_project">Iniciar um projeto</a>
+        </nav>
     </header>
 
+    <main id="main-content">
+        <!-- HERO DE RECUPERAÇÃO 404 -->
+        <section class="th-section bg-slate-900 text-white pt-16 pb-20 border-b border-slate-800" aria-labelledby="error-404-title">
+            <div class="th-shell max-w-4xl mx-auto">
+                <p class="th-eyebrow text-emerald-400 font-semibold tracking-wider uppercase mb-3">Erro 404 · Rota Não Encontrada</p>
+                <h1 id="error-404-title" class="text-3xl md:text-5xl font-bold tracking-tight text-white leading-tight mb-5">
+                    Essa página não existe ou mudou de endereço.
+                </h1>
+                <p class="text-base md:text-lg text-slate-300 leading-relaxed max-w-2xl mb-8">
+                    O link que você acessou pode estar desatualizado ou conter algum erro de digitação. Use os atalhos abaixo para ir direto ao conteúdo que procura ou voltar para a página inicial.
+                </p>
+                <div class="flex flex-wrap gap-4 items-center">
+                    <a class="th-button inline-flex items-center justify-center px-6 py-3.5 rounded-lg bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-semibold text-base transition-all shadow-lg shadow-emerald-500/20" href="/">
+                        Voltar para a Home
+                    </a>
+                    <a class="inline-flex items-center justify-center px-6 py-3.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-600 font-medium text-base transition-all" href="/contato">
+                        Falar com o Engenheiro
+                    </a>
+                    <a class="inline-flex items-center justify-center px-5 py-3.5 text-emerald-400 hover:text-emerald-300 font-medium text-sm transition-all"
+                       href="https://wa.me/5521920447431?text=Ol%C3%A1%20Alex,%20acabei%20caindo%20em%20uma%20p%C3%A1gina%20404%20no%20site%20e%20gostaria%20de%20ajuda."
+                       target="_blank" rel="noopener noreferrer">
+                        Atendimento via WhatsApp ↗
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- GRADE AMIGÁVEL DE DESTINOS ÚTEIS -->
+        <section class="th-section py-16 bg-slate-50 border-b border-slate-200" aria-labelledby="rescue-links-title">
+            <div class="th-shell max-w-5xl mx-auto">
+                <div class="mb-10">
+                    <p class="th-eyebrow text-slate-500 font-semibold uppercase tracking-wider mb-1">Mapa de Recuperação</p>
+                    <h2 id="rescue-links-title" class="text-2xl md:text-3xl font-bold text-slate-900 tracking-tight">
+                        Para onde você gostaria de ir?
+                    </h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <a href="/servicos" class="block p-6 rounded-xl bg-white border border-slate-200 hover:border-emerald-500 transition-all shadow-sm">
+                        <span class="text-xs font-bold uppercase tracking-wider text-emerald-600 block mb-2">Catálogo Técnico</span>
+                        <h3 class="text-base font-bold text-slate-900 mb-2">Serviços de Engenharia</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed mb-3">Sistemas web, aplicativos nativos, APIs fiscais, resgate de legados e Cloud Zero Trust.</p>
+                        <span class="text-xs font-semibold text-emerald-700">Ver serviços →</span>
+                    </a>
+                    <a href="/solucoes/software-sob-medida" class="block p-6 rounded-xl bg-white border border-slate-200 hover:border-emerald-500 transition-all shadow-sm">
+                        <span class="text-xs font-bold uppercase tracking-wider text-emerald-600 block mb-2">Custos & Modelo</span>
+                        <h3 class="text-base font-bold text-slate-900 mb-2">Software Sob Medida</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed mb-3">Faixas de investimento reais, contratação direta e código 100% de propriedade da empresa.</p>
+                        <span class="text-xs font-semibold text-emerald-700">Acessar guia →</span>
+                    </a>
+                    <a href="/solucoes/logistica-offline" class="block p-6 rounded-xl bg-white border border-slate-200 hover:border-emerald-500 transition-all shadow-sm">
+                        <span class="text-xs font-bold uppercase tracking-wider text-emerald-600 block mb-2">Frotas & Campo</span>
+                        <h3 class="text-base font-bold text-slate-900 mb-2">Logística &amp; App Offline</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed mb-3">Aplicativos Kotlin que operam sem internet com Outbox Pattern e conciliação CT-e/NF-e.</p>
+                        <span class="text-xs font-semibold text-emerald-700">Ver arquitetura →</span>
+                    </a>
+                    <a href="/solucoes/modernizacao-legados" class="block p-6 rounded-xl bg-white border border-slate-200 hover:border-emerald-500 transition-all shadow-sm">
+                        <span class="text-xs font-bold uppercase tracking-wider text-emerald-600 block mb-2">Migração Segura</span>
+                        <h3 class="text-base font-bold text-slate-900 mb-2">Modernização de Legados</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed mb-3">Substituição progressiva via Strangler Fig Pattern e Dual-Write sem parar a empresa.</p>
+                        <span class="text-xs font-semibold text-emerald-700">Ver metodologia →</span>
+                    </a>
+                    <a href="/projetos/transporta" class="block p-6 rounded-xl bg-white border border-slate-200 hover:border-emerald-500 transition-all shadow-sm">
+                        <span class="text-xs font-bold uppercase tracking-wider text-emerald-600 block mb-2">Caso em Produção</span>
+                        <h3 class="text-base font-bold text-slate-900 mb-2">Transporta Logística V2</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed mb-3">Estudo de caso completo e acesso à Sandbox interativa rodando em produção real.</p>
+                        <span class="text-xs font-semibold text-emerald-700">Ver projeto →</span>
+                    </a>
+                    <a href="/faq" class="block p-6 rounded-xl bg-white border border-slate-200 hover:border-emerald-500 transition-all shadow-sm">
+                        <span class="text-xs font-bold uppercase tracking-wider text-emerald-600 block mb-2">Transparência</span>
+                        <h3 class="text-base font-bold text-slate-900 mb-2">Perguntas Frequentes (FAQ)</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed mb-3">Respostas objetivas sobre prazos, contrato, NDA, Nota Fiscal e sustentação pós-deploy.</p>
+                        <span class="text-xs font-semibold text-emerald-700">Abrir FAQ →</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- RODAPÉ CANÔNICO -->
+    <footer class="th-footer">
+        <div class="th-shell">
+            <div class="th-footer-grid">
+                <div>
+                    <p class="th-footer-brand">Trinity</p>
+                    <p class="th-eyebrow" data-i18n="nh_brand_sub">Mídia Digital e Tecnologia</p>
+                    <p data-i18n="nh_footer_desc">Desenvolvimento Full Stack, sistemas em produção, aplicativos, APIs, integrações e infraestrutura.</p>
+                </div>
+                <nav aria-label="Navegação do rodapé">
+                    <p class="th-eyebrow" data-i18n="nh_footer_nav">Navegação</p>
+                    <a href="/" data-i18n="nav_home">Home</a>
+                    <a href="/servicos" data-i18n="nav_services">Serviços</a>
+                    <a href="/projetos" data-i18n="nav_projects">Projetos</a>
+                    <a href="/sobre" data-i18n="nav_about">Sobre</a>
+                    <a href="/faq">FAQ</a>
+                    <a href="/contato" data-i18n="nav_contact">Contato</a>
+                    <p class="th-eyebrow" style="margin-top: 1rem;">Soluções</p>
+                    <a href="/solucoes/software-sob-medida">Software Sob Medida</a>
+                    <a href="/solucoes/logistica-offline">Logística Offline</a>
+                    <a href="/solucoes/modernizacao-legados">Modernização de Legados</a>
+                </nav>
+                <div>
+                    <p class="th-eyebrow" data-i18n="nh_footer_position">Posicionamento</p>
+                    <p data-i18n="nh_panel_title">Desenvolvedor Full Stack Pleno — atuação end-to-end</p>
+                </div>
+            </div>
+            <div class="th-footer-bottom">
+                <p>&copy; 2026 Trinity Mídia Digital e Tecnologia. <span data-i18n="footer_rights">Todos os direitos reservados.</span></p>
+                <span data-i18n="nh_footer_note">Arquitetura, código e deploy sob condução direta</span>
+            </div>
+        </div>
+    </footer>
+
     <script src="/js/ui.js" defer></script>
-    <script type="module" src="/js/main.js" defer></script>
-    <script src="/js/background.js" defer></script> <script type="module" src="/js/main.js" defer></script>
-
-        <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const messageElement = document.getElementById('error-message');
-            
-            const textToType = "Oh não! Parece que a página que você procurava não foi encontrada... 😕";
-            let index = 0;
-
-            function typeWriter() {
-                if (index < textToType.length) {
-                    messageElement.textContent += textToType.charAt(index);
-                    index++;
-                    setTimeout(typeWriter, 40); 
-                }
-            }
-            
-           setTimeout(typeWriter, 500); 
-        });
-    </script>
-
 </body>
 </html>
