@@ -546,7 +546,26 @@ const translations = {
         "sv_final_title": "Pronto para transformar sua operação em um sistema confiável?",
         "sv_final_desc": "Converse diretamente com o engenheiro responsável para receber um diagnóstico do seu cenário técnico.",
         "sv_final_primary": "Falar com o Especialista",
-        "sv_final_secondary": "Conhecer Projetos Entregues"
+        "sv_final_secondary": "Conhecer Projetos Entregues",
+
+        // Página Links (Bio Instagram)
+        "lk_page_title": "Links Oficiais & Contato Direto | Trinity Mídia Digital e Tecnologia",
+        "lk_page_description": "Acesse os links oficiais da Trinity (@trinity.dsolutions): contato direto via WhatsApp para projetos sob medida, estudo de caso Transporta, sandbox interativa e serviços técnicos.",
+        "lk_brand_title": "Trinity — Mídia Digital e Tecnologia",
+        "lk_tagline": "Desenvolvimento de software sob medida, aplicativos, APIs e infraestrutura — contato direto com quem desenvolve.",
+        "lk_cta_badge": "WhatsApp Direto",
+        "lk_cta_primary": "Falar direto sobre um projeto",
+        "lk_cta_form": "Ou enviar mensagem pelo formulário de contato →",
+        "lk_b2_eyebrow": "Estudo de Caso · V2 em Produção",
+        "lk_b2_title": "Estudo de Caso: Transporta (Sistema Logístico)",
+        "lk_b3_eyebrow": "Demonstração Aberta · Ao Vivo",
+        "lk_b3_title": "Testar Sandbox Interativa do Transporta",
+        "lk_b4_eyebrow": "Arquitetura & Engenharia",
+        "lk_b4_title": "Serviços & Frentes Técnicas",
+        "lk_b5_eyebrow": "Quem Desenvolve",
+        "lk_b5_title": "Conhecer a Trinity & Trajetória",
+        "lk_b6_eyebrow": "Portal Oficial",
+        "lk_b6_title": "Site Institucional Completo"
 
     },
     "en": {
@@ -1091,7 +1110,26 @@ const translations = {
         "sv_final_title": "Ready to turn your operation into a reliable software system?",
         "sv_final_desc": "Speak directly with the lead engineer to get an architectural assessment of your technical needs.",
         "sv_final_primary": "Talk to the Specialist",
-        "sv_final_secondary": "Explore Completed Projects"
+        "sv_final_secondary": "Explore Completed Projects",
+
+        // Links Page (Instagram Bio)
+        "lk_page_title": "Official Links & Direct Contact | Trinity Digital Media and Technology",
+        "lk_page_description": "Official links hub for Trinity (@trinity.dsolutions): direct WhatsApp contact for custom software, Transporta case study, live sandbox, and engineering services.",
+        "lk_brand_title": "Trinity — Digital Media and Technology",
+        "lk_tagline": "Custom software development, mobile apps, APIs, and infrastructure — direct contact with the developer.",
+        "lk_cta_badge": "Direct WhatsApp",
+        "lk_cta_primary": "Talk directly about a project",
+        "lk_cta_form": "Or send a message via contact form →",
+        "lk_b2_eyebrow": "Case Study · V2 in Production",
+        "lk_b2_title": "Case Study: Transporta (Logistics System)",
+        "lk_b3_eyebrow": "Open Live Demo",
+        "lk_b3_title": "Try the Interactive Transporta Sandbox",
+        "lk_b4_eyebrow": "Architecture & Engineering",
+        "lk_b4_title": "Services & Technical Capabilities",
+        "lk_b5_eyebrow": "About the Engineer",
+        "lk_b5_title": "Meet Trinity & Background",
+        "lk_b6_eyebrow": "Official Website",
+        "lk_b6_title": "Full Corporate Website"
 
     }
 };
@@ -1472,6 +1510,7 @@ function setupFilterSwiper() {
  * BOTÃO FLUTUANTE DE WHATSAPP (CONVERSÃO DIRETA)
  * ======================================= */
 function setupWhatsAppFloat() {
+    if (document.body?.classList.contains('trinity-links-page')) return;
     if (document.getElementById('trinity-whatsapp-widget')) return;
 
     // Injeta estilos isolados do botão flutuante

@@ -92,6 +92,7 @@
 
 ## 5. Canais Oficiais de Contato e Páginas Estratégicas
 - **Site:** https://www.trinityds.com.br
+- **Links Oficiais (Bio Instagram):** https://www.trinityds.com.br/links
 - **Serviços Especializados:** https://www.trinityds.com.br/servicos
 - **Solução: Aplicativo para Motoristas Offline & Digitalização de Frotas:** https://www.trinityds.com.br/solucoes/logistica-offline
 - **Solução: Modernização Segura de Sistemas Legados & Migração de Banco de Dados:** https://www.trinityds.com.br/solucoes/modernizacao-legados
