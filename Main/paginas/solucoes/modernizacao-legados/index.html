@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modernização de Sistemas Legados & Migração de Banco de Dados | Trinity</title>
+    <meta name="description" content="Modernização segura de softwares legados e migração de banco de dados sem downtime. APIs em TypeScript/NestJS, PostgreSQL 16, Redis e zero perda de histórico.">
+    <link rel="canonical" href="https://www.trinityds.com.br/solucoes/modernizacao-legados">
+    <link rel="icon" type="image/png" href="/Imagens/trinity-logo-header.png">
+
+    <!-- Open Graph / Redes Sociais -->
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Trinity Mídia Digital e Tecnologia">
+    <meta property="og:title" content="Modernização de Sistemas Legados & Migração de Banco de Dados | Trinity">
+    <meta property="og:description" content="Substitua sistemas lentos e bancos obsoletos sem parar a operação da sua empresa. Arquitetura moderna em NestJS, PostgreSQL e migração progressiva.">
+    <meta property="og:url" content="https://www.trinityds.com.br/solucoes/modernizacao-legados">
+    <meta property="og:image" content="https://www.trinityds.com.br/Imagens/trinity-cover.png">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Modernização de Sistemas Legados & Migração de Banco de Dados | Trinity">
+    <meta name="twitter:description" content="Como modernizar softwares corporativos legados sem o risco do 'Big Bang': Strangler Fig Pattern, dual-write e zero downtime.">
+    <meta name="twitter:image" content="https://www.trinityds.com.br/Imagens/trinity-cover.png">
+
+    <link rel="stylesheet" href="/dist/output.css">
+
+    <!-- ========================================================= -->
+    <!-- [GOOGLE & GEO] DADOS ESTRUTURADOS (JSON-LD)              -->
+    <!-- TechArticle + BreadcrumbList + FAQPage                    -->
+    <!-- ========================================================= -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "TechArticle",
+                "@id": "https://www.trinityds.com.br/solucoes/modernizacao-legados#article",
+                "headline": "Modernização Segura de Sistemas Legados e Migração de Banco de Dados sem Downtime",
+                "description": "Metodologia de engenharia de software para modernização progressiva de aplicações corporativas obsoletas: Strangler Fig Pattern, replicação dual-write de banco de dados, APIs em NestJS e governança de acesso RBAC/MFA.",
+                "url": "https://www.trinityds.com.br/solucoes/modernizacao-legados",
+                "inLanguage": "pt-BR",
+                "publisher": {
+                    "@type": "Organization",
+                    "@id": "https://www.trinityds.com.br/#organization",
+                    "name": "Trinity Mídia Digital e Tecnologia Ltda",
+                    "url": "https://www.trinityds.com.br"
+                },
+                "author": {
+                    "@type": "Person",
+                    "name": "Alex Alencar",
+                    "jobTitle": "Arquiteto de Soluções & Engenheiro Full Stack"
+                }
+            },
+            {
+                "@type": "BreadcrumbList",
+                "@id": "https://www.trinityds.com.br/solucoes/modernizacao-legados#breadcrumb",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://www.trinityds.com.br/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Soluções",
+                        "item": "https://www.trinityds.com.br/servicos"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "Modernização de Legados",
+                        "item": "https://www.trinityds.com.br/solucoes/modernizacao-legados"
+                    }
+                ]
+            },
+            {
+                "@type": "FAQPage",
+                "@id": "https://www.trinityds.com.br/solucoes/modernizacao-legados#faq",
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": "Como modernizar um sistema corporativo antigo sem paralisar a empresa?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "A melhor prática da engenharia é o Strangler Fig Pattern (Padrão Estrangulador). Em vez de descartar o software de uma vez num 'Big Bang' de alto risco, colocamos uma camada de proxy/API moderna em frente ao sistema antigo. Os módulos mais críticos ou com gargalos de lentidão são reescritos primeiro em microsserviços ou módulos independentes (NestJS/PostgreSQL), enquanto o restante do legado continua operando normalmente. A substituição ocorre de forma invisível para o usuário final, com zero parada operacional."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "É seguro migrar de bancos legados (ex: MySQL antigo, Access, Firebird) para PostgreSQL 16?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Sim, desde que seja adotada uma estratégia de esteira com Dual-Write (escrita dupla) e reconciliação progressiva. Durante a fase de transição, as operações de escrita são espelhadas nos dois bancos com validação criptográfica de integridade de dados. Se houver qualquer divergência, a esteira alerta imediatamente. Apenas quando 100% dos registros históricos e transações em tempo real estão consolidados é que a chave definitiva é virada para o novo banco de dados."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Quando vale mais a pena modernizar progressivamente em vez de reescrever do zero?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Reescritas totais ('do zero') falham em mais de 70% dos casos porque levam de 1 a 2 anos sem entregar valor real ao negócio, enquanto as regras operacionais da empresa continuam mudando. A modernização progressiva modular permite colocar o primeiro módulo moderno no ar em semanas, eliminando gargalos imediatos e autofinanciando as etapas seguintes com ganhos de produtividade."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Quem é o dono do código-fonte e dos dados após o término do projeto?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "A sua empresa é titular absoluta de 100% do código-fonte, esquemas de banco de dados, documentação de arquitetura e rotinas de deploy. Na Trinity Mídia Digital e Tecnologia, não praticamos vendor lock-in nem cobramos mensalidades sobre a propriedade intelectual desenvolvida para o cliente."
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+    </script>
+</head>
+<body class="trinity-home">
+    <!-- CABEÇALHO CANÔNICO -->
+    <header class="th-header">
+        <div class="th-shell th-header-inner">
+            <a class="th-brand" href="/" aria-label="Trinity — Home">
+                <img class="th-brand-logo" src="/Imagens/trinity-logo-header.png" alt="Trinity" width="256" height="256">
+                <span>Trinity</span>
+                <small data-i18n="nh_brand_sub">Mídia Digital e Tecnologia</small>
+            </a>
+            <nav class="th-nav" aria-label="Navegação principal">
+                <a href="/" data-i18n="nav_home">Home</a>
+                <a href="/servicos" data-i18n="nav_services">Serviços</a>
+                <a href="/projetos" data-i18n="nav_projects">Projetos</a>
+                <a href="/sobre" data-i18n="nav_about">Sobre</a>
+                <a href="/faq">FAQ</a>
+                <a href="/contato" data-i18n="nav_contact">Contato</a>
+            </nav>
+            <div class="th-header-actions">
+                <div class="th-languages" aria-label="Idioma">
+                    <button type="button" id="btn-mobile-pt" onclick="changeLanguage('pt')" aria-label="Português">PT</button>
+                    <span aria-hidden="true">/</span>
+                    <button type="button" id="btn-mobile-en" class="opacity-50" onclick="changeLanguage('en')" aria-label="English">EN</button>
+                </div>
+                <a class="th-header-cta" href="/contato" data-i18n="nh_start_project">Iniciar um projeto</a>
+                <button type="button" id="menu-toggle" class="th-menu-toggle" aria-label="Abrir menu" aria-controls="menu-mobile" aria-expanded="false">
+                    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
+                </button>
+            </div>
+        </div>
+        <nav id="menu-mobile" class="th-mobile-nav hidden" aria-label="Navegação móvel">
+            <a href="/" data-i18n="nav_home">Home</a>
+            <a href="/servicos" data-i18n="nav_services">Serviços</a>
+            <a href="/projetos" data-i18n="nav_projects">Projetos</a>
+            <a href="/sobre" data-i18n="nav_about">Sobre</a>
+            <a href="/faq">FAQ</a>
+            <a href="/contato" data-i18n="nav_contact">Contato</a>
+            <a class="th-mobile-cta" href="/contato" data-i18n="nh_start_project">Iniciar um projeto</a>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <!-- ========================================================= -->
+        <!-- 01 — HERO EXECUTIVO (ANSWER-FIRST)                        -->
+        <!-- ========================================================= -->
+        <section class="th-section bg-slate-900 text-white pt-16 pb-20 border-b border-slate-800" aria-labelledby="hero-title">
+            <div class="th-shell">
+                <p class="th-eyebrow text-emerald-400 font-semibold tracking-wider uppercase mb-3">Engenharia de Software & Modernização de Sistemas</p>
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    <div class="lg:col-span-8">
+                        <h1 id="hero-title" class="text-3xl md:text-5xl font-bold tracking-tight text-white leading-tight mb-6">
+                            Modernização Segura de Sistemas Legados & Migração de Banco de Dados sem Downtime
+                        </h1>
+                        <!-- RESPOSTA DIRETA / ANSWER-FIRST (FEATURED SNIPPET TARGET) -->
+                        <div class="p-6 rounded-xl bg-slate-800/80 border border-slate-700/80 mb-8 backdrop-blur-sm">
+                            <p class="text-base md:text-lg text-slate-200 leading-relaxed font-normal">
+                                <strong>Como modernizar sem paralisar o negócio:</strong> O maior erro em TI corporativa é tentar substituir sistemas antigos através de um "Big Bang" de fim de semana. A metodologia correta utiliza o <strong>Strangler Fig Pattern (Padrão Estrangulador)</strong> aliado à <strong>replicação Dual-Write de banco de dados</strong>: isolamos os pontos críticos do software obsoleto com um API Gateway em TypeScript/NestJS, migramos as tabelas progressivamente para PostgreSQL 16 com Redis, e validamos cada registro em produção antes de desativar as telas antigas. O resultado é zero parada operacional e zero perda de histórico.
+                            </p>
+                        </div>
+                        <div class="flex flex-wrap gap-4 items-center">
+                            <a class="th-button inline-flex items-center justify-center px-6 py-3.5 rounded-lg bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-semibold text-base transition-all shadow-lg shadow-emerald-500/20" 
+                               href="https://wa.me/5521920447431?text=Ol%C3%A1%20Alex,%20gostaria%20de%20conversar%20sobre%20a%20moderniza%C3%A7%C3%A3o%20do%20nosso%20sistema%20legado."
+                               target="_blank" rel="noopener noreferrer">
+                                Falar com o Arquiteto no WhatsApp
+                            </a>
+                            <a class="inline-flex items-center justify-center px-6 py-3.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-600 font-medium text-base transition-all"
+                               href="/projetos">
+                                Ver Casos de Produção Real ↗
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-4 bg-slate-800/50 p-6 rounded-2xl border border-slate-700/60">
+                        <p class="text-xs uppercase tracking-widest text-slate-400 font-semibold mb-4">Garantias de Engenharia</p>
+                        <ul class="space-y-4 text-sm text-slate-300">
+                            <li class="flex items-start gap-3">
+                                <span class="text-emerald-400 font-bold">✓</span>
+                                <span><strong>Zero Perda de Histórico:</strong> Validação por checksum e reconciliação atômica de dados legados.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="text-emerald-400 font-bold">✓</span>
+                                <span><strong>Operação Sem Downtime:</strong> Transição invisível com esteira Dual-Write e proxy reverso.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="text-emerald-400 font-bold">✓</span>
+                                <span><strong>Stack Moderna & Escalável:</strong> NestJS (TypeScript), PostgreSQL 16, Redis e Prisma ORM.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="text-emerald-400 font-bold">✓</span>
+                                <span><strong>Governança & Segurança:</strong> RBAC granular, autenticação MFA (TOTP) e auditoria de ações.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================= -->
+        <!-- 02 — OS 5 SINAIS DE QUE O SISTEMA VIROU UM GARGALO        -->
+        <!-- ========================================================= -->
+        <section class="th-section py-20 bg-slate-50 border-b border-slate-200" aria-labelledby="signals-title">
+            <div class="th-shell max-w-5xl mx-auto">
+                <div class="text-center mb-16">
+                    <p class="th-eyebrow text-slate-500 font-semibold tracking-wider uppercase mb-2">Diagnóstico de Obsolescência</p>
+                    <h2 id="signals-title" class="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight">
+                        5 sinais de que o software da sua empresa virou um risco crítico
+                    </h2>
+                    <p class="text-slate-600 mt-4 max-w-2xl mx-auto text-base">
+                        Softwares desenvolvidos no passado costumam acumular débitos técnicos graves. Se a sua empresa enfrenta um destes cenários, a modernização já é urgente:
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="p-6 rounded-xl bg-white border border-slate-200 shadow-sm">
+                        <div class="w-10 h-10 rounded-lg bg-amber-100 text-amber-700 flex items-center justify-center font-bold text-lg mb-4">01</div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">Relatórios que Travam o Banco</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Queries pesadas sem indexação adequada bloqueiam as conexões do banco de dados, congelando as telas de todos os usuários da empresa ao mesmo tempo.
+                        </p>
+                    </div>
+                    <div class="p-6 rounded-xl bg-white border border-slate-200 shadow-sm">
+                        <div class="w-10 h-10 rounded-lg bg-red-100 text-red-700 flex items-center justify-center font-bold text-lg mb-4">02</div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">O Desenvolvedor Original Sumiu</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            O sistema foi criado anos atrás sem documentação, sem testes automatizados e em versões defasadas (PHP 5.x, Delphi, ASP clássico ou Access). Ninguém tem coragem de alterar nada.
+                        </p>
+                    </div>
+                    <div class="p-6 rounded-xl bg-white border border-slate-200 shadow-sm">
+                        <div class="w-10 h-10 rounded-lg bg-indigo-100 text-indigo-700 flex items-center justify-center font-bold text-lg mb-4">03</div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">O "Efeito Castelo de Cartas"</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Cada nova funcionalidade ou correção solicitada quebra três partes do sistema que estavam funcionando, gerando retrabalho constante e insegurança no time.
+                        </p>
+                    </div>
+                    <div class="p-6 rounded-xl bg-white border border-slate-200 shadow-sm">
+                        <div class="w-10 h-10 rounded-lg bg-purple-100 text-purple-700 flex items-center justify-center font-bold text-lg mb-4">04</div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">Incapacidade de Integração</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            A empresa precisa conectar novos canais (APIs bancárias, WhatsApp, emissão fiscal SEFAZ ou CRMs modernos), mas o software legado não possui arquitetura REST/JSON.
+                        </p>
+                    </div>
+                    <div class="p-6 rounded-xl bg-white border border-slate-200 shadow-sm md:col-span-2 lg:col-span-2">
+                        <div class="w-10 h-10 rounded-lg bg-rose-100 text-rose-700 flex items-center justify-center font-bold text-lg mb-4">05</div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">Vulnerabilidades e Ausência de Auditoria (LGPD)</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Senhas em texto puro ou com hashes fracos (MD5/SHA1), permissões binárias ("admin" ou "comum") sem granularidade, e nenhuma trilha de auditoria para saber quem alterou ou excluiu um registro crítico de cliente ou financeiro.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================= -->
+        <!-- 03 — COMPARATIVO: BIG BANG VS STRANGLER FIG               -->
+        <!-- ========================================================= -->
+        <section class="th-section py-20 bg-white border-b border-slate-200" aria-labelledby="comparison-title">
+            <div class="th-shell max-w-5xl mx-auto">
+                <div class="text-center mb-16">
+                    <p class="th-eyebrow text-slate-500 font-semibold tracking-wider uppercase mb-2">Estratégia de Risco Controlado</p>
+                    <h2 id="comparison-title" class="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight">
+                        Por que reescrever 'do zero' costuma falhar — e o que fazemos no lugar
+                    </h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Abordagem Arriscada -->
+                    <div class="p-8 rounded-2xl bg-rose-50/60 border border-rose-200">
+                        <div class="flex items-center gap-3 mb-6">
+                            <span class="w-8 h-8 rounded-full bg-rose-600 text-white flex items-center justify-center font-bold text-sm">✕</span>
+                            <h3 class="text-xl font-bold text-slate-900">A Reescrita "Big Bang" (Alto Risco)</h3>
+                        </div>
+                        <ul class="space-y-4 text-sm text-slate-700">
+                            <li class="flex items-start gap-2">
+                                <span class="text-rose-600 font-bold">•</span>
+                                <span><strong>12 a 24 meses sem entregas:</strong> A empresa investe alto sem ver nada funcionando em produção.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-rose-600 font-bold">•</span>
+                                <span><strong>Divergência de regras:</strong> O negócio muda enquanto o novo sistema é feito, gerando defasagem no lançamento.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-rose-600 font-bold">•</span>
+                                <span><strong>Virada traumática:</strong> Mudar tudo em um único final de semana quase sempre gera perda de dados e paralisação geral na segunda-feira.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-rose-600 font-bold">•</span>
+                                <span><strong>Custo descontrolado:</strong> Orçamentos estouram por escopo mal delimitado.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Abordagem Trinity -->
+                    <div class="p-8 rounded-2xl bg-emerald-50/60 border border-emerald-200">
+                        <div class="flex items-center gap-3 mb-6">
+                            <span class="w-8 h-8 rounded-full bg-emerald-600 text-white flex items-center justify-center font-bold text-sm">✓</span>
+                            <h3 class="text-xl font-bold text-slate-900">Modernização Progressiva (Trinity)</h3>
+                        </div>
+                        <ul class="space-y-4 text-sm text-slate-700">
+                            <li class="flex items-start gap-2">
+                                <span class="text-emerald-600 font-bold">•</span>
+                                <span><strong>Primeiro módulo em produção em semanas:</strong> Benefício imediato nas dores mais urgentes (ex: relatórios, faturamento).</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-emerald-600 font-bold">•</span>
+                                <span><strong>Strangler Fig Pattern:</strong> O sistema novo envolve e substitui o legado gradualmente através de proxy.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-emerald-600 font-bold">•</span>
+                                <span><strong>Dual-Write sem risco:</strong> Dados gravados simultaneamente com validação cruzada contínua.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-emerald-600 font-bold">•</span>
+                                <span><strong>Investimento sob demanda:</strong> Cada etapa se autofinancia com os ganhos de produtividade gerados.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================= -->
+        <!-- 04 — ARQUITETURA TÉCNICA DE PRODUÇÃO                      -->
+        <!-- ========================================================= -->
+        <section class="th-section py-20 bg-slate-900 text-white" aria-labelledby="architecture-title">
+            <div class="th-shell max-w-5xl mx-auto">
+                <div class="text-center mb-16">
+                    <p class="th-eyebrow text-emerald-400 font-semibold tracking-wider uppercase mb-2">Stack & Infraestrutura</p>
+                    <h2 id="architecture-title" class="text-3xl md:text-4xl font-bold text-white tracking-tight">
+                        Pilares técnicos da arquitetura moderna da Trinity
+                    </h2>
+                    <p class="text-slate-400 mt-4 max-w-2xl mx-auto text-base">
+                        Trabalhamos com tecnologias consolidadas pela indústria para garantir estabilidade por décadas, facilidade de manutenção e segurança estrita:
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="p-6 rounded-xl bg-slate-800/80 border border-slate-700">
+                        <div class="text-emerald-400 text-2xl font-bold mb-3">01. NestJS</div>
+                        <h3 class="text-lg font-bold text-white mb-2">TypeScript & APIs Fortes</h3>
+                        <p class="text-slate-400 text-xs leading-relaxed">
+                            Arquitetura modular inspirada no Angular, tipagem estrita de ponta a ponta, validação automática de payloads (DTOs) e documentação Swagger integrada.
+                        </p>
+                    </div>
+                    <div class="p-6 rounded-xl bg-slate-800/80 border border-slate-700">
+                        <div class="text-emerald-400 text-2xl font-bold mb-3">02. Postgres 16</div>
+                        <h3 class="text-lg font-bold text-white mb-2">Integridade Relacional</h3>
+                        <p class="text-slate-400 text-xs leading-relaxed">
+                            Modelagem com constraints rigorosas, índices parciais, particionamento de tabelas históricas e suporte nativo a JSONB para dados flexíveis.
+                        </p>
+                    </div>
+                    <div class="p-6 rounded-xl bg-slate-800/80 border border-slate-700">
+                        <div class="text-emerald-400 text-2xl font-bold mb-3">03. Redis</div>
+                        <h3 class="text-lg font-bold text-white mb-2">Cache & Filas Atômicas</h3>
+                        <p class="text-slate-400 text-xs leading-relaxed">
+                            Desafogamento de até 85% das leituras do banco, controle de concorrência com locks distribuídos e filas assíncronas (BullMQ) para tarefas pesadas.
+                        </p>
+                    </div>
+                    <div class="p-6 rounded-xl bg-slate-800/80 border border-slate-700">
+                        <div class="text-emerald-400 text-2xl font-bold mb-3">04. RBAC / MFA</div>
+                        <h3 class="text-lg font-bold text-white mb-2">Governança Corporativa</h3>
+                        <p class="text-slate-400 text-xs leading-relaxed">
+                            Controle de acesso por papel e permissão granular, segundo fator de autenticação (TOTP) e rastreabilidade total em logs imutáveis.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================= -->
+        <!-- 05 — PROVA DE PRODUÇÃO: CASO REAL TV XERÉM & GOVERNANÇA   -->
+        <!-- ========================================================= -->
+        <section class="th-section py-20 bg-slate-50 border-b border-slate-200" aria-labelledby="cases-title">
+            <div class="th-shell max-w-5xl mx-auto">
+                <div class="p-8 md:p-12 rounded-3xl bg-white border border-slate-200 shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                    <div class="lg:col-span-7">
+                        <p class="th-eyebrow text-emerald-600 font-semibold tracking-wider uppercase mb-2">Governança em Produção Real</p>
+                        <h2 id="cases-title" class="text-2xl md:text-3xl font-bold text-slate-900 tracking-tight mb-4">
+                            Portal TV Xerém: Alta Confiabilidade, RBAC Granular e Proteção de Dados
+                        </h2>
+                        <p class="text-slate-600 text-sm md:text-base leading-relaxed mb-6">
+                            Na modernização de portais administrativos e plataformas de alto tráfego como a <strong>TV Xerém</strong>, implementamos camadas completas de controle de acesso granular (RBAC), separação estrita de privilégios de publicação, auditoria de ações administrativas e esteiras de contingência para garantir operação contínua sem interrupções.
+                        </p>
+                        <div class="grid grid-cols-2 gap-4 text-xs text-slate-700 mb-6">
+                            <div class="p-3 bg-slate-50 rounded-lg border border-slate-200">
+                                <strong class="block text-slate-900 text-sm mb-1">MFA Obrigatório</strong>
+                                Proteção de acessos administrativos via aplicativo autenticador.
+                            </div>
+                            <div class="p-3 bg-slate-50 rounded-lg border border-slate-200">
+                                <strong class="block text-slate-900 text-sm mb-1">Logs Auditáveis</strong>
+                                Registro de quem acessou, modificou ou removeu dados sensíveis.
+                            </div>
+                        </div>
+                        <a class="inline-flex items-center text-sm font-semibold text-emerald-600 hover:text-emerald-700" href="/projetos">
+                            Conhecer todos os projetos entregues pela Trinity →
+                        </a>
+                    </div>
+                    <div class="lg:col-span-5 bg-slate-900 p-6 rounded-2xl text-white">
+                        <p class="text-xs uppercase tracking-widest text-emerald-400 font-semibold mb-3">Checklist de Segurança</p>
+                        <ul class="space-y-3 text-xs text-slate-300">
+                            <li class="flex items-center gap-2">
+                                <span class="text-emerald-400">✓</span> Proteção contra SQL Injection (ORM tipado)
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="text-emerald-400">✓</span> Rate-limiting e proteção contra brute-force
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="text-emerald-400">✓</span> Criptografia de dados em repouso e em trânsito
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="text-emerald-400">✓</span> Backup automatizado com retenção ponto-a-ponto
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="text-emerald-400">✓</span> Zero dependência de bibliotecas sem manutenção
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================= -->
+        <!-- 06 — FAQ ESTRUTURADO (GEO & BUSCA ORGÂNICA)                -->
+        <!-- ========================================================= -->
+        <section class="th-section py-20 bg-white border-b border-slate-200" aria-labelledby="faq-title">
+            <div class="th-shell max-w-4xl mx-auto">
+                <div class="text-center mb-16">
+                    <p class="th-eyebrow text-slate-500 font-semibold tracking-wider uppercase mb-2">Tire Suas Dúvidas</p>
+                    <h2 id="faq-title" class="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight">
+                        Perguntas frequentes sobre modernização e migração
+                    </h2>
+                </div>
+                <div class="space-y-6">
+                    <div class="p-6 rounded-xl bg-slate-50 border border-slate-200">
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">
+                            Como modernizar um sistema corporativo antigo sem paralisar a empresa?
+                        </h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            A melhor prática da engenharia é o Strangler Fig Pattern (Padrão Estrangulador). Em vez de descartar o software de uma vez num 'Big Bang' de alto risco, colocamos uma camada de proxy/API moderna em frente ao sistema antigo. Os módulos mais críticos ou com gargalos de lentidão são reescritos primeiro em microsserviços ou módulos independentes (NestJS/PostgreSQL), enquanto o restante do legado continua operando normalmente. A substituição ocorre de forma invisível para o usuário final, com zero parada operacional.
+                        </p>
+                    </div>
+                    <div class="p-6 rounded-xl bg-slate-50 border border-slate-200">
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">
+                            É seguro migrar de bancos legados (ex: MySQL antigo, Access, Firebird) para PostgreSQL 16?
+                        </h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Sim, desde que seja adotada uma estratégia de esteira com Dual-Write (escrita dupla) e reconciliação progressiva. Durante a fase de transição, as operações de escrita são espelhadas nos dois bancos com validação criptográfica de integridade de dados. Se houver qualquer divergência, a esteira alerta imediatamente. Apenas quando 100% dos registros históricos e transações em tempo real estão consolidados é que a chave definitiva é virada para o novo banco de dados.
+                        </p>
+                    </div>
+                    <div class="p-6 rounded-xl bg-slate-50 border border-slate-200">
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">
+                            Quando vale mais a pena modernizar progressivamente em vez de reescrever do zero?
+                        </h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Reescritas totais ('do zero') falham em mais de 70% dos casos porque levam de 1 a 2 anos sem entregar valor real ao negócio, enquanto as regras operacionais da empresa continuam mudando. A modernização progressiva modular permite colocar o primeiro módulo moderno no ar em semanas, eliminando gargalos imediatos e autofinanciando as etapas seguintes com ganhos de produtividade.
+                        </p>
+                    </div>
+                    <div class="p-6 rounded-xl bg-slate-50 border border-slate-200">
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">
+                            Quem é o dono do código-fonte e dos dados após o término do projeto?
+                        </h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            A sua empresa é titular absoluta de 100% do código-fonte, esquemas de banco de dados, documentação de arquitetura e rotinas de deploy. Na Trinity Mídia Digital e Tecnologia, não praticamos vendor lock-in nem cobramos mensalidades sobre a propriedade intelectual desenvolvida para o cliente.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================= -->
+        <!-- 07 — CTA FINAL: CONTATO DIRETO COM O ARQUITETO            -->
+        <!-- ========================================================= -->
+        <section class="th-section py-20 bg-slate-900 text-white text-center" aria-labelledby="cta-final-title">
+            <div class="th-shell max-w-3xl mx-auto">
+                <p class="th-eyebrow text-emerald-400 font-semibold uppercase tracking-wider mb-2">Próximo Passo</p>
+                <h2 id="cta-final-title" class="text-3xl md:text-5xl font-bold text-white tracking-tight mb-6">
+                    Chegou a hora de destravar o crescimento do seu software?
+                </h2>
+                <p class="text-slate-300 text-base md:text-lg leading-relaxed mb-8">
+                    Converse diretamente com o Arquiteto de Soluções para avaliar a viabilidade de modernização do seu sistema sem compromisso de fechamento imediato.
+                </p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a class="th-button inline-flex items-center px-8 py-4 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-base transition-all shadow-xl shadow-emerald-500/20"
+                       href="https://wa.me/5521920447431?text=Ol%C3%A1%20Alex,%20estive%20na%20p%C3%A1gina%20de%20moderniza%C3%A7%C3%A3o%20de%20legados%20e%20gostaria%20de%20um%20diagn%C3%B3stico%20para%20o%20sistema%20da%20minha%20empresa."
+                       target="_blank" rel="noopener noreferrer">
+                        Iniciar Diagnóstico no WhatsApp
+                    </a>
+                    <a class="inline-flex items-center px-8 py-4 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 text-base font-medium transition-all"
+                       href="/contato">
+                        Enviar Mensagem por Formulário
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- RODAPÉ CANÔNICO -->
+    <footer class="th-footer">
+        <div class="th-shell">
+            <div class="th-footer-grid">
+                <div>
+                    <p class="th-footer-brand">Trinity</p>
+                    <p class="th-eyebrow" data-i18n="nh_brand_sub">Mídia Digital e Tecnologia</p>
+                    <p data-i18n="nh_footer_desc">Desenvolvimento Full Stack, sistemas em produção, aplicativos, APIs, integrações e infraestrutura.</p>
+                </div>
+                <nav aria-label="Navegação do rodapé">
+                    <p class="th-eyebrow" data-i18n="nh_footer_nav">Navegação</p>
+                    <a href="/" data-i18n="nav_home">Home</a>
+                    <a href="/servicos" data-i18n="nav_services">Serviços</a>
+                    <a href="/projetos" data-i18n="nav_projects">Projetos</a>
+                    <a href="/sobre" data-i18n="nav_about">Sobre</a>
+                    <a href="/faq">FAQ</a>
+                    <a href="/contato" data-i18n="nav_contact">Contato</a>
+                </nav>
+                <div>
+                    <p class="th-eyebrow" data-i18n="nh_footer_position">Posicionamento</p>
+                    <p data-i18n="nh_panel_title">Desenvolvedor Full Stack Pleno — atuação end-to-end</p>
+                </div>
+            </div>
+            <div class="th-footer-bottom">
+                <p>&copy; 2026 Trinity Mídia Digital e Tecnologia. <span data-i18n="footer_rights">Todos os direitos reservados.</span></p>
+                <span data-i18n="nh_footer_note">Arquitetura, código e deploy sob condução direta</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/ui.js" defer></script>
+</body>
+</html>

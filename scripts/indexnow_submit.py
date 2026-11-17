@@ -30,6 +30,9 @@ ALL_CANONICAL_URLS = [
     f"https://{HOST}/faq",
     f"https://{HOST}/projetos",
     f"https://{HOST}/projetos/transporta",
+    f"https://{HOST}/solucoes/logistica-offline",
+    f"https://{HOST}/solucoes/modernizacao-legados",
+    f"https://{HOST}/solucoes/software-sob-medida",
     f"https://{HOST}/sobre",
     f"https://{HOST}/contato",
     f"https://{HOST}/llms.txt",
@@ -137,6 +140,12 @@ def detect_changed_urls(project_root):
             detected.add(f"https://{HOST}/faq")
         elif "paginas/projetos/transporta" in f:
             detected.add(f"https://{HOST}/projetos/transporta")
+        elif "paginas/solucoes/logistica-offline" in f:
+            detected.add(f"https://{HOST}/solucoes/logistica-offline")
+        elif "paginas/solucoes/modernizacao-legados" in f:
+            detected.add(f"https://{HOST}/solucoes/modernizacao-legados")
+        elif "paginas/solucoes/software-sob-medida" in f:
+            detected.add(f"https://{HOST}/solucoes/software-sob-medida")
         elif "paginas/projetos" in f:
             detected.add(f"https://{HOST}/projetos")
         elif "paginas/sobre" in f:

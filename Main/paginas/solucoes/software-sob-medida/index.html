@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desenvolvimento de Software Sob Medida & Sistemas Corporativos | Trinity</title>
+    <meta name="description" content="Desenvolvimento de software sob medida, plataformas web e aplicativos empresariais. Elimine licenças abusivas de SaaS com código 100% seu e pagamento por marcos.">
+    <link rel="canonical" href="https://www.trinityds.com.br/solucoes/software-sob-medida">
+    <link rel="icon" type="image/png" href="/Imagens/trinity-logo-header.png">
+
+    <!-- Open Graph / Redes Sociais -->
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Trinity Mídia Digital e Tecnologia">
+    <meta property="og:title" content="Desenvolvimento de Software Sob Medida & Sistemas Corporativos | Trinity">
+    <meta property="og:description" content="Engenharia de software direto com quem desenvolve: escopo transparente, código próprio da sua empresa e pagamento atrelado a entregas testadas em staging.">
+    <meta property="og:url" content="https://www.trinityds.com.br/solucoes/software-sob-medida">
+    <meta property="og:image" content="https://www.trinityds.com.br/Imagens/trinity-cover.png">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Desenvolvimento de Software Sob Medida & Sistemas Corporativos | Trinity">
+    <meta name="twitter:description" content="Quanto custa criar software sob medida no Brasil sem intermediários comerciais e sem armadilhas de SaaS perpétuo.">
+    <meta name="twitter:image" content="https://www.trinityds.com.br/Imagens/trinity-cover.png">
+
+    <link rel="stylesheet" href="/dist/output.css">
+
+    <!-- ========================================================= -->
+    <!-- [GOOGLE & GEO] DADOS ESTRUTURADOS (JSON-LD)              -->
+    <!-- TechArticle + BreadcrumbList + FAQPage                    -->
+    <!-- ========================================================= -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "TechArticle",
+                "@id": "https://www.trinityds.com.br/solucoes/software-sob-medida#article",
+                "headline": "Guia Executivo de Software Sob Medida: Custos Reais, Prazos e Soberania Tecnológica",
+                "description": "Engenharia de software corporativo sob medida: metodologia de contratação sem intermediários comerciais, faixas de preço no mercado brasileiro, modelo de pagamento por marcos em staging e titularidade absoluta do código-fonte.",
+                "url": "https://www.trinityds.com.br/solucoes/software-sob-medida",
+                "inLanguage": "pt-BR",
+                "publisher": {
+                    "@type": "Organization",
+                    "@id": "https://www.trinityds.com.br/#organization",
+                    "name": "Trinity Mídia Digital e Tecnologia Ltda",
+                    "url": "https://www.trinityds.com.br"
+                },
+                "author": {
+                    "@type": "Person",
+                    "name": "Alex Alencar",
+                    "jobTitle": "Arquiteto de Soluções & Engenheiro Full Stack"
+                }
+            },
+            {
+                "@type": "BreadcrumbList",
+                "@id": "https://www.trinityds.com.br/solucoes/software-sob-medida#breadcrumb",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://www.trinityds.com.br/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Soluções",
+                        "item": "https://www.trinityds.com.br/servicos"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "Software Sob Medida",
+                        "item": "https://www.trinityds.com.br/solucoes/software-sob-medida"
+                    }
+                ]
+            },
+            {
+                "@type": "FAQPage",
+                "@id": "https://www.trinityds.com.br/solucoes/software-sob-medida#faq",
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": "Quanto custa desenvolver um software sob medida para uma empresa no Brasil?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "No modelo transparente da Trinity, projetos com escopo focado (MVPs e módulos operacionais) variam em média entre R$ 15.000 e R$ 35.000 com prazo de 6 a 10 semanas. Ecossistemas corporativos completos (com painel web, backend performático em NestJS/PostgreSQL, aplicativo nativo e infraestrutura em nuvem) variam de R$ 40.000 a R$ 120.000+, dependendo do número de integrações fiscais e legadas. Não cobramos mensalidade por usuário ou licença perpétua."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Qual é a vantagem de contratar um Engenheiro Full Stack direto em vez de uma software house tradicional?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Em agências e software houses tradicionais, até 60% do custo vai para intermediários comerciais, gerentes de conta e burocracia de reuniões, criando o 'telefone sem fio' onde quem vende não sabe programar. Na condução técnica direta, você alinha requisitos e prazos diretamente com quem projeta a arquitetura, escreve o código e sobe o deploy em produção, reduzindo prazos e eliminando retrabalho."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Como funciona o modelo de pagamento por marcos (milestones)?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "O investimento é dividido em etapas contratuais atreladas a entregas concretas. Cada módulo concluído é homologado pelo cliente em um ambiente online de testes (staging). O pagamento da etapa só é liberado após a validação funcional em produção, garantindo previsibilidade e segurança financeira total para a sua empresa."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "A minha empresa é a dona oficial do código-fonte e dos servidores?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Sim. Toda contratação formalizada pela Trinity Mídia Digital e Tecnologia Ltda (CNPJ 62.720.421/0001-44) prevê em contrato a transferência patrimonial de 100% da propriedade intelectual do código-fonte, bancos de dados, chaves de API e pipelines de deploy. Sua empresa adquire um ativo estratégico permanente, sem risco de lock-in."
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+    </script>
+</head>
+<body class="trinity-home">
+    <!-- CABEÇALHO CANÔNICO -->
+    <header class="th-header">
+        <div class="th-shell th-header-inner">
+            <a class="th-brand" href="/" aria-label="Trinity — Home">
+                <img class="th-brand-logo" src="/Imagens/trinity-logo-header.png" alt="Trinity" width="256" height="256">
+                <span>Trinity</span>
+                <small data-i18n="nh_brand_sub">Mídia Digital e Tecnologia</small>
+            </a>
+            <nav class="th-nav" aria-label="Navegação principal">
+                <a href="/" data-i18n="nav_home">Home</a>
+                <a href="/servicos" data-i18n="nav_services">Serviços</a>
+                <a href="/projetos" data-i18n="nav_projects">Projetos</a>
+                <a href="/sobre" data-i18n="nav_about">Sobre</a>
+                <a href="/faq">FAQ</a>
+                <a href="/contato" data-i18n="nav_contact">Contato</a>
+            </nav>
+            <div class="th-header-actions">
+                <div class="th-languages" aria-label="Idioma">
+                    <button type="button" id="btn-mobile-pt" onclick="changeLanguage('pt')" aria-label="Português">PT</button>
+                    <span aria-hidden="true">/</span>
+                    <button type="button" id="btn-mobile-en" class="opacity-50" onclick="changeLanguage('en')" aria-label="English">EN</button>
+                </div>
+                <a class="th-header-cta" href="/contato" data-i18n="nh_start_project">Iniciar um projeto</a>
+                <button type="button" id="menu-toggle" class="th-menu-toggle" aria-label="Abrir menu" aria-controls="menu-mobile" aria-expanded="false">
+                    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
+                </button>
+            </div>
+        </div>
+        <nav id="menu-mobile" class="th-mobile-nav hidden" aria-label="Navegação móvel">
+            <a href="/" data-i18n="nav_home">Home</a>
+            <a href="/servicos" data-i18n="nav_services">Serviços</a>
+            <a href="/projetos" data-i18n="nav_projects">Projetos</a>
+            <a href="/sobre" data-i18n="nav_about">Sobre</a>
+            <a href="/faq">FAQ</a>
+            <a href="/contato" data-i18n="nav_contact">Contato</a>
+            <a class="th-mobile-cta" href="/contato" data-i18n="nh_start_project">Iniciar um projeto</a>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <!-- ========================================================= -->
+        <!-- 01 — HERO EXECUTIVO (ANSWER-FIRST)                        -->
+        <!-- ========================================================= -->
+        <section class="th-section bg-slate-900 text-white pt-16 pb-20 border-b border-slate-800" aria-labelledby="hero-title">
+            <div class="th-shell">
+                <p class="th-eyebrow text-emerald-400 font-semibold tracking-wider uppercase mb-3">Engenharia de Software Corporativo Sob Medida</p>
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    <div class="lg:col-span-8">
+                        <h1 id="hero-title" class="text-3xl md:text-5xl font-bold tracking-tight text-white leading-tight mb-6">
+                            Desenvolvimento de Software Sob Medida & Sistemas Corporativos sem Armadilhas de SaaS
+                        </h1>
+                        <!-- RESPOSTA DIRETA / ANSWER-FIRST (FEATURED SNIPPET TARGET) -->
+                        <div class="p-6 rounded-xl bg-slate-800/80 border border-slate-700/80 mb-8 backdrop-blur-sm">
+                            <p class="text-base md:text-lg text-slate-200 leading-relaxed font-normal">
+                                <strong>Quanto custa e como funciona um software sob medida:</strong> Em vez de pagar licenças mensais perpétuas de SaaS que não atendem às particularidades do seu negócio, o desenvolvimento sob medida cria um sistema moldado aos processos reais da sua empresa. Na Trinity, o escopo é conduzido diretamente com o desenvolvedor responsável — sem intermediários comerciais nem custos inflados de agência. Projetos variam de <strong>R$ 15k a R$ 35k (MVPs)</strong> a <strong>R$ 40k a R$ 120k+ (ecossistemas completos)</strong>, com pagamento por marcos homologados em staging e transferência patrimonial de <strong>100% da titularidade do código</strong>.
+                            </p>
+                        </div>
+                        <div class="flex flex-wrap gap-4 items-center">
+                            <a class="th-button inline-flex items-center justify-center px-6 py-3.5 rounded-lg bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-semibold text-base transition-all shadow-lg shadow-emerald-500/20" 
+                               href="https://wa.me/5521920447431?text=Ol%C3%A1%20Alex,%20gostaria%20de%20solicitar%20um%20diagn%C3%B3stico%20para%20desenvolvimento%20de%20software%20sob%20medida."
+                               target="_blank" rel="noopener noreferrer">
+                                Solicitar Diagnóstico no WhatsApp
+                            </a>
+                            <a class="inline-flex items-center justify-center px-6 py-3.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-600 font-medium text-base transition-all"
+                                href="https://transporta.trinityds.com.br/sandbox/" target="_blank" rel="noopener noreferrer">
+                                Ver Demonstração em Produção ↗
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-4 bg-slate-800/50 p-6 rounded-2xl border border-slate-700/60">
+                        <p class="text-xs uppercase tracking-widest text-slate-400 font-semibold mb-4">Diferenciais de Contratação</p>
+                        <ul class="space-y-4 text-sm text-slate-300">
+                            <li class="flex items-start gap-3">
+                                <span class="text-emerald-400 font-bold">✓</span>
+                                <span><strong>Zero Mensalidade por Usuário:</strong> O software é da sua empresa, sem custos recorrentes de licença.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="text-emerald-400 font-bold">✓</span>
+                                <span><strong>Pagamento por Marcos (Milestones):</strong> Você só paga as parcelas após validar o módulo funcionando em staging.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="text-emerald-400 font-bold">✓</span>
+                                <span><strong>Interlocução Direta:</strong> Reuniões de alinhamento com quem realmente escreve o código e faz o deploy.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="text-emerald-400 font-bold">✓</span>
+                                <span><strong>Segurança Jurídica:</strong> Contrato formal, emissão de Nota Fiscal (CNPJ 62.720.421/0001-44) e NDA.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================= -->
+        <!-- 02 — AS 4 ARMADILHAS DE DEPENDER DE SAAS GENÉRICO         -->
+        <!-- ========================================================= -->
+        <section class="th-section py-20 bg-slate-50 border-b border-slate-200" aria-labelledby="saas-pains-title">
+            <div class="th-shell max-w-5xl mx-auto">
+                <div class="text-center mb-16">
+                    <p class="th-eyebrow text-slate-500 font-semibold tracking-wider uppercase mb-2">A Conta que Não Fecha</p>
+                    <h2 id="saas-pains-title" class="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight">
+                        Por que softwares de prateleira (SaaS) sufocam o crescimento da sua empresa
+                    </h2>
+                    <p class="text-slate-600 mt-4 max-w-2xl mx-auto text-base">
+                        Contratar plataformas SaaS prontas parece barato no início, mas rapidamente se torna um gargalo operacional e financeiro perigoso:
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="p-8 rounded-2xl bg-white border border-slate-200 shadow-sm">
+                        <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center font-bold text-lg mb-4">01</div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">Cobrança Abusiva por Usuário Cadastrado</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Conforme sua equipe cresce, a fatura mensal dobra ou triplica. Sua empresa passa a limitar o acesso de colaboradores ao sistema simplesmente para não estourar a cota de licenças de um software de terceiros.
+                        </p>
+                    </div>
+                    <div class="p-8 rounded-2xl bg-white border border-slate-200 shadow-sm">
+                        <div class="w-12 h-12 rounded-xl bg-red-100 text-red-800 flex items-center justify-center font-bold text-lg mb-4">02</div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">Processos Forçados a Caber no 'Padrão'</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            O diferencial competitivo da sua operação não existe no software pronto. Se você precisa de uma regra fiscal específica, um fluxo de aprovação próprio ou uma integração customizada, o suporte do SaaS responde que 'está no roadmap sem previsão'.
+                        </p>
+                    </div>
+                    <div class="p-8 rounded-2xl bg-white border border-slate-200 shadow-sm">
+                        <div class="w-12 h-12 rounded-xl bg-purple-100 text-purple-800 flex items-center justify-center font-bold text-lg mb-4">03</div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">Risco de Extinção & Lock-in de Dados</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Se a fornecedora do SaaS for vendida, triplicar o preço ou descontinuar a ferramenta, a operação da sua empresa fica refém. Exportar dados históricos costuma ser complexo, incompleto e propositalmente dificultado.
+                        </p>
+                    </div>
+                    <div class="p-8 rounded-2xl bg-white border border-slate-200 shadow-sm">
+                        <div class="w-12 h-12 rounded-xl bg-rose-100 text-rose-800 flex items-center justify-center font-bold text-lg mb-4">04</div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">Custo que Nunca Vira Patrimônio</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Após 3 ou 5 anos pagando mensalidades perpétuas que somam centenas de milhares de reais, a sua empresa não construiu um único real de patrimônio tecnológico. O software continua sendo alugado.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================= -->
+        <!-- 03 — COMPARATIVO: SOFTWARE HOUSE VS MODELO TRINITY        -->
+        <!-- ========================================================= -->
+        <section class="th-section py-20 bg-white border-b border-slate-200" aria-labelledby="comparison-title">
+            <div class="th-shell max-w-5xl mx-auto">
+                <div class="text-center mb-16">
+                    <p class="th-eyebrow text-slate-500 font-semibold tracking-wider uppercase mb-2">Transparência de Ponta a Ponta</p>
+                    <h2 id="comparison-title" class="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight">
+                        Software House Tradicional vs. Engenharia Direta Trinity
+                    </h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Modelo Tradicional -->
+                    <div class="p-8 rounded-2xl bg-slate-100/70 border border-slate-300">
+                        <div class="flex items-center gap-3 mb-6">
+                            <span class="w-8 h-8 rounded-full bg-slate-600 text-white flex items-center justify-center font-bold text-sm">✕</span>
+                            <h3 class="text-xl font-bold text-slate-900">Software House / Agência Convencional</h3>
+                        </div>
+                        <ul class="space-y-4 text-sm text-slate-700">
+                            <li class="flex items-start gap-2">
+                                <span class="text-slate-500 font-bold">•</span>
+                                <span><strong>Telefone sem fio comercial:</strong> Você alinha com vendedores que prometem tudo, mas que nunca escreveram uma linha de código.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-slate-500 font-bold">•</span>
+                                <span><strong>Orçamentos inflados:</strong> Você banca o custo operacional de gerentes de conta, escritórios caros e intermediários desnecessários.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-slate-500 font-bold">•</span>
+                                <span><strong>Rotatividade de equipe:</strong> Os programadores que iniciaram seu projeto saem da empresa na metade do caminho.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-slate-500 font-bold">•</span>
+                                <span><strong>Retenção de código:</strong> Dificultam a entrega do repositório para forçar contratos perpétuos de manutenção.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Modelo Trinity -->
+                    <div class="p-8 rounded-2xl bg-emerald-50/70 border border-emerald-300">
+                        <div class="flex items-center gap-3 mb-6">
+                            <span class="w-8 h-8 rounded-full bg-emerald-600 text-white flex items-center justify-center font-bold text-sm">✓</span>
+                            <h3 class="text-xl font-bold text-slate-900">Modelo Direto Trinity (End-to-End)</h3>
+                        </div>
+                        <ul class="space-y-4 text-sm text-slate-700">
+                            <li class="flex items-start gap-2">
+                                <span class="text-emerald-600 font-bold">•</span>
+                                <span><strong>Engenharia de ponta a ponta:</strong> Condução direta com o Arquiteto de Soluções e Engenheiro Full Stack responsável.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-emerald-600 font-bold">•</span>
+                                <span><strong>Custo estritamente produtivo:</strong> 100% do seu investimento vai para horas reais de arquitetura, desenvolvimento e testes.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-emerald-600 font-bold">•</span>
+                                <span><strong>Pagamento por marcos (milestones):</strong> Liberação de recursos atrelada a entregas testadas e homologadas em staging.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-emerald-600 font-bold">•</span>
+                                <span><strong>Titularidade 100% sua:</strong> Código-fonte, bancos de dados e infraestrutura pertencem à sua empresa desde o primeiro dia.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================= -->
+        <!-- 04 — VALORES E PRAZOS MÉDIOS DE MERCADO                   -->
+        <!-- ========================================================= -->
+        <section class="th-section py-20 bg-slate-900 text-white" aria-labelledby="pricing-title">
+            <div class="th-shell max-w-5xl mx-auto">
+                <div class="text-center mb-16">
+                    <p class="th-eyebrow text-emerald-400 font-semibold tracking-wider uppercase mb-2">Previsibilidade Financeira</p>
+                    <h2 id="pricing-title" class="text-3xl md:text-4xl font-bold text-white tracking-tight">
+                        Faixas de investimento reais no Brasil em 2026
+                    </h2>
+                    <p class="text-slate-400 mt-4 max-w-2xl mx-auto text-base">
+                        Sem pegadinhas ou cobranças ocultas. Conheça as faixas médias de mercado praticadas para desenvolvimento de alta performance:
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Nível 1 -->
+                    <div class="p-8 rounded-2xl bg-slate-800/90 border border-slate-700 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs uppercase tracking-widest text-emerald-400 font-bold block mb-2">Escopo Focado</span>
+                            <h3 class="text-2xl font-bold text-white mb-2">MVPs & Módulos Rápidos</h3>
+                            <p class="text-slate-400 text-xs leading-relaxed mb-6">
+                                Validação de novas ideias, automação de processos específicos ou digitalização de planilhas críticas com entrega ágil.
+                            </p>
+                            <div class="text-3xl font-extrabold text-white mb-1">R$ 15k a 35k</div>
+                            <span class="text-xs text-slate-400">Prazo médio: 6 a 10 semanas</span>
+                        </div>
+                        <ul class="space-y-3 text-xs text-slate-300 mt-8 pt-6 border-t border-slate-700">
+                            <li>✓ Backend NestJS / Fastify</li>
+                            <li>✓ Painel Web responsivo moderno</li>
+                            <li>✓ Banco de dados PostgreSQL 16</li>
+                            <li>✓ Deploy homologado em staging</li>
+                        </ul>
+                    </div>
+
+                    <!-- Nível 2 -->
+                    <div class="p-8 rounded-2xl bg-slate-800/90 border-2 border-emerald-500 relative flex flex-col justify-between shadow-xl shadow-emerald-500/10">
+                        <div class="absolute -top-3.5 right-6 px-3 py-1 bg-emerald-500 text-slate-950 text-xs font-bold rounded-full uppercase">Mais Procurado</div>
+                        <div>
+                            <span class="text-xs uppercase tracking-widest text-emerald-400 font-bold block mb-2">Operação Crítica</span>
+                            <h3 class="text-2xl font-bold text-white mb-2">Sistemas Corporativos</h3>
+                            <p class="text-slate-400 text-xs leading-relaxed mb-6">
+                                Plataformas operacionais completas, gestão de equipes de campo, frotas, esteiras B2B ou controle administrativo avançado.
+                            </p>
+                            <div class="text-3xl font-extrabold text-emerald-400 mb-1">R$ 40k a 120k+</div>
+                            <span class="text-xs text-slate-400">Prazo médio: 3 a 6 meses</span>
+                        </div>
+                        <ul class="space-y-3 text-xs text-slate-300 mt-8 pt-6 border-t border-slate-700">
+                            <li>✓ Web + App Nativo Android (Kotlin)</li>
+                            <li>✓ Operação Offline com Outbox Pattern</li>
+                            <li>✓ Cache Redis e filas BullMQ</li>
+                            <li>✓ Conciliação fiscal e APIs externas</li>
+                            <li>✓ Governança RBAC e MFA (TOTP)</li>
+                        </ul>
+                    </div>
+
+                    <!-- Nível 3 -->
+                    <div class="p-8 rounded-2xl bg-slate-800/90 border border-slate-700 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs uppercase tracking-widest text-emerald-400 font-bold block mb-2">Parceria Estratégica</span>
+                            <h3 class="text-2xl font-bold text-white mb-2">Fractional CTO & Sustentação</h3>
+                            <p class="text-slate-400 text-xs leading-relaxed mb-6">
+                                Apoio técnico independente para diretoria, auditoria de fornecedores de TI, sustentação contínua e evolução sob demanda.
+                            </p>
+                            <div class="text-3xl font-extrabold text-white mb-1">Sob Medida</div>
+                            <span class="text-xs text-slate-400">Mensal ou por Sprint</span>
+                        </div>
+                        <ul class="space-y-3 text-xs text-slate-300 mt-8 pt-6 border-t border-slate-700">
+                            <li>✓ "Advogado técnico" da sua empresa</li>
+                            <li>✓ Avaliação independente de orçamentos</li>
+                            <li>✓ SLA de emergência para servidores</li>
+                            <li>✓ Evolução contínua sem inchar equipe fixa</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================= -->
+        <!-- 05 — PROVA DE PRODUÇÃO: CASES REAIS (TRANSPORTA & TV XERÉM) -->
+        <!-- ========================================================= -->
+        <section class="th-section py-20 bg-slate-50 border-b border-slate-200" aria-labelledby="cases-title">
+            <div class="th-shell max-w-5xl mx-auto">
+                <div class="text-center mb-16">
+                    <p class="th-eyebrow text-slate-500 font-semibold tracking-wider uppercase mb-2">Resultados Comprovados</p>
+                    <h2 id="cases-title" class="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight">
+                        Sistemas reais em produção gerando valor todos os dias
+                    </h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Case Transporta -->
+                    <div class="p-8 rounded-2xl bg-white border border-slate-200 shadow-sm flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs uppercase tracking-wider text-emerald-600 font-bold block mb-2">Logística & Carga Rodoviária</span>
+                            <h3 class="text-2xl font-bold text-slate-900 mb-3">Transporta (Expresso Lima)</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                                Aplicativo nativo Android operando 100% offline para motoristas de caminhão em estradas sem sinal, dashboard operacional em Vue 3 e conciliação automática de CT-e e NF-e via NS Docs com zero perda histórica de dados.
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-4 pt-4 border-t border-slate-100">
+                            <a class="text-sm font-semibold text-emerald-600 hover:text-emerald-700" href="/projetos/transporta">Ler Estudo de Caso →</a>
+                            <a class="text-sm text-slate-500 hover:text-slate-800" href="https://transporta.trinityds.com.br/sandbox/" target="_blank" rel="noopener noreferrer">Testar Sandbox ↗</a>
+                        </div>
+                    </div>
+
+                    <!-- Case TV Xerém -->
+                    <div class="p-8 rounded-2xl bg-white border border-slate-200 shadow-sm flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs uppercase tracking-wider text-emerald-600 font-bold block mb-2">Portal de Notícias & Mídia</span>
+                            <h3 class="text-2xl font-bold text-slate-900 mb-3">Portal TV Xerém</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                                Arquitetura moderna desacoplada em NestJS, PostgreSQL 16 e Redis. Governança completa com controle de acesso granular (RBAC), autenticação multifator (MFA/TOTP) e mais de 300 testes automatizados aprovados.
+                            </p>
+                        </div>
+                        <div class="pt-4 border-t border-slate-100">
+                            <a class="text-sm font-semibold text-emerald-600 hover:text-emerald-700" href="/projetos">Ver Todos os Projetos →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================= -->
+        <!-- 06 — FAQ ESTRUTURADO (GEO & MONEY QUERIES)                 -->
+        <!-- ========================================================= -->
+        <section class="th-section py-20 bg-white border-b border-slate-200" aria-labelledby="faq-title">
+            <div class="th-shell max-w-4xl mx-auto">
+                <div class="text-center mb-16">
+                    <p class="th-eyebrow text-slate-500 font-semibold tracking-wider uppercase mb-2">Tire Suas Dúvidas</p>
+                    <h2 id="faq-title" class="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight">
+                        Perguntas frequentes sobre contratação e desenvolvimento
+                    </h2>
+                </div>
+                <div class="space-y-6">
+                    <div class="p-6 rounded-xl bg-slate-50 border border-slate-200">
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">
+                            Quanto custa desenvolver um software sob medida para uma empresa no Brasil?
+                        </h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            No modelo transparente da Trinity, projetos com escopo focado (MVPs e módulos operacionais) variam em média entre R$ 15.000 e R$ 35.000 com prazo de 6 a 10 semanas. Ecossistemas corporativos completos (com painel web, backend performático em NestJS/PostgreSQL, aplicativo nativo e infraestrutura em nuvem) variam de R$ 40.000 a R$ 120.000+, dependendo do número de integrações fiscais e legadas. Não cobramos mensalidade por usuário ou licença perpétua.
+                        </p>
+                    </div>
+                    <div class="p-6 rounded-xl bg-slate-50 border border-slate-200">
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">
+                            Qual é a vantagem de contratar um Engenheiro Full Stack direto em vez de uma software house tradicional?
+                        </h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Em agências e software houses tradicionais, até 60% do custo vai para intermediários comerciais, gerentes de conta e burocracia de reuniões, criando o 'telefone sem fio' onde quem vende não sabe programar. Na condução técnica direta, você alinha requisitos e prazos diretamente com quem projeta a arquitetura, escreve o código e sobe o deploy em produção, reduzindo prazos e eliminando retrabalho.
+                        </p>
+                    </div>
+                    <div class="p-6 rounded-xl bg-slate-50 border border-slate-200">
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">
+                            Como funciona o modelo de pagamento por marcos (milestones)?
+                        </h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            O investimento é dividido em etapas contratuais atreladas a entregas concretas. Cada módulo concluído é homologado pelo cliente em um ambiente online de testes (staging). O pagamento da etapa só é liberado após a validação funcional em produção, garantindo previsibilidade e segurança financeira total para a sua empresa.
+                        </p>
+                    </div>
+                    <div class="p-6 rounded-xl bg-slate-50 border border-slate-200">
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">
+                            A minha empresa é a dona oficial do código-fonte e dos servidores?
+                        </h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Sim. Toda contratação formalizada pela Trinity Mídia Digital e Tecnologia Ltda (CNPJ 62.720.421/0001-44) prevê em contrato a transferência patrimonial de 100% da propriedade intelectual do código-fonte, bancos de dados, chaves de API e pipelines de deploy. Sua empresa adquire um ativo estratégico permanente, sem risco de lock-in.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================= -->
+        <!-- 07 — CTA FINAL: CONTATO DIRETO COM O ENGENHEIRO           -->
+        <!-- ========================================================= -->
+        <section class="th-section py-20 bg-slate-900 text-white text-center" aria-labelledby="cta-final-title">
+            <div class="th-shell max-w-3xl mx-auto">
+                <p class="th-eyebrow text-emerald-400 font-semibold uppercase tracking-wider mb-2">Próximo Passo</p>
+                <h2 id="cta-final-title" class="text-3xl md:text-5xl font-bold text-white tracking-tight mb-6">
+                    Vamos desenhar a arquitetura do seu próximo sistema?
+                </h2>
+                <p class="text-slate-300 text-base md:text-lg leading-relaxed mb-8">
+                    Converse diretamente com o desenvolvedor responsável para entender custos, viabilidade técnica e prazos reais para a sua operação.
+                </p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a class="th-button inline-flex items-center px-8 py-4 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-base transition-all shadow-xl shadow-emerald-500/20"
+                       href="https://wa.me/5521920447431?text=Ol%C3%A1%20Alex,%20estive%20na%20p%C3%A1gina%20de%20software%20sob%20medida%20e%20gostaria%20de%20um%20diagn%C3%B3stico%20t%C3%A9cnico."
+                       target="_blank" rel="noopener noreferrer">
+                        Falar no WhatsApp sem Compromisso
+                    </a>
+                    <a class="inline-flex items-center px-8 py-4 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 text-base font-medium transition-all"
+                       href="/contato">
+                        Enviar Mensagem por Formulário
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- RODAPÉ CANÔNICO -->
+    <footer class="th-footer">
+        <div class="th-shell">
+            <div class="th-footer-grid">
+                <div>
+                    <p class="th-footer-brand">Trinity</p>
+                    <p class="th-eyebrow" data-i18n="nh_brand_sub">Mídia Digital e Tecnologia</p>
+                    <p data-i18n="nh_footer_desc">Desenvolvimento Full Stack, sistemas em produção, aplicativos, APIs, integrações e infraestrutura.</p>
+                </div>
+                <nav aria-label="Navegação do rodapé">
+                    <p class="th-eyebrow" data-i18n="nh_footer_nav">Navegação</p>
+                    <a href="/" data-i18n="nav_home">Home</a>
+                    <a href="/servicos" data-i18n="nav_services">Serviços</a>
+                    <a href="/projetos" data-i18n="nav_projects">Projetos</a>
+                    <a href="/sobre" data-i18n="nav_about">Sobre</a>
+                    <a href="/faq">FAQ</a>
+                    <a href="/contato" data-i18n="nav_contact">Contato</a>
+                </nav>
+                <div>
+                    <p class="th-eyebrow" data-i18n="nh_footer_position">Posicionamento</p>
+                    <p data-i18n="nh_panel_title">Desenvolvedor Full Stack Pleno — atuação end-to-end</p>
+                </div>
+            </div>
+            <div class="th-footer-bottom">
+                <p>&copy; 2026 Trinity Mídia Digital e Tecnologia. <span data-i18n="footer_rights">Todos os direitos reservados.</span></p>
+                <span data-i18n="nh_footer_note">Arquitetura, código e deploy sob condução direta</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/ui.js" defer></script>
+</body>
+</html>

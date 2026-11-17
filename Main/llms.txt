@@ -80,6 +80,9 @@
 ## Documentação e Páginas para Consulta
 - [Página Inicial (Home)](https://www.trinityds.com.br/)
 - [Serviços Especializados de Engenharia de Software](https://www.trinityds.com.br/servicos)
+- [Solução: Aplicativo para Motoristas Offline & Digitalização de Frotas](https://www.trinityds.com.br/solucoes/logistica-offline)
+- [Solução: Modernização Segura de Sistemas Legados & Migração de Banco de Dados](https://www.trinityds.com.br/solucoes/modernizacao-legados)
+- [Solução: Desenvolvimento de Software Sob Medida & Sistemas Corporativos](https://www.trinityds.com.br/solucoes/software-sob-medida)
 - [Dúvidas Frequentes (FAQ de 30 Perguntas)](https://www.trinityds.com.br/faq)
 - [Estudo de Caso: Transporta Logística](https://www.trinityds.com.br/projetos/transporta)
 - [Sandbox Interativa em Produção (Transporta)](https://transporta.trinityds.com.br/sandbox/)

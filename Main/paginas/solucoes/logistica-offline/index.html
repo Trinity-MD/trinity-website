@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicativo para Motoristas Offline & Digitalização de Frotas | Trinity</title>
+    <meta name="description" content="Desenvolvimento de aplicativos Android offline-first para motoristas e frotas de carga. Sincronização atômica sem internet, conciliação fiscal de CT-e/NF-e e dashboard web.">
+    <link rel="canonical" href="https://www.trinityds.com.br/solucoes/logistica-offline">
+    <link rel="icon" type="image/png" href="/Imagens/trinity-logo-header.png">
+
+    <!-- Open Graph / Redes Sociais -->
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Trinity Mídia Digital e Tecnologia">
+    <meta property="og:title" content="Aplicativo para Motoristas Offline & Digitalização de Frotas | Trinity">
+    <meta property="og:description" content="Engenharia de software para transporte de carga: apps Android offline-first, conciliação automática de CT-e/NF-e e painéis operacionais sob medida.">
+    <meta property="og:url" content="https://www.trinityds.com.br/solucoes/logistica-offline">
+    <meta property="og:image" content="https://www.trinityds.com.br/Imagens/Transporta_cover.png">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Aplicativo para Motoristas Offline & Digitalização de Frotas | Trinity">
+    <meta name="twitter:description" content="Como conectar caminhões sem sinal à controladoria da empresa com arquitetura offline-first e conciliação fiscal automática.">
+    <meta name="twitter:image" content="https://www.trinityds.com.br/Imagens/Transporta_cover.png">
+
+    <link rel="stylesheet" href="/dist/output.css">
+
+    <!-- ========================================================= -->
+    <!-- [GOOGLE & GEO] DADOS ESTRUTURADOS (JSON-LD)              -->
+    <!-- TechArticle + BreadcrumbList + FAQPage                    -->
+    <!-- ========================================================= -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "TechArticle",
+                "@id": "https://www.trinityds.com.br/solucoes/logistica-offline#article",
+                "headline": "Aplicativos Móveis Offline-First e Automação Fiscal para Frotas Rodoviárias",
+                "description": "Guia técnico e solução de engenharia para digitalização de frotas rodoviárias de carga pesada: como construir aplicativos para motoristas com operação 100% offline, Outbox Pattern e conciliação fiscal de CT-e/NF-e.",
+                "url": "https://www.trinityds.com.br/solucoes/logistica-offline",
+                "inLanguage": "pt-BR",
+                "publisher": {
+                    "@type": "Organization",
+                    "@id": "https://www.trinityds.com.br/#organization",
+                    "name": "Trinity Mídia Digital e Tecnologia Ltda",
+                    "url": "https://www.trinityds.com.br"
+                },
+                "author": {
+                    "@type": "Person",
+                    "name": "Alex Alencar",
+                    "jobTitle": "Arquiteto de Soluções & Engenheiro Full Stack"
+                }
+            },
+            {
+                "@type": "BreadcrumbList",
+                "@id": "https://www.trinityds.com.br/solucoes/logistica-offline#breadcrumb",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://www.trinityds.com.br/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Soluções",
+                        "item": "https://www.trinityds.com.br/servicos"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "Logística Offline",
+                        "item": "https://www.trinityds.com.br/solucoes/logistica-offline"
+                    }
+                ]
+            },
+            {
+                "@type": "FAQPage",
+                "@id": "https://www.trinityds.com.br/solucoes/logistica-offline#faq",
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": "Como o aplicativo para motorista funciona quando não há nenhum sinal de internet?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "O aplicativo utiliza arquitetura Offline-First nativa com banco de dados local durável no aparelho (Room/Realm) e Outbox Pattern. Todas as ações — como registro de despesas, checklists de veículo, fotos de canhotos e confirmação de entrega — são salvas, validadas e criptografadas localmente. Assim que o motorista passa por um ponto com sinal 4G/5G ou Wi-Fi, o aplicativo sincroniza os pacotes em segundo plano com o servidor central sem travar o uso da tela."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Como a conciliação automática de CT-e e NF-e elimina erros fiscais na transportadora?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Através de integração de backend com APIs de mensageria fiscal (como NS Docs e SEFAZ), os XMLs de Conhecimento de Transporte (CT-e) e Notas Fiscais (NF-e) são importados, parseados e vinculados automaticamente à viagem correspondente. O sistema confronta pesos, valores de frete, dados do tomador e canhotos digitalizados, eliminando glosas e digitação manual."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Por que aplicativos híbridos (PWAs ou React Native) costumam falhar em rotas de carga pesada?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Em operações de campo extremas, WebView e camadas de emulação sofrem com gerenciamento agressivo de memória do Android, resultando em perda de dados quando o app é fechado pelo sistema enquanto o aparelho está sem sinal. Soluções nativas em Kotlin gerenciam o ciclo de vida do processo, armazenamento de chaves criptográficas (Keystore) e sincronização transacional confiável."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "O código e os dados da plataforma pertencerão à minha transportadora?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Sim. Na Trinity Mídia Digital, o modelo de contratação transfere a titularidade integral do código-fonte e dos bancos de dados para a sua empresa. Não cobramos licenças mensais por caminhão ou usuário cadastrado."
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+    </script>
+</head>
+<body class="trinity-home">
+    <!-- CABEÇALHO CANÔNICO -->
+    <header class="th-header">
+        <div class="th-shell th-header-inner">
+            <a class="th-brand" href="/" aria-label="Trinity — Home">
+                <img class="th-brand-logo" src="/Imagens/trinity-logo-header.png" alt="Trinity" width="256" height="256">
+                <span>Trinity</span>
+                <small data-i18n="nh_brand_sub">Mídia Digital e Tecnologia</small>
+            </a>
+            <nav class="th-nav" aria-label="Navegação principal">
+                <a href="/" data-i18n="nav_home">Home</a>
+                <a href="/servicos" data-i18n="nav_services">Serviços</a>
+                <a href="/projetos" data-i18n="nav_projects">Projetos</a>
+                <a href="/sobre" data-i18n="nav_about">Sobre</a>
+                <a href="/faq">FAQ</a>
+                <a href="/contato" data-i18n="nav_contact">Contato</a>
+            </nav>
+            <div class="th-header-actions">
+                <div class="th-languages" aria-label="Idioma">
+                    <button type="button" id="btn-mobile-pt" onclick="changeLanguage('pt')" aria-label="Português">PT</button>
+                    <span aria-hidden="true">/</span>
+                    <button type="button" id="btn-mobile-en" class="opacity-50" onclick="changeLanguage('en')" aria-label="English">EN</button>
+                </div>
+                <a class="th-header-cta" href="/contato" data-i18n="nh_start_project">Iniciar um projeto</a>
+                <button type="button" id="menu-toggle" class="th-menu-toggle" aria-label="Abrir menu" aria-controls="menu-mobile" aria-expanded="false">
+                    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
+                </button>
+            </div>
+        </div>
+        <nav id="menu-mobile" class="th-mobile-nav hidden" aria-label="Navegação móvel">
+            <a href="/" data-i18n="nav_home">Home</a>
+            <a href="/servicos" data-i18n="nav_services">Serviços</a>
+            <a href="/projetos" data-i18n="nav_projects">Projetos</a>
+            <a href="/sobre" data-i18n="nav_about">Sobre</a>
+            <a href="/faq">FAQ</a>
+            <a href="/contato" data-i18n="nav_contact">Contato</a>
+            <a class="th-mobile-cta" href="/contato" data-i18n="nh_start_project">Iniciar um projeto</a>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <!-- ========================================================= -->
+        <!-- 01 — HERO EXECUTIVO (ANSWER-FIRST)                        -->
+        <!-- ========================================================= -->
+        <section class="th-section bg-slate-900 text-white pt-16 pb-20 border-b border-slate-800" aria-labelledby="hero-title">
+            <div class="th-shell">
+                <p class="th-eyebrow text-emerald-400 font-semibold tracking-wider uppercase mb-3">Engenharia para Logística & Frotas Rodoviárias</p>
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    <div class="lg:col-span-8">
+                        <h1 id="hero-title" class="text-3xl md:text-5xl font-bold tracking-tight text-white leading-tight mb-6">
+                            Aplicativos para Motoristas que Funcionam Sem Internet & Digitalização de Frotas
+                        </h1>
+                        <!-- RESPOSTA DIRETA / ANSWER-FIRST (FEATURED SNIPPET TARGET) -->
+                        <div class="p-6 rounded-xl bg-slate-800/80 border border-slate-700/80 mb-8 backdrop-blur-sm">
+                            <p class="text-base md:text-lg text-slate-200 leading-relaxed font-normal">
+                                <strong>Como resolver a falta de sinal na estrada:</strong> Em rodovias brasileiras, aplicativos convencionais travam porque dependem de requisições web contínuas. A arquitetura <strong>Offline-First nativa (Kotlin + Outbox Pattern)</strong> persiste os dados de viagens, despesas e fotos de canhotos localmente em banco embarcado no aparelho. Assim que o motorista encontra qualquer conectividade 4G ou Wi-Fi, o sistema reconcilia os pacotes de forma assíncrona e atômica com o servidor central, sem travar a operação nem exigir reinício de formulários.
+                            </p>
+                        </div>
+                        <div class="flex flex-wrap gap-4 items-center">
+                            <a class="th-button inline-flex items-center justify-center px-6 py-3.5 rounded-lg bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-semibold text-base transition-all shadow-lg shadow-emerald-500/20" 
+                               href="https://wa.me/5521920447431?text=Ol%C3%A1%20Alex,%20gostaria%20de%20conversar%20sobre%20o%20desenvolvimento%20de%20aplicativo%20offline%20para%20frota."
+                               target="_blank" rel="noopener noreferrer">
+                                Falar com o Engenheiro no WhatsApp
+                            </a>
+                            <a class="inline-flex items-center justify-center px-6 py-3.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-600 font-medium text-base transition-all"
+                               href="https://transporta.trinityds.com.br/sandbox/" target="_blank" rel="noopener noreferrer">
+                                Abrir Sandbox Interativa da Frota ↗
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-4 bg-slate-800/50 p-6 rounded-2xl border border-slate-700/60">
+                        <p class="text-xs uppercase tracking-widest text-slate-400 font-semibold mb-4">Garantias de Arquitetura</p>
+                        <ul class="space-y-4 text-sm text-slate-300">
+                            <li class="flex items-start gap-3">
+                                <span class="text-emerald-400 font-bold">✓</span>
+                                <span><strong>Zero perda de viagens:</strong> Gravação local antes de qualquer tentativa de rede.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="text-emerald-400 font-bold">✓</span>
+                                <span><strong>Conciliação SEFAZ / NS Docs:</strong> Cruzamento de CT-e e NF-e sem conferência manual.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="text-emerald-400 font-bold">✓</span>
+                                <span><strong>Painel Web de Alta Velocidade:</strong> Dashboard operacional em Vue 3 com resposta sub-segundo.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="text-emerald-400 font-bold">✓</span>
+                                <span><strong>Propriedade Intelectual:</strong> Código e dados 100% da transportadora (sem mensalidade por caminhão).</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================= -->
+        <!-- 02 — O PROBLEMA DAS RODOVIAS & IMPACTO FINANCEIRO         -->
+        <!-- ========================================================= -->
+        <section class="th-section py-20 bg-slate-50 border-b border-slate-200" aria-labelledby="problem-title">
+            <div class="th-shell max-w-5xl mx-auto">
+                <div class="text-center mb-16">
+                    <p class="th-eyebrow text-slate-500 font-semibold tracking-wider uppercase mb-2">O Custo Oculto da Desconexão</p>
+                    <h2 id="problem-title" class="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight">
+                        Por que aplicativos genéricos de logística falham na estrada
+                    </h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="p-8 rounded-xl bg-white border border-slate-200 shadow-sm">
+                        <div class="w-12 h-12 rounded-lg bg-amber-100 text-amber-700 flex items-center justify-center font-bold text-xl mb-6">01</div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">O 'Apagão' de Sinal 4G/5G</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Basta afastar-se 20 km dos centros urbanos para o motorista perder a conexão. Se o app exige internet para validar uma tela, a viagem trava, notas deixam de ser conferidas e os comprovantes de entrega voltam para o papel.
+                        </p>
+                    </div>
+                    <div class="p-8 rounded-xl bg-white border border-slate-200 shadow-sm">
+                        <div class="w-12 h-12 rounded-lg bg-red-100 text-red-700 flex items-center justify-center font-bold text-xl mb-6">02</div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">Glosas e Faturamento Atrasado</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Canhotos em papel que chegam amassados ou que demoram 7 a 15 dias para retornar à sede atrasam o faturamento da empresa com o embarcador, gerando estresse no fluxo de caixa e glosas fiscais desnecessárias.
+                        </p>
+                    </div>
+                    <div class="p-8 rounded-xl bg-white border border-slate-200 shadow-sm">
+                        <div class="w-12 h-12 rounded-lg bg-blue-100 text-blue-700 flex items-center justify-center font-bold text-xl mb-6">03</div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">O 'Preço por Caminhão' do SaaS</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Softwares de mercado cobram mensalidades salgadas por veículo ou usuário ativo. Quando a frota cresce, a conta se torna insustentável sem que a empresa tenha soberania ou customização do próprio sistema.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================= -->
+        <!-- 03 — A ARQUITETURA TÉCNICA EM CAMADAS                     -->
+        <!-- ========================================================= -->
+        <section class="th-section py-20 bg-white border-b border-slate-200" aria-labelledby="architecture-title">
+            <div class="th-shell max-w-5xl mx-auto">
+                <div class="text-center mb-16">
+                    <p class="th-eyebrow text-slate-500 font-semibold tracking-wider uppercase mb-2">Engenharia Sob Medida</p>
+                    <h2 id="architecture-title" class="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight">
+                        A Tríade da Plataforma Logística Resiliente
+                    </h2>
+                </div>
+
+                <div class="space-y-8">
+                    <!-- Camada 1: Mobile -->
+                    <div class="p-8 rounded-2xl bg-slate-900 text-white border border-slate-800">
+                        <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-4">
+                            <span class="text-xs uppercase tracking-widest bg-emerald-500/20 text-emerald-400 font-semibold px-3 py-1 rounded-full border border-emerald-500/30">Camada de Campo (Motorista)</span>
+                            <span class="text-xs text-slate-400 font-mono">Kotlin · Room · Outbox Pattern · Keystore P-256</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-3">Aplicativo Android Nativo com Operação 100% Offline</h3>
+                        <p class="text-slate-300 leading-relaxed mb-4">
+                            O motorista registra checkpoints, canhotos com câmera integrada, abastecimentos e custos mesmo sem nenhum chip ou Wi-Fi. Os eventos são gravados na <strong>Fila Outbox</strong> local com transações atômicas e assinados com certificado criptográfico de hardware. Ao detectar sinal, a fila descarrega os pacotes com verificação de idempotência (zero duplicatas).
+                        </p>
+                    </div>
+
+                    <!-- Camada 2: Conciliação Fiscal -->
+                    <div class="p-8 rounded-2xl bg-slate-50 border border-slate-200">
+                        <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-4">
+                            <span class="text-xs uppercase tracking-widest bg-blue-100 text-blue-700 font-semibold px-3 py-1 rounded-full border border-blue-200">Camada Fiscal & Integridade</span>
+                            <span class="text-xs text-slate-500 font-mono">NS Docs API · SEFAZ · XML Parser · Redis</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-slate-900 mb-3">Conciliação Automática Assíncrona de CT-e e NF-e</h3>
+                        <p class="text-slate-600 leading-relaxed mb-4">
+                            Em vez de digitar chaves de acesso de 44 dígitos manualmente, o backend consome webhooks e APIs fiscais para baixar, validar e vincular automaticamente os Conhecimentos de Transporte e Notas Fiscais à carga do motorista. O faturamento é liberado no mesmo dia da entrega.
+                        </p>
+                    </div>
+
+                    <!-- Camada 3: Painel Web -->
+                    <div class="p-8 rounded-2xl bg-slate-50 border border-slate-200">
+                        <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-4">
+                            <span class="text-xs uppercase tracking-widest bg-purple-100 text-purple-700 font-semibold px-3 py-1 rounded-full border border-purple-200">Camada de Gestão (Diretoria & Operação)</span>
+                            <span class="text-xs text-slate-500 font-mono">Vue 3 · Vite · Tailwind CSS · Fastify / NestJS</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-slate-900 mb-3">Dashboard Operacional em Tempo Real com Resposta Sub-Segundo</h3>
+                        <p class="text-slate-600 leading-relaxed mb-4">
+                            Painel web construído para carregar em milissegundos. A equipe de despacho e a diretoria filtram viagens por placa, motorista, cliente e status financeiro sem telas lentas ou travamentos típicos de ERPs pesados.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================= -->
+        <!-- 04 — CASE DE SUCESSO: TRANSPORTA                          -->
+        <!-- ========================================================= -->
+        <section class="th-section py-20 bg-slate-900 text-white" aria-labelledby="case-title">
+            <div class="th-shell max-w-5xl mx-auto">
+                <div class="p-8 md:p-12 rounded-3xl bg-slate-800/80 border border-slate-700 relative overflow-hidden">
+                    <div class="relative z-10">
+                        <p class="th-eyebrow text-emerald-400 font-semibold uppercase tracking-wider mb-2">Comprovação em Produção</p>
+                        <h2 id="case-title" class="text-3xl md:text-4xl font-bold text-white mb-6">
+                            Case Real: Sistema Transporta V2
+                        </h2>
+                        <p class="text-slate-300 text-base md:text-lg leading-relaxed mb-8">
+                            Desenvolvido e operado pela Trinity Mídia Digital para atender transporte rodoviário de cargas. A operação saiu de controles fragmentados para um ecossistema integrado com app Android offline, dashboard web reativo e conciliação fiscal automática, processando centenas de milhares de reais em fretes com zero perda histórica de registros.
+                        </p>
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 py-6 border-y border-slate-700 mb-8">
+                            <div>
+                                <p class="text-3xl font-bold text-emerald-400">100%</p>
+                                <p class="text-xs text-slate-400 uppercase mt-1">Disponibilidade Offline</p>
+                            </div>
+                            <div>
+                                <p class="text-3xl font-bold text-white">0%</p>
+                                <p class="text-xs text-slate-400 uppercase mt-1">Perda de Registros</p>
+                            </div>
+                            <div>
+                                <p class="text-3xl font-bold text-white">&lt;100ms</p>
+                                <p class="text-xs text-slate-400 uppercase mt-1">Latência de API</p>
+                            </div>
+                            <div>
+                                <p class="text-3xl font-bold text-emerald-400">R$ 0</p>
+                                <p class="text-xs text-slate-400 uppercase mt-1">Custo de Licença/Mês</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap gap-4 items-center">
+                            <a class="th-button inline-flex items-center px-6 py-3.5 rounded-lg bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-semibold transition-all"
+                               href="https://transporta.trinityds.com.br/sandbox/" target="_blank" rel="noopener noreferrer">
+                                Testar Sandbox Interativa ao Vivo ↗
+                            </a>
+                            <a class="inline-flex items-center px-6 py-3.5 rounded-lg bg-slate-700/80 hover:bg-slate-700 text-slate-200 border border-slate-600 transition-all text-sm font-medium"
+                               href="/projetos/transporta">
+                                Ler Estudo de Caso Completo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================= -->
+        <!-- 05 — COMPARATIVO: SOB MEDIDA VS PACOTE TMS                -->
+        <!-- ========================================================= -->
+        <section class="th-section py-20 bg-slate-50 border-b border-slate-200" aria-labelledby="compare-title">
+            <div class="th-shell max-w-4xl mx-auto">
+                <div class="text-center mb-12">
+                    <p class="th-eyebrow text-slate-500 font-semibold tracking-wider uppercase mb-2">Tomada de Decisão</p>
+                    <h2 id="compare-title" class="text-3xl font-bold text-slate-900 tracking-tight">
+                        Sistema Sob Medida vs. Aluguel de Pacote TMS
+                    </h2>
+                </div>
+                <div class="overflow-x-auto bg-white rounded-2xl border border-slate-200 shadow-sm">
+                    <table class="w-full text-left border-collapse text-sm">
+                        <thead>
+                            <tr class="border-b border-slate-200 bg-slate-100/60 text-slate-700">
+                                <th class="p-4 font-semibold">Critério de Avaliação</th>
+                                <th class="p-4 font-semibold text-emerald-800 bg-emerald-50/60">Sistema Sob Medida (Trinity)</th>
+                                <th class="p-4 font-semibold text-slate-500">Pacotes Genéricos (SaaS TMS)</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-100 text-slate-600">
+                            <tr>
+                                <td class="p-4 font-medium text-slate-900">Operação Offline no Celular</td>
+                                <td class="p-4 bg-emerald-50/30 text-emerald-900 font-medium">100% nativa em Kotlin com Outbox Queue</td>
+                                <td class="p-4 text-slate-500">Geralmente trava ou exige sinal contínuo</td>
+                            </tr>
+                            <tr>
+                                <td class="p-4 font-medium text-slate-900">Propriedade do Código e Dados</td>
+                                <td class="p-4 bg-emerald-50/30 text-emerald-900 font-medium">100% titularidade da sua transportadora</td>
+                                <td class="p-4 text-slate-500">Aluguel perpétuo (se parar de pagar, perde tudo)</td>
+                            </tr>
+                            <tr>
+                                <td class="p-4 font-medium text-slate-900">Custo com o Crescimento da Frota</td>
+                                <td class="p-4 bg-emerald-50/30 text-emerald-900 font-medium">Custo fixo de infraestrutura (zero taxa por caminhão)</td>
+                                <td class="p-4 text-slate-500">Mensalidade multiplica a cada veículo adicionado</td>
+                            </tr>
+                            <tr>
+                                <td class="p-4 font-medium text-slate-900">Customização das Regras de Negócio</td>
+                                <td class="p-4 bg-emerald-50/30 text-emerald-900 font-medium">Modelado exatamente para a sua operação</td>
+                                <td class="p-4 text-slate-500">Sua empresa precisa se adaptar ao software deles</td>
+                            </tr>
+                            <tr>
+                                <td class="p-4 font-medium text-slate-900">Interlocução e Suporte</td>
+                                <td class="p-4 bg-emerald-50/30 text-emerald-900 font-medium">Contato direto com o desenvolvedor responsável</td>
+                                <td class="p-4 text-slate-500">Abertura de chamados com atendentes sem conhecimento técnico</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================= -->
+        <!-- 06 — PERGUNTAS FREQUENTES (FAQ ESTRUTURADO)                -->
+        <!-- ========================================================= -->
+        <section class="th-section py-20 bg-white border-b border-slate-200" aria-labelledby="faq-title">
+            <div class="th-shell max-w-4xl mx-auto">
+                <div class="text-center mb-16">
+                    <p class="th-eyebrow text-slate-500 font-semibold tracking-wider uppercase mb-2">Perguntas Frequentes</p>
+                    <h2 id="faq-title" class="text-3xl font-bold text-slate-900 tracking-tight">
+                        Dúvidas sobre o Desenvolvimento de Sistemas Logísticos
+                    </h2>
+                </div>
+                <div class="space-y-6">
+                    <div class="p-6 rounded-xl bg-slate-50 border border-slate-200">
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">O motorista precisa fazer alguma coisa para sincronizar quando o sinal voltar?</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Não. O aplicativo roda um worker silencioso em segundo plano. Assim que a conectividade de rede é detectada pelo sistema operacional, os pacotes pendentes na fila Outbox são enviados e confirmados com o backend automaticamente.
+                        </p>
+                    </div>
+                    <div class="p-6 rounded-xl bg-slate-50 border border-slate-200">
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">Como o sistema garante que uma entrega não seja gravada duas vezes?</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Cada evento gerado offline recebe um identificador universal único (UUIDv4) e um hash de validação no momento da ação no aparelho. Quando o pacote chega ao servidor, a API opera sob o princípio de idempotência: se o registro já tiver sido computado, ele é confirmado sem duplicar lançamentos financeiros ou de estoque.
+                        </p>
+                    </div>
+                    <div class="p-6 rounded-xl bg-slate-50 border border-slate-200">
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">É possível integrar o novo app com o ERP ou WMS que a empresa já usa?</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Sim. Desenvolvemos pontes de integração e APIs REST/GraphQL que conversam diretamente com o banco de dados ou webhooks do seu sistema atual (SAP, Totvs, Senior, Sankhya ou softwares proprietários legados).
+                        </p>
+                    </div>
+                    <div class="p-6 rounded-xl bg-slate-50 border border-slate-200">
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">Quanto tempo leva para desenvolver e colocar a operação rodando?</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            A entrega é feita por marcos homologados (milestones). Versões piloto (MVPs) com o aplicativo do motorista e dashboard web de conferência costumam entrar em testes em 6 a 8 semanas, permitindo que a empresa valide em rota antes da expansão para toda a frota.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================= -->
+        <!-- 07 — CTA FINAL: CONTATO DIRETO COM O ENGENHEIRO           -->
+        <!-- ========================================================= -->
+        <section class="th-section py-20 bg-slate-900 text-white text-center" aria-labelledby="cta-final-title">
+            <div class="th-shell max-w-3xl mx-auto">
+                <p class="th-eyebrow text-emerald-400 font-semibold uppercase tracking-wider mb-2">Próximo Passo</p>
+                <h2 id="cta-final-title" class="text-3xl md:text-5xl font-bold text-white tracking-tight mb-6">
+                    Pronto para digitalizar a sua frota sem depender de sinal na estrada?
+                </h2>
+                <p class="text-slate-300 text-base md:text-lg leading-relaxed mb-8">
+                    Converse diretamente com o desenvolvedor responsável pela arquitetura para entender a viabilidade técnica e receber um diagnóstico preliminar do seu cenário.
+                </p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a class="th-button inline-flex items-center px-8 py-4 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-base transition-all shadow-xl shadow-emerald-500/20"
+                       href="https://wa.me/5521920447431?text=Ol%C3%A1%20Alex,%20estive%20na%20p%C3%A1gina%20de%20log%C3%ADstica%20offline%20e%20gostaria%20de%20um%20diagn%C3%B3stico%20para%20minha%20frota."
+                       target="_blank" rel="noopener noreferrer">
+                        Iniciar Conversa no WhatsApp
+                    </a>
+                    <a class="inline-flex items-center px-8 py-4 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 text-base font-medium transition-all"
+                       href="/contato">
+                        Enviar Mensagem por Formulário
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- RODAPÉ CANÔNICO -->
+    <footer class="th-footer">
+        <div class="th-shell">
+            <div class="th-footer-grid">
+                <div>
+                    <p class="th-footer-brand">Trinity</p>
+                    <p class="th-eyebrow" data-i18n="nh_brand_sub">Mídia Digital e Tecnologia</p>
+                    <p data-i18n="nh_footer_desc">Desenvolvimento Full Stack, sistemas em produção, aplicativos, APIs, integrações e infraestrutura.</p>
+                </div>
+                <nav aria-label="Navegação do rodapé">
+                    <p class="th-eyebrow" data-i18n="nh_footer_nav">Navegação</p>
+                    <a href="/" data-i18n="nav_home">Home</a>
+                    <a href="/servicos" data-i18n="nav_services">Serviços</a>
+                    <a href="/projetos" data-i18n="nav_projects">Projetos</a>
+                    <a href="/sobre" data-i18n="nav_about">Sobre</a>
+                    <a href="/faq">FAQ</a>
+                    <a href="/contato" data-i18n="nav_contact">Contato</a>
+                </nav>
+                <div>
+                    <p class="th-eyebrow" data-i18n="nh_footer_position">Posicionamento</p>
+                    <p data-i18n="nh_panel_title">Desenvolvedor Full Stack Pleno — atuação end-to-end</p>
+                </div>
+            </div>
+            <div class="th-footer-bottom">
+                <p>&copy; 2026 Trinity Mídia Digital e Tecnologia. <span data-i18n="footer_rights">Todos os direitos reservados.</span></p>
+                <span data-i18n="nh_footer_note">Arquitetura, código e deploy sob condução direta</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/ui.js" defer></script>
+</body>
+</html>
